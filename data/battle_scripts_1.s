@@ -3979,7 +3979,11 @@ BattleScript_SpeedBoostActivates::
 	printstring STRINGID_PKMNRAISEDSPEED
 	waitmessage 0x40
 	end3
-
+BattleScript_StaminaActivates::
+	playanimation BS_BATTLER_0, B_ANIM_STATS_CHANGE, sB_ANIM_ARG1
+	printstring STRINGID_STAMINARAISEDDEF
+	waitmessage 0x40
+	end3
 BattleScript_TraceActivates::
 	pause 0x20
 	printstring STRINGID_PKMNTRACED
@@ -4198,6 +4202,15 @@ BattleScript_RoughSkinActivates::
 	healthbarupdate BS_ATTACKER
 	datahpupdate BS_ATTACKER
 	printstring STRINGID_PKMNHURTSWITH
+	waitmessage 0x40
+	tryfaintmon BS_ATTACKER, FALSE, NULL
+	return
+
+BattleScript_BadDreamsActivates::
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_x100000
+	healthbarupdate BS_ATTACKER
+	datahpupdate BS_ATTACKER
+	printstring STRINGID_BADDREAMSACTIVATES
 	waitmessage 0x40
 	tryfaintmon BS_ATTACKER, FALSE, NULL
 	return

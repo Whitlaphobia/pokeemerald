@@ -19,6 +19,8 @@ extern const u8 gText_ExpandedPlaceholder_May[];
 
 extern const u8 gText_FromSpace[];
 
+extern const u8 gText_AshQty[];
+
 extern const u8 gText_Lv50[];
 extern const u8 gText_OpenLevel[];
 
@@ -392,6 +394,7 @@ extern const u8 gText_DefaultNameLillie[];
 extern const u8 gText_DefaultNameTerra[];
 extern const u8 gText_DefaultNameLucy[];
 extern const u8 gText_DefaultNameHalie[];
+extern const u8 gText_ThrowInPremierBalls[];
 
 extern const u8 gText_BirchInTrouble[];
 extern const u8 gText_ConfirmStarterChoice[];
@@ -517,6 +520,7 @@ extern const u8 gText_SpDef[];
 extern const u8 gText_Speed[];
 extern const u8 gText_Dash[];
 extern const u8 gText_Plus[];
+extern const u8 gText_Nickname[];
 
 //pokedex text
 extern const u8 gText_CryOf[];
@@ -1007,6 +1011,7 @@ extern const u8 gText_InBagVar1[];
 extern const u8 gText_Var1AndYouWantedVar2[];
 extern const u8 gText_HereYouGoThankYou[];
 extern const u8 gText_NoMoreRoomForThis[];
+extern const u8 gText_YouAlreadyHaveThis[];
 extern const u8 gText_ThankYouIllSendItHome[];
 extern const u8 gText_ThanksIllSendItHome[];
 extern const u8 gText_SpaceForVar1Full[];

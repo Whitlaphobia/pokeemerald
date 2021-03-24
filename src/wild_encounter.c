@@ -741,7 +741,6 @@ bool8 DoesCurrentMapHaveFishingMons(void)
 void FishingWildEncounter(u8 rod)
 {
     u16 species;
-
     if (CheckFeebas() == TRUE)
     {
         u8 level = ChooseWildMonLevel(&gWildFeebasRoute119Data);
@@ -753,6 +752,7 @@ void FishingWildEncounter(u8 rod)
     {
         species = GenerateFishingWildMon(gWildMonHeaders[GetCurrentMapWildMonHeaderId()].fishingMonsInfo, rod);
     }
+    
     IncrementGameStat(GAME_STAT_FISHING_CAPTURES);
     SetPokemonAnglerSpecies(species);
     BattleSetup_StartWildBattle();

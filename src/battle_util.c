@@ -2729,6 +2729,19 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     effect++;
                 }
                 break;
+            case ABILITY_BAD_DREAMS:
+                if (gBattleMons[gBattlerAttacker].hp != 0
+                && gBattleMons[gBattlerAttacker].status1 & STATUS1_SLEEP)
+                {
+                    gBattleMoveDamage = gBattleMons[gBattlerAttacker].maxHP / 8;
+                    if (gBattleMoveDamage == 0)
+                        gBattleMoveDamage = 1;
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_BadDreamsActivates;
+                    effect++;
+                }
+                break;
+
             case ABILITY_EFFECT_SPORE:
                 if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
                  && gBattleMons[gBattlerAttacker].hp != 0
@@ -2817,6 +2830,22 @@ u8 AbilityBattleEffects(u8 caseID, u8 battler, u8 ability, u8 special, u16 moveA
                     effect++;
                 }
                 break;
+            case ABILITY_STAMINA:
+                if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+                 && !gProtectStructs[gBattlerAttacker].confusionSelfDmg
+                 && TARGET_TURN_DAMAGED
+                 && gBattleMons[battler].hp != 0
+                 && gBattleMons[battler].statStages[STAT_DEF] < MAX_STAT_STAGE )
+                 {
+                        gBattleMons[battler].statStages[STAT_DEF]++;
+                        gBattleScripting.animArg1 = 0x11;
+                        gBattleScripting.animArg2 = 0;
+                        BattleScriptPushCursorAndCallback(BattleScript_StaminaActivates);
+                        gBattleScripting.battler = battler;
+                        effect++;
+
+                 }
+                 break;
             }
             break;
         case ABILITYEFFECT_IMMUNITY: // 5
