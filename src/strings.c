@@ -1979,3 +1979,4 @@ const u8 gText_SideQuestReward_28[] = _("Reward 28");
 const u8 gText_SideQuestReward_29[] = _("Reward 29");
 const u8 gText_SideQuestReward_30[] = _("Reward 30");
 
+const u8 gText_Nickname[] = _("NICKNAME");
