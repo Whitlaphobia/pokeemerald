@@ -172,6 +172,7 @@ static const struct ItemSlot gNewGamePCItems[] =
     { ITEM_POTION, 1 },
     { ITEM_TM13, 1 },
     { ITEM_SURFBOARD, 1},
+    { ITEM_REPEL, 3 },
     { ITEM_NONE, 0 }
 };
 
