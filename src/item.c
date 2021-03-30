@@ -450,6 +450,13 @@ u8 GetPocketByItemId(u16 itemId)
     return ItemId_GetPocket(itemId);
 }
 
+void ItemId_GetHoldEffectParam_Script();
+void ItemId_GetHoldEffectParam_Script()
+{
+    VarSet(VAR_RESULT, ItemId_GetHoldEffectParam(VarGet(VAR_0x8004)));
+}
+
+
 void ClearItemSlots(struct ItemSlot *itemSlots, u8 itemCount)
 {
     u16 i;
