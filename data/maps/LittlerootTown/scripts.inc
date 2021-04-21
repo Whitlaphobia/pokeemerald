@@ -1009,9 +1009,9 @@ LittlerootTown_Text_ComeHomeIfAnythingHappens: @ 81E8A03
 	.string "Go on, go get them, honey!$"
 
 LittlerootTown_Text_CanUsePCToStoreItems: @ 81E8ACF
-	.string "If you use a PC, you can store items\n"
-	.string "and POKéMON.\p"
-	.string "The power of science is staggering!$"
+	.string "Welcome to METEOR POINT!\n"
+	.string "we'll have your stuff moved in in no time.\p"
+	.string "We should be done before you finish your orientation.!$"
 
 LittlerootTown_Text_BirchSpendsDaysInLab: @ 81E8B25
 	.string "PROF. BIRCH spends days in his LAB\n"
