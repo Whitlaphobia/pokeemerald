@@ -1010,8 +1010,9 @@ LittlerootTown_Text_ComeHomeIfAnythingHappens: @ 81E8A03
 
 LittlerootTown_Text_CanUsePCToStoreItems: @ 81E8ACF
 	.string "Welcome to METEOR POINT!\n"
-	.string "we'll have your stuff moved in in no time.\p"
-	.string "We should be done before you finish your orientation.!$"
+	.string "I'll have your stuff moved in in no time.\p"
+	.string "We should be done before you finish \n"
+	.string "your orientation.!$"
 
 LittlerootTown_Text_BirchSpendsDaysInLab: @ 81E8B25
 	.string "PROF. BIRCH spends days in his LAB\n"
