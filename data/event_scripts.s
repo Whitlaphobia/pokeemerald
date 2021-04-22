@@ -1066,3 +1066,9 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/LittlerootTown_WeatherInstitute_3F/scripts.inc"
 
 	.include "data/maps/LittlerootTown_WeatherInstitute_BF/scripts.inc"
+
+	.include "data/maps/LittlerootTown_WeatherInstitute_3F_A/scripts.inc"
+
+	.include "data/maps/LittlerootTown_WeatherInstitute_3F_B/scripts.inc"
+
+	.include "data/maps/LittlerootTown_WeatherInstitute_3F_C/scripts.inc"

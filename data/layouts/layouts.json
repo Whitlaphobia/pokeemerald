@@ -4415,7 +4415,7 @@
       "id": "LAYOUT_LITTLEROOT_TOWN_WEATHER_INSTITUTE_2F",
       "name": "LittlerootTown_WeatherInstitute_2F_Layout",
       "width": 20,
-      "height": 10,
+      "height": 8,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/LittlerootTown_WeatherInstitute_2F/border.bin",
@@ -4425,7 +4425,7 @@
       "id": "LAYOUT_LITTLEROOT_TOWN_WEATHER_INSTITUTE_3F",
       "name": "LittlerootTown_WeatherInstitute_3F_Layout",
       "width": 20,
-      "height": 10,
+      "height": 7,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/LittlerootTown_WeatherInstitute_3F/border.bin",
@@ -4435,11 +4435,41 @@
       "id": "LAYOUT_LITTLEROOT_TOWN_WEATHER_INSTITUTE_BF",
       "name": "LittlerootTown_WeatherInstitute_BF_Layout",
       "width": 20,
-      "height": 10,
+      "height": 9,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/LittlerootTown_WeatherInstitute_BF/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown_WeatherInstitute_BF/map.bin"
+    },
+    {
+      "id": "LAYOUT_LITTLEROOT_TOWN_WEATHER_INSTITUTE_3F_A",
+      "name": "LittlerootTown_WeatherInstitute_3F_A_Layout",
+      "width": 13,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
+      "border_filepath": "data/layouts/LittlerootTown_WeatherInstitute_3F_A/border.bin",
+      "blockdata_filepath": "data/layouts/LittlerootTown_WeatherInstitute_3F_A/map.bin"
+    },
+    {
+      "id": "LAYOUT_LITTLEROOT_TOWN_WEATHER_INSTITUTE_3F_B",
+      "name": "LittlerootTown_WeatherInstitute_3F_B_Layout",
+      "width": 15,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PrettyPetalFlowerShop",
+      "border_filepath": "data/layouts/LittlerootTown_WeatherInstitute_3F_B/border.bin",
+      "blockdata_filepath": "data/layouts/LittlerootTown_WeatherInstitute_3F_B/map.bin"
+    },
+    {
+      "id": "LAYOUT_LITTLEROOT_TOWN_WEATHER_INSTITUTE_3F_C",
+      "name": "LittlerootTown_WeatherInstitute_3F_C_Layout",
+      "width": 10,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_MysteryEventsHouse",
+      "border_filepath": "data/layouts/LittlerootTown_WeatherInstitute_3F_C/border.bin",
+      "blockdata_filepath": "data/layouts/LittlerootTown_WeatherInstitute_3F_C/map.bin"
     }
   ]
 }

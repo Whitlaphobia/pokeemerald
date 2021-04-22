@@ -1,7 +1,7 @@
 {
-  "id": "MAP_LITTLEROOT_TOWN_WEATHER_INSTITUTE_BF",
-  "name": "LittlerootTown_WeatherInstitute_BF",
-  "layout": "LAYOUT_LITTLEROOT_TOWN_WEATHER_INSTITUTE_BF",
+  "id": "MAP_LITTLEROOT_TOWN_WEATHER_INSTITUTE_3F_B",
+  "name": "LittlerootTown_WeatherInstitute_3F_B",
+  "layout": "LAYOUT_LITTLEROOT_TOWN_WEATHER_INSTITUTE_3F_B",
   "music": "MUS_ABANDONED_SHIP",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
@@ -18,10 +18,17 @@
   ],
   "warp_events": [
     {
-      "x": 16,
-      "y": 1,
+      "x": 2,
+      "y": 0,
       "elevation": 0,
-      "dest_map": "MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB",
+      "dest_map": "MAP_LITTLEROOT_TOWN_WEATHER_INSTITUTE_3F",
+      "dest_warp_id": 3
+    },
+    {
+      "x": 3,
+      "y": 0,
+      "elevation": 0,
+      "dest_map": "MAP_LITTLEROOT_TOWN_WEATHER_INSTITUTE_3F",
       "dest_warp_id": 3
     }
   ],
