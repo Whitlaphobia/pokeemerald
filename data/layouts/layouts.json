@@ -4470,6 +4470,16 @@
       "secondary_tileset": "gTileset_MysteryEventsHouse",
       "border_filepath": "data/layouts/LittlerootTown_WeatherInstitute_3F_C/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown_WeatherInstitute_3F_C/map.bin"
+    },
+    {
+      "id": "LAYOUT_LITTLEROOT_TOWN_UNDERSEA_TOURS_1F",
+      "name": "LittlerootTown_UnderseaTours_1F_Layout",
+      "width": 15,
+      "height": 12,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/LittlerootTown_UnderseaTours_1F/border.bin",
+      "blockdata_filepath": "data/layouts/LittlerootTown_UnderseaTours_1F/map.bin"
     }
   ]
 }
