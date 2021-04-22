@@ -702,6 +702,34 @@ LittlerootTown_ProfessorBirchsLab_EventScript_Bookshelf:: @ 81FA4C4
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_CrammedWithBooksOnPokemon, MSGBOX_SIGN
 	end
 
+LittlerootTown_ProfessorBirchsLab_EventScript_GlassDisplay1:: @ 81FA4C4
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_TornadoDisplay, MSGBOX_SIGN
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_GlassDisplay2:: @ 81FA4C4
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_LightningWood, MSGBOX_SIGN
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_ShippingCrate:: @ 81FA4C4
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_CrateContents, MSGBOX_SIGN
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Railing:: @ 81FA4C4
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_RailingView, MSGBOX_SIGN
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_GarbageCan:: @ 81FA4C4
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_WeatherTrash, MSGBOX_SIGN
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Garbagecan:: @ 81FA4C4
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_WeatherTrash, MSGBOX_SIGN
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_Window:: @ 81FA4C4
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_WindowView, MSGBOX_SIGN
+	end
+
 LittlerootTown_ProfessorBirchsLab_EventScript_Book:: @ 81FA4CD
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_BookTooHardToRead, MSGBOX_SIGN
 	end
@@ -861,7 +889,7 @@ LittlerootTown_ProfessorBirchsLab_Text_BrendanWhereShouldIGoNext: @ 81FB073
 
 LittlerootTown_ProfessorBirchsLab_Text_SeriousLookingMachine: @ 81FB0A2
 	.string "It's a serious-looking machine.\n"
-	.string "The PROF must use this for research.$"
+	.string "It must be used for research.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_PCUsedForResearch: @ 81FB0E7
 	.string "It's a PC used for research.\n"
@@ -869,6 +897,27 @@ LittlerootTown_ProfessorBirchsLab_Text_PCUsedForResearch: @ 81FB0E7
 
 LittlerootTown_ProfessorBirchsLab_Text_CrammedWithBooksOnPokemon: @ 81FB124
 	.string "It's crammed with books on POKéMON.$"
+
+LittlerootTown_ProfessorBirchsLab_Text_TornadoDisplay: @ 81FB124
+	.string "A diorama to teach about tornados.\n"
+	.string "Within the glass,tiny cows spin round.$"
+
+LittlerootTown_ProfessorBirchsLab_Text_LightningWood: @ 81FB124
+	.string "A piece of wood struck by lightning.\n"
+	.string "It is stripped and smooth.$"
+
+LittlerootTown_ProfessorBirchsLab_Text_WeatherTrash: @ 81FB124
+	.string "Looks like a lot of snack food\n"
+	.string "is eaten here.$"
+
+LittlerootTown_ProfessorBirchsLab_Text_RailingView: @ 81FB124
+	.string "Looks like heavy work goes on down there.$"
+
+LittlerootTown_ProfessorBirchsLab_Text_WindowView: @ 81FB124
+	.string "A nice view of a nice town.$"
+
+LittlerootTown_ProfessorBirchsLab_Text_CrateContents: @ 81FB124
+	.string "Full of supplies shipped from overseas.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_BookTooHardToRead: @ 81FB148
 	.string "It's a book that's too hard to read.$"
