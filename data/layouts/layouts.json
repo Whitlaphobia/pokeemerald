@@ -4455,7 +4455,7 @@
       "id": "LAYOUT_LITTLEROOT_TOWN_WEATHER_INSTITUTE_3F_B",
       "name": "LittlerootTown_WeatherInstitute_3F_B_Layout",
       "width": 15,
-      "height": 5,
+      "height": 6,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_InsideShip",
       "border_filepath": "data/layouts/LittlerootTown_WeatherInstitute_3F_B/border.bin",
@@ -4464,7 +4464,7 @@
     {
       "id": "LAYOUT_LITTLEROOT_TOWN_WEATHER_INSTITUTE_3F_C",
       "name": "LittlerootTown_WeatherInstitute_3F_C_Layout",
-      "width": 10,
+      "width": 11,
       "height": 10,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_MysteryEventsHouse",
