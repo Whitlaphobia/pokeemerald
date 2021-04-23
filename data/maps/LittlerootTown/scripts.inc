@@ -28,7 +28,12 @@ LittlerootTown_EventScript_FishermanonBreak:: @ 81E8151
 	msgbox LittlerootTown_Text_FishermanonLeave, MSGBOX_DEFAULT
 	release
 	end
-
+LittlerootTown_EventScript_Wingull:: @ 81E8151
+	lock
+	faceplayer
+	msgbox LittlerootTown_Text_WingullSound, MSGBOX_DEFAULT
+	release
+	end
 
 LittlerootTown_EventScript_LaprasTrainingBag:: @ 81E8151
 	msgbox LittlerootTown_Text_ThisBagContains, MSGBOX_SIGN
@@ -76,3 +81,6 @@ LittlerootTown_Text_FishermanonLeave: @ 81E8D32
 	.string "Things aren't so easy for us fishermen.\n"
 	.string "The storms here can be really nasty.\p"
 	.string "Is this career really for me?$"
+
+	LittlerootTown_Text_WingullSound: @ 81E8D32
+	.string "Pyyooo!$"
