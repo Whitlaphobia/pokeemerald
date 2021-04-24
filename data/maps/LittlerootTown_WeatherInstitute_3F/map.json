@@ -77,7 +77,7 @@
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "LittlerootTown_WeatherInstitute_3F_EventScript_BigWindow3F"
     },
     {
       "type": "sign",
@@ -101,7 +101,7 @@
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_WeatherInstitute_3F_EventScript_BigWindow3F"
+      "script": "LittlerootTown_WeatherInstitute_3F_EventScript_KeanuWindow"
     },
     {
       "type": "sign",
@@ -117,7 +117,7 @@
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "LittlerootTown_WeatherInstitute_3F_EventScript_SmallWindow3F"
     },
     {
       "type": "sign",
@@ -125,7 +125,7 @@
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "LittlerootTown_WeatherInstitute_3F_EventScript_SmallWindow3F"
     },
     {
       "type": "sign",
@@ -133,7 +133,7 @@
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "LittlerootTown_WeatherInstitute_3F_EventScript_SmallWindow3F"
     },
     {
       "type": "sign",
@@ -141,7 +141,7 @@
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "LittlerootTown_WeatherInstitute_3F_EventScript_SmallWindow3F"
     },
     {
       "type": "sign",
@@ -149,7 +149,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "LittlerootTown_WeatherInstitute_3F_EventScript_Barometers3F"
     },
     {
       "type": "sign",
@@ -157,7 +157,7 @@
       "y": 4,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "LittlerootTown_WeatherInstitute_3F_EventScript_Barometers3F"
     },
     {
       "type": "sign",
@@ -165,7 +165,7 @@
       "y": 4,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "LittlerootTown_WeatherInstitute_3F_EventScript_Barometers3F"
     }
   ]
 }

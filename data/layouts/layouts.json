@@ -4444,30 +4444,30 @@
     {
       "id": "LAYOUT_LITTLEROOT_TOWN_WEATHER_INSTITUTE_3F_A",
       "name": "LittlerootTown_WeatherInstitute_3F_A_Layout",
-      "width": 13,
-      "height": 10,
+      "width": 27,
+      "height": 18,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PokemonCenter",
+      "secondary_tileset": "gTileset_PokemonSchool",
       "border_filepath": "data/layouts/LittlerootTown_WeatherInstitute_3F_A/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown_WeatherInstitute_3F_A/map.bin"
     },
     {
       "id": "LAYOUT_LITTLEROOT_TOWN_WEATHER_INSTITUTE_3F_B",
       "name": "LittlerootTown_WeatherInstitute_3F_B_Layout",
-      "width": 15,
-      "height": 6,
+      "width": 34,
+      "height": 18,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_InsideShip",
+      "secondary_tileset": "gTileset_OceanicMuseum",
       "border_filepath": "data/layouts/LittlerootTown_WeatherInstitute_3F_B/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown_WeatherInstitute_3F_B/map.bin"
     },
     {
       "id": "LAYOUT_LITTLEROOT_TOWN_WEATHER_INSTITUTE_3F_C",
       "name": "LittlerootTown_WeatherInstitute_3F_C_Layout",
-      "width": 11,
-      "height": 10,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_MysteryEventsHouse",
+      "width": 25,
+      "height": 19,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_PokemonDayCare",
       "border_filepath": "data/layouts/LittlerootTown_WeatherInstitute_3F_C/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown_WeatherInstitute_3F_C/map.bin"
     },
@@ -4480,6 +4480,16 @@
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/LittlerootTown_UnderseaTours_1F/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown_UnderseaTours_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_LITTLEROOT_TOWN_STUDIO_VINCENT_1F",
+      "name": "LittlerootTown_StudioVincent_1F_Layout",
+      "width": 10,
+      "height": 6,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/LittlerootTown_StudioVincent_1F/border.bin",
+      "blockdata_filepath": "data/layouts/LittlerootTown_StudioVincent_1F/map.bin"
     }
   ]
 }
