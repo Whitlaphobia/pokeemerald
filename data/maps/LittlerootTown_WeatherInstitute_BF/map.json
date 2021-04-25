@@ -196,7 +196,7 @@
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_WeatherInstitute_BF_EventScript_Thermostat"
+      "script": "LittlerootTown_WeatherInstitute_BF_EventScript_CraneHook"
     },
     {
       "type": "sign",
