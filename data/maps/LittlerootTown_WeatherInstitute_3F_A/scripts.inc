@@ -64,7 +64,7 @@ LittlerootTown_WeatherInstitute_3F_A_Text_CornerPunishment: @ 81E8ACF
 	.string "You should take one too!$"
 
 LittlerootTown_WeatherInstitute_3F_A_Text_KeenerWorking: @ 81E8ACF
-	.string "When I'm getting perfect\n
+	.string "When I'm getting perfect\n"
 	.string "on my classwork,\p"
 	.string "it means I need \n"
 	.string "more of a challenge!$"

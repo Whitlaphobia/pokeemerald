@@ -56,7 +56,7 @@ LittlerootTown_UnderseaTours_1F_Text_WelcomeIn: @ 81E8ACF
 	.string "Hi there!\p"
 	.string "Sorry that I can't \n"
 	.string "do anything yet\p"
-	.string "The water has leaked out of them.$"
+	.string "The script just doesn't exist!.$"
 
 LittlerootTown_UnderseaTours_1F_Text_FullofDefective: @ 81E8ACF
 	.string "It's full of defective\n"
