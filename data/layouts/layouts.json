@@ -4490,6 +4490,26 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/LittlerootTown_StudioVincent_1F/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown_StudioVincent_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_LITTLEROOT_TOWN_INTRO_SHIP",
+      "name": "LittlerootTown_IntroShip_Layout",
+      "width": 28,
+      "height": 16,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Facility",
+      "border_filepath": "data/layouts/LittlerootTown_IntroShip/border.bin",
+      "blockdata_filepath": "data/layouts/LittlerootTown_IntroShip/map.bin"
+    },
+    {
+      "id": "LAYOUT_LITTLEROOT_TOWN_INTRO_SHIP_ROOM",
+      "name": "LittlerootTown_IntroShip_Room_Layout",
+      "width": 8,
+      "height": 6,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_InsideShip",
+      "border_filepath": "data/layouts/LittlerootTown_IntroShip_Room/border.bin",
+      "blockdata_filepath": "data/layouts/LittlerootTown_IntroShip_Room/map.bin"
     }
   ]
 }

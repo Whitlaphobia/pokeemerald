@@ -1076,3 +1076,7 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/LittlerootTown_UnderseaTours_1F/scripts.inc"
 
 	.include "data/maps/LittlerootTown_StudioVincent_1F/scripts.inc"
+
+	.include "data/maps/LittlerootTown_IntroShip/scripts.inc"
+
+	.include "data/maps/LittlerootTown_IntroShip_Room/scripts.inc"

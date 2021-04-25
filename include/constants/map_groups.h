@@ -74,6 +74,8 @@
 #define MAP_LITTLEROOT_TOWN_WEATHER_INSTITUTE_3F_C (10 | (1 << 8))
 #define MAP_LITTLEROOT_TOWN_UNDERSEA_TOURS_1F      (11 | (1 << 8))
 #define MAP_LITTLEROOT_TOWN_STUDIO_VINCENT_1F      (12 | (1 << 8))
+#define MAP_LITTLEROOT_TOWN_INTRO_SHIP             (13 | (1 << 8))
+#define MAP_LITTLEROOT_TOWN_INTRO_SHIP_ROOM        (14 | (1 << 8))
 
 // Map Group 2
 #define MAP_OLDALE_TOWN_HOUSE1            (0 | (2 << 8))

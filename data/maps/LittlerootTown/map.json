@@ -284,6 +284,13 @@
       "elevation": 0,
       "dest_map": "MAP_LITTLEROOT_TOWN_STUDIO_VINCENT_1F",
       "dest_warp_id": 0
+    },
+    {
+      "x": 9,
+      "y": 11,
+      "elevation": 0,
+      "dest_map": "MAP_LITTLEROOT_TOWN_INTRO_SHIP",
+      "dest_warp_id": 0
     }
   ],
   "coord_events": [
