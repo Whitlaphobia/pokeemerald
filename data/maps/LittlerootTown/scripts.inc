@@ -1,6 +1,142 @@
+.set LOCALID_OLDMAN, 10
+.set LOCALID_SIDNEY, 13
+.set LOCALID_MOVINGVIGROTH, 3
+.set LOCALID_SHIP, 9
+
 
 LittlerootTown_MapScripts:: @ 81E7DCB
 	.byte 0
+
+
+LittlerootTown_Movement_LeftOne: @ 81E7F98
+	walk_left
+	step_end
+
+LittlerootTown_Movement_UpOne: @ 81E7F98
+	walk_up
+	faceplayer
+	step_end
+
+LittlerootTown_Movement_DownOne: @ 81E7F98
+	walk_down
+	step_end
+
+LittlerootTown_Movement_FaceRight: @ 81E7F98
+	face_right
+	step_end
+
+
+LittlerootTown_Movement_LeavePort: @ 81E7F98
+	walk_left
+	walk_left
+	walk_fast_left
+	walk_fast_left
+	walk_fastest_left
+	walk_fastest_left
+	walk_fastest_left
+	walk_fastest_left
+	set_invisible
+	step_end
+
+LittlerootTown_Movement_MovingIn: @ 81E7F98
+	walk_fast_right
+	walk_fast_right
+	walk_fast_right
+	walk_fast_down
+	walk_fast_down
+	walk_fastest_right
+	walk_fastest_right
+	walk_fastest_right
+	walk_fastest_right
+	walk_fastest_right
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	set_invisible
+	step_end
+
+LittlerootTown_Movement_VigMove: @ 81E7F98
+	walk_fastest_right
+	walk_fastest_right
+	walk_fastest_right
+	walk_fastest_right
+	walk_fastest_right
+	walk_fastest_right
+	walk_fastest_right
+	walk_fastest_right
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	walk_fastest_up
+	set_invisible
+	step_end
+
+LittlerootTown_Movement_ExitDock: @ 81E7F98
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+LittlerootTown_Text_SidneyPortGreeting: @ 81E8D32
+	.string "Hope you enjoyed\n"
+	.string "the trip over!\p"
+	.string "We'll have you moved in\n"
+	.string "in no time!$"
+
+LittlerootTown_Text_VigrothGreeting: @ 81E8D32
+	.string "GROOOOW!$"
+
+LittlerootTown_EventScript_ShipExit:: @ 81E8151
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_FaceRight
+	applymovement LOCALID_SIDNEY, Common_Movement_ExclamationMark
+	delay 20
+	msgbox LittlerootTown_Text_SidneyPortGreeting, MSGBOX_SIGN
+	delay 40
+	applymovement LOCALID_SIDNEY, LittlerootTown_Movement_MovingIn
+	delay 20
+	applymovement LOCALID_MOVINGVIGROTH, LittlerootTown_Movement_VigMove
+	msgbox LittlerootTown_Text_VigrothGreeting, MSGBOX_SIGN
+	delay 60
+	applymovement LOCALID_SHIP, LittlerootTown_Movement_LeavePort
+	delay 70
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_ExitDock
+	delay 200
+	applymovement LOCALID_OLDMAN, LittlerootTown_Movement_DownOne
+	return
+
+
+
+
+
+
+
+
 
 
 LittlerootTown_EventScript_TownSign:: @ 81E8151
