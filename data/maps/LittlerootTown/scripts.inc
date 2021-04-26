@@ -2,6 +2,7 @@
 .set LOCALID_SIDNEY, 13
 .set LOCALID_MOVINGVIGROTH, 3
 .set LOCALID_SHIP, 9
+.set LOCALID_VINCENT, 14
 
 
 LittlerootTown_MapScripts:: @ 81E7DCB
@@ -14,7 +15,6 @@ LittlerootTown_Movement_LeftOne: @ 81E7F98
 
 LittlerootTown_Movement_UpOne: @ 81E7F98
 	walk_up
-	faceplayer
 	step_end
 
 LittlerootTown_Movement_DownOne: @ 81E7F98
@@ -112,11 +112,14 @@ LittlerootTown_Text_SidneyPortGreeting: @ 81E8D32
 LittlerootTown_Text_VigrothGreeting: @ 81E8D32
 	.string "GROOOOW!$"
 
+
+
 LittlerootTown_EventScript_ShipExit:: @ 81E8151
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_FaceRight
 	applymovement LOCALID_SIDNEY, Common_Movement_ExclamationMark
 	delay 20
 	msgbox LittlerootTown_Text_SidneyPortGreeting, MSGBOX_SIGN
+	applymovement LOCALID_OLDMAN, LittlerootTown_Movement_UpOne
 	delay 40
 	applymovement LOCALID_SIDNEY, LittlerootTown_Movement_MovingIn
 	delay 20
@@ -125,10 +128,12 @@ LittlerootTown_EventScript_ShipExit:: @ 81E8151
 	delay 60
 	applymovement LOCALID_SHIP, LittlerootTown_Movement_LeavePort
 	delay 70
+	setflag FLAG_HIDE_SIDNEY_PORT
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_ExitDock
 	delay 200
 	applymovement LOCALID_OLDMAN, LittlerootTown_Movement_DownOne
-	return
+	setvar VAR_TEMP_0, 1
+	end
 
 
 
@@ -178,11 +183,55 @@ LittlerootTown_EventScript_YoungsterDavidGreeting:: @ 81E8151
 	release
 	end
 
+
+LittlerootTown_Movement_VincentLeave:
+	walk_down
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	set_invisible
+	step_end
+
+LittlerootTown_Movement_VincentPush:
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_left
+	step_end
+
+
 LittlerootTown_EventScript_VincentWelcome:: @ 81E8151
-	lock
-	faceplayer
-	msgbox LittlerootTown_Text_ItMustBeTough, MSGBOX_DEFAULT
-	release
+
+	applymovement LOCALID_VINCENT, Common_Movement_ExclamationMark
+	delay 20
+	msgbox LittlerootTown_Text_HeyWatchIt, MSGBOX_SIGN
+	delay 20
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_LeftOne
+	delay 20
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_FaceRight
+	applymovement LOCALID_VINCENT, LittlerootTown_Movement_VincentPush
+	delay 40
+	msgbox LittlerootTown_Text_ItMustBeTough, MSGBOX_SIGN
+	delay 40
+	applymovement LOCALID_VINCENT, LittlerootTown_Movement_VincentLeave
+	setvar VAR_TEMP_0, 2
+	setflag FLAG_MET_VINCENT
 	end
 
 
@@ -291,8 +340,17 @@ LittlerootTown_Text_SidneyWelcome: @ 81E8ACF
 	.string "I'll have your stuff moved in in no time.\p"
 	.string "We should be done before you finish \n"
 	.string "your orientation.$"
+
+LittlerootTown_Text_HeyWatchIt: @ 81E8ACF
+	.string "HEY!!\p"
+	.string "You're trodding on the\n"
+	.string "flowers I was painting!$"
+
 LittlerootTown_Text_ItMustBeTough: @ 81E8ACF
-	.string "Oh, you just moved in?\n"
+	.string "...\p"
+	.string "Oh, you just moved in?\p"
+	.string "...\p"
+	.string "Well...\n"
 	.string "I'm quite sure you'll love it here.\p"
 	.string "Though it can be hard moving to a \n"
 	.string "new place where you don't know anyone...\p"
