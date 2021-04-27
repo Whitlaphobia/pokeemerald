@@ -29,21 +29,21 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
-      "x": 15,
-      "y": 12,
+      "x": 9,
+      "y": 10,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "LittlerootTown_WeatherInstitute_3F_C_EventScript_SwabluBall",
+      "flag": "FLAG_GOT_POKEMON"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_CYNDAQUIL_DOLL",
-      "x": 8,
-      "y": 10,
+      "x": 11,
+      "y": 9,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -120,8 +120,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SIDNEY",
-      "x": 2,
-      "y": 4,
+      "x": 1,
+      "y": 0,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
@@ -129,27 +129,70 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "0"
+      "flag": "FLAG_TEMP_1"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_2",
+      "x": 10,
+      "y": 11,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LittlerootTown_WeatherInstitute_3F_C_EventScript_TakeYourTimeWithIt",
+      "flag": "FLAG_GOT_POKEMON"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
+      "x": 8,
+      "y": 10,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "LittlerootTown_WeatherInstitute_3F_C_EventScript_CastformBall",
+      "flag": "FLAG_GOT_POKEMON"
     }
   ],
   "warp_events": [
     {
       "x": 9,
-      "y": 13,
+      "y": 14,
       "elevation": 0,
       "dest_map": "MAP_LITTLEROOT_TOWN_WEATHER_INSTITUTE_3F",
       "dest_warp_id": 5
     },
     {
       "x": 10,
-      "y": 13,
+      "y": 14,
       "elevation": 0,
       "dest_map": "MAP_LITTLEROOT_TOWN_WEATHER_INSTITUTE_3F",
       "dest_warp_id": 5
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_UNUSED_0x40E5",
+      "var_value": "0",
+      "script": "LittlerootTown_WeatherInstitute_3F_C_EventScript_StarterPokemonSequence"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
+      "y": 13,
+      "elevation": 0,
+      "var": "VAR_UNUSED_0x40E5",
+      "var_value": "0",
+      "script": "LittlerootTown_WeatherInstitute_3F_C_EventScript_StarterPokemonSequence"
+    }
   ],
   "bg_events": [
     {

@@ -43,8 +43,8 @@
 
 #define FLAG_HIDE_SIDNEY_PORT    0x20 // Unused Flag
 #define FLAG_MET_VINCENT    0x21 // Unused Flag
-#define FLAG_UNUSED_0x022    0x22 // Unused Flag
-#define FLAG_UNUSED_0x023    0x23 // Unused Flag
+#define FLAG_MET_DRAKE    0x22 // Unused Flag
+#define FLAG_GOT_POKEMON    0x23 // Unused Flag
 #define FLAG_UNUSED_0x024    0x24 // Unused Flag
 #define FLAG_UNUSED_0x025    0x25 // Unused Flag
 #define FLAG_UNUSED_0x026    0x26 // Unused Flag

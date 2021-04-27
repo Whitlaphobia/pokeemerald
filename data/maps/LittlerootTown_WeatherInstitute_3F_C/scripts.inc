@@ -1,3 +1,7 @@
+.set LOCALID_BALL_CASTFORM, 2
+.set LOCALID_BALL_SWABLU, 11
+.set LOCALID_AIDE, 10
+
 LittlerootTown_WeatherInstitute_3F_C_MapScripts::
 	.byte 0
 
@@ -70,3 +74,127 @@ LittlerootTown_WeatherInstitute_3F_C_Text_PokemonDaycare: @ 81E8ACF
 	.string "It's very lifelike,\n"
 	.string "but it's actually just a doll.\p"
 	.string "Cyndaquil sure is cute!$"
+
+
+
+
+ LittlerootTown_WeatherInstitute_3F_C_Text_YoullTakeCastform:
+	.string "You'll take CASTFORM,\n"
+	.string "the forecast pokemon?$"
+
+LittlerootTown_WeatherInstitute_3F_C_Text_YoullTakeSwablu:
+	.string "You'll take SWABLU,\n"
+	.string "cloud bird pokemon?$"
+
+
+LittlerootTown_WeatherInstitute_3F_C_EventScript_SwabluBall:: @ 81F9FBB
+	release
+	setflag FLAG_SYS_POKEMON_GET
+	showmonpic SPECIES_SWABLU, 10, 3
+	msgbox LittlerootTown_WeatherInstitute_3F_C_Text_YoullTakeSwablu, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq LittlerootTown_WeatherInstitute_3F_C_EventScript_TakeYourTime
+	goto LittlerootTown_WeatherInstitute_3F_C_EventScript_GiveSwablu
+	end
+
+LittlerootTown_WeatherInstitute_3F_C_EventScript_CastformBall:: @ 81F9FBB
+	release
+	setflag FLAG_SYS_POKEMON_GET
+	showmonpic SPECIES_CASTFORM, 10, 3
+	msgbox LittlerootTown_WeatherInstitute_3F_C_Text_YoullTakeCastform, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq LittlerootTown_WeatherInstitute_3F_C_EventScript_TakeYourTime
+	goto LittlerootTown_WeatherInstitute_3F_C_EventScript_GiveCastform
+	end
+
+
+
+LittlerootTown_WeatherInstitute_3F_C_EventScript_GiveCastform:: @ 81FA06C
+		bufferspeciesname 0, SPECIES_CASTFORM
+		setvar VAR_TEMP_1, SPECIES_CASTFORM
+		givemon SPECIES_CASTFORM, 5, ITEM_NONE
+		goto LittlerootTown_WeatherInstitute_3F_C_EventScript_SendCastformToParty
+		hidemonpic
+		end
+
+
+
+LittlerootTown_WeatherInstitute_3F_C_EventScript_GiveSwablu:: @ 81FA06C
+		bufferspeciesname 0, SPECIES_SWABLU
+		setvar VAR_TEMP_1, SPECIES_SWABLU
+		givemon SPECIES_SWABLU, 5, ITEM_NONE
+		goto LittlerootTown_WeatherInstitute_3F_C_EventScript_SendSwabluToParty
+		hidemonpic
+		end
+
+LittlerootTown_WeatherInstitute_3F_C_EventScript_SendCastformToParty:: @ 81FA0A1
+	removeobject LOCALID_BALL_CASTFORM
+	removeobject LOCALID_BALL_SWABLU
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq LittlerootTown_WeatherInstitute_3F_C_EventScript_ReceivedCastform
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto LittlerootTown_WeatherInstitute_3F_C_EventScript_ReceivedCastform
+	end
+
+LittlerootTown_WeatherInstitute_3F_C_EventScript_SendSwabluToParty:: @ 81FA0A1
+	removeobject LOCALID_BALL_SWABLU
+	removeobject LOCALID_BALL_CASTFORM
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq LittlerootTown_WeatherInstitute_3F_C_EventScript_ReceivedSwablu
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto LittlerootTown_WeatherInstitute_3F_C_EventScript_ReceivedSwablu
+	
+	end
+
+LittlerootTown_WeatherInstitute_3F_C_EventScript_ReceivedCastform:: @ 81FA0FD
+	hidemonpic
+	msgbox LittlerootTown_WeatherInstitute_3F_C_Text_HeadOnDown, MSGBOX_DEFAULT
+	releaseall
+	setflag FLAG_GOT_POKEMON
+	end
+
+LittlerootTown_WeatherInstitute_3F_C_EventScript_ReceivedSwablu:: @ 81FA0FD
+	hidemonpic
+	msgbox LittlerootTown_WeatherInstitute_3F_C_Text_HeadOnDown, MSGBOX_DEFAULT
+	releaseall
+	setflag FLAG_GOT_POKEMON
+	end
+
+
+LittlerootTown_WeatherInstitute_3F_C_EventScript_TakeYourTime:: @ 81FA061
+	hidemonpic
+	msgbox LittlerootTown_WeatherInstitute_3F_C_Text_BothGood, MSGBOX_DEFAULT
+	releaseall
+	end
+
+ LittlerootTown_WeatherInstitute_3F_C_Text_HeadOnDown:
+	.string "Fantastic!\n"
+	.string "Head on down to see Dr.Drake.$"
+
+ LittlerootTown_WeatherInstitute_3F_C_Text_BothGood:
+	.string "Take your time, both\n"
+	.string "options are equally good!$"
+
+
+LittlerootTown_WeatherInstitute_3F_C_EventScript_StarterPokemonSequence::
+	turnobject LOCALID_AIDE, DIR_SOUTH
+	delay 20
+	msgbox LittlerootTown_WeatherInstitute_3F_C_Text_ComeonOver,MSGBOX_SIGN
+	setvar VAR_UNUSED_0x40E5, 1
+	end
+
+ LittlerootTown_WeatherInstitute_3F_C_Text_ComeonOver:
+	.string "Come on over and pick out \n"
+	.string "your partner!$"
+
+LittlerootTown_WeatherInstitute_3F_C_EventScript_TakeYourTimeWithIt:: @ 81E8151
+	lock
+	faceplayer
+	msgbox LittlerootTown_WeatherInstitute_3F_C_Text_BothGood, MSGBOX_DEFAULT
+	release
+	end
+

@@ -1,14 +1,12 @@
-.set LOCALID_AIDE, 1
-.set LOCALID_BIRCH, 2
+.set LOCALID_AIDE2, 1
+.set LOCALID_DRAKE, 2
 .set LOCALID_RIVAL, 3
 .set LOCALID_BALL_CYNDAQUIL, 4
 .set LOCALID_BALL_TOTODILE, 5
 .set LOCALID_BALL_CHIKORITA, 6
 
 LittlerootTown_ProfessorBirchsLab_MapScripts:: @ 81F9C91
-	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_ProfessorBirchsLab_OnTransition
-	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, LittlerootTown_ProfessorBirchsLab_OnWarp
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, LittlerootTown_ProfessorBirchsLab_OnFrame
+	
 	.byte 0
 
 	@ State descriptions for VAR_DEX_UPGRADE_JOHTO_STARTER_STATE
@@ -25,6 +23,146 @@ LittlerootTown_ProfessorBirchsLab_MapScripts:: @ 81F9C91
 	@ 3: Received starter in lab
 	@ 4: Defeated rival on Route 103
 	@ 5: Received pokedex
+
+LittlerootTown_ProfessorBirchsLab_Movement_DrakeNotice:
+	walk_down
+	walk_down
+	walk_left
+	walk_down
+	step_end
+
+LittlerootTown_ProfessorBirchsLab_Movement_DrakeLeaves:
+	walk_left
+	walk_down
+	walk_down
+	walk_down
+	walk_down
+	set_invisible
+	step_end
+
+LittlerootTown_ProfessorBirchsLab_Movement_AideNotice:
+	walk_down
+	walk_down
+	walk_right
+	walk_right
+	walk_down
+	step_end
+
+LittlerootTown_ProfessorBirchsLab_Movement_AideLeaves:
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_left
+	walk_up
+	walk_up
+	walk_up
+	walk_up
+	set_invisible
+	step_end
+
+
+LittlerootTown_ProfessorBirchsLab_Text_WelcomeOrientation:
+	.string "Oh hello!\n"
+	.string "Didn't notice you coming in!\p"
+	.string "You're {PLAYER}, here for your\n"
+	.string "orientation right?\p"
+	.string "Wonderful!\p"
+	.string "Excuse me, I have some urgent\n"
+	.string "matters to attend to.\p"
+	.string "Please speak to my AIDE here\n"
+	.string "to get started.\p"
+	.string "I'll be back to brief you shortly.$"
+
+
+LittlerootTown_ProfessorBirchsLab_Text_DraketoAide:
+	.string "And you're sure that this is\n"
+	.string "a credible report?\p"
+	.string "Of course I understand the\n"
+	.string "significance but we cannot keep\p"
+	.string "chasing red herrings when we\n"
+	.string "have people to help!$"
+
+LittlerootTown_ProfessorBirchsLab_Text_OrientationQuestion:
+	.string "Are you familiar with\n"
+	.string "what we do here already?\p"
+	.string "Have you read our orientation\n"
+	.string "materials already?\p"
+	.string "(Hint, hint)$"
+
+LittlerootTown_ProfessorBirchsLab_Movement_LeftOne:
+	walk_left
+	step_end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_DrakeMeeting::
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_DraketoAide, MSGBOX_SIGN
+	delay 20
+	applymovement LOCALID_DRAKE, Common_Movement_ExclamationMark
+	delay 20
+	applymovement LOCALID_DRAKE, LittlerootTown_ProfessorBirchsLab_Movement_DrakeNotice
+	delay 80
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_WelcomeOrientation, MSGBOX_SIGN
+	delay 100
+	applymovement LOCALID_DRAKE, LittlerootTown_ProfessorBirchsLab_Movement_DrakeLeaves
+	delay 100
+	applymovement LOCALID_AIDE2, LittlerootTown_ProfessorBirchsLab_Movement_AideNotice
+	delay 20
+	
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_OrientationQuestion, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq LittlerootTown_ProfessorBirchsLab_EventScript_AideLeaves
+	compare VAR_RESULT, NO
+	goto_if_eq LittlerootTown_ProfessorBirchsLab_EventScript_OrientationSpeech
+	setvar VAR_TEMP_0, 3
+	setflag FLAG_MET_DRAKE
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_AideLeaves::
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_WonderfulMeet, MSGBOX_SIGN
+	delay 20
+	applymovement LOCALID_AIDE2, LittlerootTown_ProfessorBirchsLab_Movement_AideLeaves
+	delay 20
+	setvar VAR_UNUSED_0x8014, 1
+	setflag FLAG_MET_DRAKE
+	return
+
+LittlerootTown_ProfessorBirchsLab_EventScript_OrientationSpeech::
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_HereAtTheInstitute, MSGBOX_SIGN
+	delay 20
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_WonderfulMeet, MSGBOX_SIGN
+	delay 20
+	applymovement LOCALID_AIDE2, LittlerootTown_ProfessorBirchsLab_Movement_AideLeaves
+	setvar VAR_UNUSED_0x8014, 1
+	setflag FLAG_MET_DRAKE
+	return
+
+LittlerootTown_ProfessorBirchsLab_Text_HereAtTheInstitute:
+	.string "As you likely know,\n"
+	.string "the regions of the world have been\p"
+	.string "facing worse and worse weather\n"
+	.string "over the last few decades.\p"
+	.string "As a result, our work has expanded\n"
+	.string "beyond just research to also\p"
+	.string "involve disaster relief and \n"
+	.string "rescue operations.\p"
+	.string "We train people to help out our\n"
+	.string "communities and gather data on\p"
+	.string "our changing climate together\n"
+	.string "With their pokemon.\p"
+	.string "We provide housing, training, support,\n"
+	.string "and specially bred pokemon adapted\p"
+	.string "to extreme weather conditions.$"
+
+LittlerootTown_ProfessorBirchsLab_Text_WonderfulMeet:
+ 	.string "Wonderful!\p"
+	.string "Feel free to look around our facility\n"
+	.string "and meet me on the third floor when\p"
+	.string "you're ready to pick out your partner!$"
 
 LittlerootTown_ProfessorBirchsLab_OnTransition: @ 81F9CA1
 	call Common_EventScript_SetupRivalGfxId
@@ -81,8 +219,6 @@ LittlerootTown_ProfessorBirchsLab_EventScript_SetObjectPosForDexUpgrade:: @ 81F9
 	setobjectxy LOCALID_RIVAL, 5, 5
 	turnobject LOCALID_BIRCH, DIR_SOUTH
 	setobjectxy LOCALID_BIRCH, 6, 4
-	turnobject LOCALID_AIDE, DIR_EAST
-	setobjectxy LOCALID_AIDE, 10, 10
 	end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_AddRivalObject:: @ 81F9D71

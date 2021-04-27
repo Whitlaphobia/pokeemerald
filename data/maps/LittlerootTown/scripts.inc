@@ -115,6 +115,8 @@ LittlerootTown_Text_VigrothGreeting: @ 81E8D32
 
 
 LittlerootTown_EventScript_ShipExit:: @ 81E8151
+
+	setflag FLAG_SYS_POKEDEX_GET
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_FaceRight
 	applymovement LOCALID_SIDNEY, Common_Movement_ExclamationMark
 	delay 20
