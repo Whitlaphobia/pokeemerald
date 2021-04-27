@@ -14,6 +14,22 @@ LittlerootTown_BrendansHouse_1F_OnLoad: @ 81F7765
 	call_if_set FLAG_RECEIVED_RUNNING_SHOES, LittlerootTown_BrendansHouse_1F_EventScript_CheckShowShoesManual
 	end
 
+
+
+
+LittlerootTown_BrendansHouse_1F_EventScript_Unfinished::
+	msgbox LittlerootTown_BrendansHouse_1F_Text_Sorry,MSGBOX_SIGN
+	setvar VAR_TEMP_0,1
+	end
+
+
+LittlerootTown_BrendansHouse_1F_Text_Sorry:
+	.string "Sorry! This building\n"
+	.string "is not finished.\p"
+	.string "Feel free to look\n"
+	.string "at the map though!$"
+
+
 LittlerootTown_BrendansHouse_1F_EventScript_SetMovingBoxes:: @ 81F777A
 	setmetatile 5, 4, METATILE_BrendansMaysHouse_MovingBox_Open, 1
 	setmetatile 5, 2, METATILE_BrendansMaysHouse_MovingBox_Closed, 1

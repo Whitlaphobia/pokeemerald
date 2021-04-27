@@ -8,6 +8,22 @@ LittlerootTown_MaysHouse_1F_MapScripts:: @ 81F88A5
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, LittlerootTown_MaysHouse_1F_OnFrame
 	.byte 0
 
+
+
+
+LittlerootTown_MaysHouse_1F_EventScript_Unfinished::
+	msgbox LittlerootTown_MaysHouse_1F_Text_Sorry,MSGBOX_SIGN
+	setvar VAR_TEMP_0,1
+	end
+
+
+LittlerootTown_MaysHouse_1F_Text_Sorry:
+	.string "Sorry! This building\n"
+	.string "is not finished.\p"
+	.string "Feel free to look\n"
+	.string "at the map though!$"
+
+
 LittlerootTown_MaysHouse_1F_OnLoad: @ 81F88B5
 	compare VAR_LITTLEROOT_INTRO_STATE, 6
 	call_if_lt LittlerootTown_MaysHouse_1F_EventScript_SetMovingBoxes

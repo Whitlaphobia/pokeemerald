@@ -534,10 +534,10 @@
     {
       "id": "LAYOUT_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F",
       "name": "LittlerootTown_BrendansHouse_1F_Layout",
-      "width": 11,
-      "height": 9,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "width": 14,
+      "height": 12,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/LittlerootTown_BrendansHouse_1F/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown_BrendansHouse_1F/map.bin"
     },
@@ -554,10 +554,10 @@
     {
       "id": "LAYOUT_LITTLEROOT_TOWN_MAYS_HOUSE_1F",
       "name": "LittlerootTown_MaysHouse_1F_Layout",
-      "width": 11,
-      "height": 9,
-      "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "width": 13,
+      "height": 10,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/LittlerootTown_MaysHouse_1F/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown_MaysHouse_1F/map.bin"
     },
@@ -4510,6 +4510,16 @@
       "secondary_tileset": "gTileset_InsideShip",
       "border_filepath": "data/layouts/LittlerootTown_IntroShip_Room/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown_IntroShip_Room/map.bin"
+    },
+    {
+      "id": "LAYOUT_LITTLEROOT_TOWN_WEATHER_BARRACKS_1F",
+      "name": "LittlerootTown_WeatherBarracks_1F_Layout",
+      "width": 54,
+      "height": 27,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/LittlerootTown_WeatherBarracks_1F/border.bin",
+      "blockdata_filepath": "data/layouts/LittlerootTown_WeatherBarracks_1F/map.bin"
     }
   ]
 }

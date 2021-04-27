@@ -155,6 +155,7 @@ LittlerootTown_WeatherInstitute_3F_C_EventScript_ReceivedCastform:: @ 81FA0FD
 	msgbox LittlerootTown_WeatherInstitute_3F_C_Text_HeadOnDown, MSGBOX_DEFAULT
 	releaseall
 	setflag FLAG_GOT_POKEMON
+	warpsilent MAP_LITTLEROOT_TOWN_WEATHER_INSTITUTE_3F_C, -3, 9,14
 	end
 
 LittlerootTown_WeatherInstitute_3F_C_EventScript_ReceivedSwablu:: @ 81FA0FD
@@ -162,6 +163,7 @@ LittlerootTown_WeatherInstitute_3F_C_EventScript_ReceivedSwablu:: @ 81FA0FD
 	msgbox LittlerootTown_WeatherInstitute_3F_C_Text_HeadOnDown, MSGBOX_DEFAULT
 	releaseall
 	setflag FLAG_GOT_POKEMON
+	warpsilent MAP_LITTLEROOT_TOWN_WEATHER_INSTITUTE_3F_C, 3, 9,14
 	end
 
 

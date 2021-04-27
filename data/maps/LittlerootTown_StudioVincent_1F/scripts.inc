@@ -145,6 +145,7 @@ LittlerootTown_StudioVincent_1F_EventScript_ReceivedSmeargle:: @ 81FA0FD
 	releaseall
 	setflag FLAG_GOT_POKEMON
 	setvar VAR_UNUSED_0x40E5, 1
+	warpsilent MAP_LITTLEROOT_TOWN_STUDIO_VINCENT_1F, 3, 4, 5
 	end
 
 LittlerootTown_StudioVincent_1F_Text_ThickAsThieves:

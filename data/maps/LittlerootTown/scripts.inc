@@ -8,6 +8,11 @@
 LittlerootTown_MapScripts:: @ 81E7DCB
 	.byte 0
 
+	
+
+LittlerootTown_EventScript_VariableFixPokemon2::
+	setvar VAR_TEMP_0,2
+	end
 
 LittlerootTown_Movement_LeftOne: @ 81E7F98
 	walk_left
@@ -112,7 +117,12 @@ LittlerootTown_Text_SidneyPortGreeting: @ 81E8D32
 LittlerootTown_Text_VigrothGreeting: @ 81E8D32
 	.string "GROOOOW!$"
 
-
+LittlerootTown_EventScript_VigHello::
+	lock
+	faceplayer
+	msgbox LittlerootTown_Text_VigrothGreeting, MSGBOX_DEFAULT
+	release
+	end
 
 LittlerootTown_EventScript_ShipExit:: @ 81E8151
 

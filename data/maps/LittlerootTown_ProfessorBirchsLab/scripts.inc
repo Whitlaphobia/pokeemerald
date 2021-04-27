@@ -40,6 +40,14 @@ LittlerootTown_ProfessorBirchsLab_Movement_DrakeLeaves:
 	set_invisible
 	step_end
 
+LittlerootTown_ProfessorBirchsLab_Movement_AdjustPlayer:
+	walk_right
+	step_end
+
+
+
+
+
 LittlerootTown_ProfessorBirchsLab_Movement_AideNotice:
 	walk_down
 	walk_down
@@ -99,7 +107,9 @@ LittlerootTown_ProfessorBirchsLab_Movement_LeftOne:
 	walk_left
 	step_end
 
+
 LittlerootTown_ProfessorBirchsLab_EventScript_DrakeMeeting::
+	setvar VAR_UNUSED_0x8014, 1
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_DraketoAide, MSGBOX_SIGN
 	delay 20
 	applymovement LOCALID_DRAKE, Common_Movement_ExclamationMark
@@ -118,7 +128,33 @@ LittlerootTown_ProfessorBirchsLab_EventScript_DrakeMeeting::
 	goto_if_eq LittlerootTown_ProfessorBirchsLab_EventScript_AideLeaves
 	compare VAR_RESULT, NO
 	goto_if_eq LittlerootTown_ProfessorBirchsLab_EventScript_OrientationSpeech
-	setvar VAR_TEMP_0, 3
+	setflag FLAG_MET_DRAKE
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_DrakeMeetingLeft::
+	setvar VAR_UNUSED_0x8014, 1
+	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_ProfessorBirchsLab_Movement_AdjustPlayer
+	delay 20
+	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
+	delay 20
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_DraketoAide, MSGBOX_SIGN
+	delay 20
+	applymovement LOCALID_DRAKE, Common_Movement_ExclamationMark
+	delay 20
+	applymovement LOCALID_DRAKE, LittlerootTown_ProfessorBirchsLab_Movement_DrakeNotice
+	delay 80
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_WelcomeOrientation, MSGBOX_SIGN
+	delay 100
+	applymovement LOCALID_DRAKE, LittlerootTown_ProfessorBirchsLab_Movement_DrakeLeaves
+	delay 100
+	applymovement LOCALID_AIDE2, LittlerootTown_ProfessorBirchsLab_Movement_AideNotice
+	delay 20
+	
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_OrientationQuestion, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq LittlerootTown_ProfessorBirchsLab_EventScript_AideLeaves
+	compare VAR_RESULT, NO
+	goto_if_eq LittlerootTown_ProfessorBirchsLab_EventScript_OrientationSpeech
 	setflag FLAG_MET_DRAKE
 	end
 
@@ -127,7 +163,6 @@ LittlerootTown_ProfessorBirchsLab_EventScript_AideLeaves::
 	delay 20
 	applymovement LOCALID_AIDE2, LittlerootTown_ProfessorBirchsLab_Movement_AideLeaves
 	delay 20
-	setvar VAR_UNUSED_0x8014, 1
 	setflag FLAG_MET_DRAKE
 	return
 
