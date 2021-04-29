@@ -1785,7 +1785,6 @@ static const u8 sTM50Desc[] = _(
     "attack, but sharply\n"
     "lowers Sp. Atk.");
 
-
 static const u8 sHM01Desc[] = _(
     "Attacks the foe\n"
     "with sharp blades\n"

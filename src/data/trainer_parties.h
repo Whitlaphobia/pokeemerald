@@ -108,16 +108,13 @@ static const struct TrainerMonNoItemDefaultMoves sParty_GruntPetalburgWoods[] = 
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Marcel[] = {
+static const struct TrainerMonItemCustomMoves sParty_YDavid1[] = {
     {
-    .iv = 100,
-    .lvl = 29,
-    .species = SPECIES_MANECTRIC,
-    },
-    {
-    .iv = 100,
-    .lvl = 29,
-    .species = SPECIES_SHIFTRY,
+    .iv = 10,
+    .lvl = 1,
+    .species = SPECIES_KECLEON,
+    .heldItem = ITEM_TOXIC_ORB,
+    .moves = {MOVE_ABSORB, MOVE_QUICK_ATTACK, MOVE_BUBBLE, MOVE_NUZZLE}
     }
 };
 

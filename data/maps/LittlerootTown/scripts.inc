@@ -188,6 +188,13 @@ LittlerootTown_EventScript_Wingull:: @ 81E8151
 	release
 	end
 
+LittlerootTown_EventScript_Kecleon:: @ 81E8151
+	lock
+	faceplayer
+	msgbox LittlerootTown_Text_KecleonSound, MSGBOX_DEFAULT
+	release
+	end
+
 LittlerootTown_EventScript_YoungsterDavidGreeting:: @ 81E8151
 	lock
 	faceplayer
@@ -229,7 +236,7 @@ LittlerootTown_Movement_VincentPush:
 
 
 LittlerootTown_EventScript_VincentWelcome:: @ 81E8151
-
+	setrespawn HEAL_LOCATION_LITTLEROOT_TOWN
 	applymovement LOCALID_VINCENT, Common_Movement_ExclamationMark
 	delay 20
 	msgbox LittlerootTown_Text_HeyWatchIt, MSGBOX_SIGN
@@ -389,6 +396,38 @@ LittlerootTown_Text_FishermanonLeave: @ 81E8D32
 
 	LittlerootTown_Text_WingullSound: @ 81E8D32
 	.string "PYYOOO!$"
+
+
+	LittlerootTown_Text_KecleonSound: @ 81E8D32
+	.string "...$"
+
+
+
+LittlerootTown_Text_YDavidIntro: @ 81E8ACF
+	.string "You have a pokemon now!\p"
+	.string "Let's have a battle\n"
+	.string "to keep warm!$"
+
+
+
+LittlerootTown_Text_YDavidDefeated: @ 81E8ACF
+	.string "You burned bright\n"
+	.string "like the sun.\n"
+	.string "Good thing I'm wearing shorts!$"
+
+LittlerootTown_Text_YDavidPostBattle: @ 81E8ACF
+	.string "Me and my KECLEON decide who\n"
+	.string "we are for ourselves.\n"
+	.string "That's why KECLEON changes type\n"
+	.string "according to its own moves, not its\p"
+	.string "oponenets'.$"
+
+	LittlerootTown_EventScript_YoungsterBattle::
+	trainerbattle_single TRAINER_YOUNGSTER_DAVID_1, LittlerootTown_Text_YDavidIntro, LittlerootTown_Text_YDavidDefeated
+	msgbox LittlerootTown_Text_YDavidPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+
 
 
 
