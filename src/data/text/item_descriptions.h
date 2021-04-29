@@ -1705,10 +1705,15 @@ static const u8 sTM34Desc[] = _(
     "jolt of electricity\n"
     "that never misses.");
 
+//static const u8 sTM35Desc[] = _(
+   // "Looses a stream of\n"
+   // "fire that may burn\n"
+   // "the foe.");
 static const u8 sTM35Desc[] = _(
-    "Looses a stream of\n"
-    "fire that may burn\n"
-    "the foe.");
+    "Enables a pokemon\n"
+    "to copy and learn\n"
+    "an oppponent's move.");
+
 
 static const u8 sTM36Desc[] = _(
     "Hurls sludge at the\n"
@@ -1784,6 +1789,7 @@ static const u8 sTM50Desc[] = _(
     "Enables full-power\n"
     "attack, but sharply\n"
     "lowers Sp. Atk.");
+
 
 static const u8 sHM01Desc[] = _(
     "Attacks the foe\n"

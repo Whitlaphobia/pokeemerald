@@ -110,7 +110,7 @@ LittlerootTown_WeatherInstitute_3F_A_EventScript_Whiteboard:: @ 81E8151
 
 LittlerootTown_WeatherInstitute_3F_A_EventScript_ChooseBlackboardTopic:: @ 81E8151
 	message LittlerootTown_WeatherInstitute_3F_A_Text_ReadWhichTopic
-	multichoicegrid 8, 1, MULTI_STATUS_INFO, 3, 0
+	multichoicegrid 3, 1, MULTI_EVSIVS_INFO, 3, 0
 	switch VAR_RESULT
 	case 0, LittlerootTown_WeatherInstitute_3F_A_EventScript_EffortValues
 	case 1, LittlerootTown_WeatherInstitute_3F_A_EventScript_IndividualValues

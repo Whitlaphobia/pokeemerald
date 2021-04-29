@@ -122,7 +122,7 @@ LittlerootTown_StudioVincent_1F_EventScript_VincentOffer:: @ 81F9FBB
 LittlerootTown_StudioVincent_1F_EventScript_GiveSmeargle:: @ 81FA06C
 		bufferspeciesname 0, SPECIES_SMEARGLE
 		setvar VAR_TEMP_1, SPECIES_SMEARGLE
-		givemon SPECIES_SMEARGLE, 5, ITEM_LAGGING_TAIL
+		givemon SPECIES_SMEARGLE, 5, ITEM_TM35_FLAMETHROWER
 		setflag FLAG_SYS_POKEMON_GET
 		goto LittlerootTown_StudioVincent_1F_EventScript_SendSmeargleToParty
 		hidemonpic

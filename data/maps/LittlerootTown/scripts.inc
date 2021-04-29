@@ -417,10 +417,10 @@ LittlerootTown_Text_YDavidDefeated: @ 81E8ACF
 
 LittlerootTown_Text_YDavidPostBattle: @ 81E8ACF
 	.string "Me and my KECLEON decide who\n"
-	.string "we are for ourselves.\n"
+	.string "we are for ourselves.\p"
 	.string "That's why KECLEON changes type\n"
 	.string "according to its own moves, not its\p"
-	.string "oponenets'.$"
+	.string "opponents'.$"
 
 	LittlerootTown_EventScript_YoungsterBattle::
 	trainerbattle_single TRAINER_YOUNGSTER_DAVID_1, LittlerootTown_Text_YDavidIntro, LittlerootTown_Text_YDavidDefeated
