@@ -24,7 +24,7 @@ LittlerootTown_StudioVincent_1F_EventScript_DisplayCabinet:: @ 81E8151
 	msgbox LittlerootTown_StudioVincent_1F_Text_PokemonFigures, MSGBOX_SIGN
 	end
 LittlerootTown_StudioVincent_1F_Text_PokemonFigures: @ 81E8D32
-	.string "It's a display cabiniet\n"
+	.string "It's a display cabinet\n"
 	.string "full of tiny figures.\p"
 	.string "They appear to be little sculptures\n"
 	.string "of pokemon carefully painted.$"

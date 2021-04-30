@@ -35,8 +35,6 @@ LittlerootTown_ProfessorBirchsLab_Movement_DrakeLeaves:
 	walk_left
 	walk_down
 	walk_down
-	walk_down
-	walk_down
 	set_invisible
 	step_end
 
@@ -45,7 +43,9 @@ LittlerootTown_ProfessorBirchsLab_Movement_AdjustPlayer:
 	step_end
 
 
-
+LittlerootTown_ProfessorBirchsLab_Movement_DrakeEmphasis:
+	walk_in_place_fastest_left
+	step_end
 
 
 LittlerootTown_ProfessorBirchsLab_Movement_AideNotice:
@@ -110,6 +110,7 @@ LittlerootTown_ProfessorBirchsLab_Movement_LeftOne:
 
 LittlerootTown_ProfessorBirchsLab_EventScript_DrakeMeeting::
 	setvar VAR_UNUSED_0x8014, 1
+	applymovement LOCALID_DRAKE, LittlerootTown_ProfessorBirchsLab_Movement_DrakeEmphasis
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_DraketoAide, MSGBOX_SIGN
 	delay 20
 	applymovement LOCALID_DRAKE, Common_Movement_ExclamationMark
@@ -133,6 +134,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_DrakeMeeting::
 
 LittlerootTown_ProfessorBirchsLab_EventScript_DrakeMeetingLeft::
 	setvar VAR_UNUSED_0x8014, 1
+	applymovement LOCALID_DRAKE, LittlerootTown_ProfessorBirchsLab_Movement_DrakeEmphasis
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_ProfessorBirchsLab_Movement_AdjustPlayer
 	delay 20
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
@@ -1070,7 +1072,7 @@ LittlerootTown_ProfessorBirchsLab_Text_CrammedWithBooksOnPokemon: @ 81FB124
 	.string "It's crammed with books on POKéMON.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_TornadoDisplay: @ 81FB124
-	.string "A diorama to teach about tornados.\n"
+	.string "A diorama to teach about tornadoes.\n"
 	.string "Within the glass,tiny cows spin round.$"
 
 LittlerootTown_ProfessorBirchsLab_Text_LightningWood: @ 81FB124

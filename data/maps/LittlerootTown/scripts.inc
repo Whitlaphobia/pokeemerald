@@ -1,8 +1,7 @@
-.set LOCALID_OLDMAN, 10
-.set LOCALID_SIDNEY, 13
-.set LOCALID_MOVINGVIGROTH, 3
-.set LOCALID_SHIP, 9
-.set LOCALID_VINCENT, 14
+.set LOCALID_OLDMAN, 9
+.set LOCALID_SIDNEY, 12
+.set LOCALID_SHIP, 8
+.set LOCALID_VINCENT, 13
 
 
 LittlerootTown_MapScripts:: @ 81E7DCB
@@ -34,10 +33,10 @@ LittlerootTown_Movement_FaceRight: @ 81E7F98
 LittlerootTown_Movement_LeavePort: @ 81E7F98
 	walk_left
 	walk_left
+	walk_left
+	walk_left
 	walk_fast_left
 	walk_fast_left
-	walk_fastest_left
-	walk_fastest_left
 	walk_fastest_left
 	walk_fastest_left
 	set_invisible
@@ -112,14 +111,18 @@ LittlerootTown_Text_SidneyPortGreeting: @ 81E8D32
 	.string "Hope you enjoyed\n"
 	.string "the trip over!\p"
 	.string "We'll have you moved in\n"
-	.string "in no time!$"
+	.string "in no time!\p"
+	.string "Head on down to the\n"
+	.string "Weather Institute\p"
+	.string "for your orientation and\n"
+	.string "to pick out a pokemon!$"
 
 LittlerootTown_Text_VigrothGreeting: @ 81E8D32
 	.string "GROOOOW!$"
 
 LittlerootTown_EventScript_VigHello::
 	lock
-	faceplayer
+	playmoncry SPECIES_VIGOROTH, 0
 	msgbox LittlerootTown_Text_VigrothGreeting, MSGBOX_DEFAULT
 	release
 	end
@@ -127,6 +130,8 @@ LittlerootTown_EventScript_VigHello::
 LittlerootTown_EventScript_ShipExit:: @ 81E8151
 
 	setflag FLAG_SYS_POKEDEX_GET
+	setflag FLAG_RECEIVED_RUNNING_SHOES
+	setflag FLAG_SYS_NATIONAL_DEX
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_FaceRight
 	applymovement LOCALID_SIDNEY, Common_Movement_ExclamationMark
 	delay 20
@@ -135,8 +140,7 @@ LittlerootTown_EventScript_ShipExit:: @ 81E8151
 	delay 40
 	applymovement LOCALID_SIDNEY, LittlerootTown_Movement_MovingIn
 	delay 20
-	applymovement LOCALID_MOVINGVIGROTH, LittlerootTown_Movement_VigMove
-	msgbox LittlerootTown_Text_VigrothGreeting, MSGBOX_SIGN
+	playmoncry SPECIES_VIGOROTH, 0
 	delay 60
 	applymovement LOCALID_SHIP, LittlerootTown_Movement_LeavePort
 	delay 70
@@ -184,6 +188,7 @@ LittlerootTown_EventScript_FishermanonBreak:: @ 81E8151
 LittlerootTown_EventScript_Wingull:: @ 81E8151
 	lock
 	faceplayer
+	playmoncry SPECIES_WINGULL, 0
 	msgbox LittlerootTown_Text_WingullSound, MSGBOX_DEFAULT
 	release
 	end
@@ -191,6 +196,7 @@ LittlerootTown_EventScript_Wingull:: @ 81E8151
 LittlerootTown_EventScript_Kecleon:: @ 81E8151
 	lock
 	faceplayer
+	playmoncry SPECIES_KECLEON, 0
 	msgbox LittlerootTown_Text_KecleonSound, MSGBOX_DEFAULT
 	release
 	end
@@ -399,7 +405,7 @@ LittlerootTown_Text_FishermanonLeave: @ 81E8D32
 
 
 	LittlerootTown_Text_KecleonSound: @ 81E8D32
-	.string "...$"
+	.string "Puuu Puyahh!$"
 
 
 
@@ -408,7 +414,9 @@ LittlerootTown_Text_YDavidIntro: @ 81E8ACF
 	.string "Let's have a battle\n"
 	.string "to keep warm!$"
 
-
+LittlerootTown_EventScript_LaggingTail:: @ 8290E2A
+	finditem ITEM_LAGGING_TAIL
+	end
 
 LittlerootTown_Text_YDavidDefeated: @ 81E8ACF
 	.string "You burned bright\n"

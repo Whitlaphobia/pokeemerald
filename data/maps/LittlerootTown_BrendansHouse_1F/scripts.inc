@@ -1,11 +1,6 @@
-.set LOCALID_MOM, 1
-.set LOCALID_RIVAL_MOM, 4
-.set LOCALID_RIVAL, 7
 
 LittlerootTown_BrendansHouse_1F_MapScripts:: @ 81F7755
-	map_script MAP_SCRIPT_ON_LOAD, LittlerootTown_BrendansHouse_1F_OnLoad
-	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_BrendansHouse_1F_OnTransition
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, LittlerootTown_BrendansHouse_1F_OnFrame
+	
 	.byte 0
 
 LittlerootTown_BrendansHouse_1F_OnLoad: @ 81F7765
@@ -14,8 +9,158 @@ LittlerootTown_BrendansHouse_1F_OnLoad: @ 81F7765
 	call_if_set FLAG_RECEIVED_RUNNING_SHOES, LittlerootTown_BrendansHouse_1F_EventScript_CheckShowShoesManual
 	end
 
+LittlerootTown_BrendansHouse_1F_EventScript_Wingull:: @ 81E8151
+	lock
+	faceplayer
+	playmoncry SPECIES_WINGULL, 0
+	msgbox LittlerootTown_BrendansHouse_1F_Text_WingullSound, MSGBOX_DEFAULT
+	release
+	end
+
+LittlerootTown_BrendansHouse_1F_EventScript_WingullPrankster:: @ 81E8151
+	lock
+	faceplayer
+	playmoncry SPECIES_WINGULL, 0
+	msgbox LittlerootTown_BrendansHouse_1F_Text_WingullSoundPrankster, MSGBOX_DEFAULT
+	release
+	end
+
+LittlerootTown_BrendansHouse_1F_EventScript_WingullDefender:: @ 81E8151
+	lock
+	faceplayer
+	playmoncry SPECIES_WINGULL, 0
+	msgbox LittlerootTown_BrendansHouse_1F_Text_WingullSoundDefender, MSGBOX_DEFAULT
+	release
+	end
+
+LittlerootTown_BrendansHouse_1F_EventScript_TiredBabysitter:: @ 81E8151
+	lock
+	faceplayer
+	playmoncry SPECIES_WINGULL, 0
+	msgbox LittlerootTown_BrendansHouse_1F_Text_OhGoodness, MSGBOX_DEFAULT
+	release
+	end
+
+LittlerootTown_BrendansHouse_1F_EventScript_MrBriney:: @ 81E8151
+	lock
+	faceplayer
+	msgbox LittlerootTown_BrendansHouse_1F_Text_HelloYoungster, MSGBOX_DEFAULT
+	release
+	end
+
+LittlerootTown_BrendansHouse_1F_Text_HelloYoungster:
+	.string "Ahoy there youngster!\p"
+	.string "I remember when I first settled\n"
+	.string "down on this island.\p"
+	.string "It's a beautiful, tranquil\n"
+	.string "place...\p"
+	.string "To raise a family of WINGULL!$"
 
 
+LittlerootTown_BrendansHouse_1F_Text_OhGoodness:
+	.string "PYOOO!\p"
+	.string "Oh goodness, I'm sorry!\n"
+	.string "I'm a little burnt out\p"
+	.string "from taking care of all\n"
+	.string "of these WINGULL!$"
+
+
+LittlerootTown_BrendansHouse_1F_Text_WingullSound:
+	.string "PYOOOO!\p"
+	.string "It flaps around happily.$"
+
+LittlerootTown_BrendansHouse_1F_Text_WingullSoundPrankster:
+	.string "PYOOOO...?\p"
+	.string "It flaps around mischeviously.$"
+
+LittlerootTown_BrendansHouse_1F_Text_WingullSoundDefender:
+	.string "PYOOOO!\p"
+	.string "It guards the door protectively.$"
+
+LittlerootTown_BrendansHouse_1F_EventScript_BrineyBookshelf::
+	msgbox LittlerootTown_BrendansHouse_1F_Text_SeaBooks,MSGBOX_SIGN
+	end
+
+
+LittlerootTown_BrendansHouse_1F_Text_SeaBooks:
+	.string "This shelf is full of\n"
+	.string "old nautical maps and\p"
+	.string "books on ocean dwelling pokemon.$"
+
+
+
+
+LittlerootTown_BrendansHouse_1F_EventScript_BrineyWindow::
+	msgbox LittlerootTown_BrendansHouse_1F_Text_QuaintSeaside,MSGBOX_SIGN
+	end
+
+LittlerootTown_BrendansHouse_1F_Text_QuaintSeaside:
+	.string "A quaint seaside view.$"
+
+
+
+LittlerootTown_BrendansHouse_1F_EventScript_SeafoodFridge::
+	msgbox LittlerootTown_BrendansHouse_1F_Text_Seafood,MSGBOX_SIGN
+	end
+
+LittlerootTown_BrendansHouse_1F_Text_Seafood:
+	.string "It's packed to the brim\n"
+	.string "with fresh caught seafood!\p"
+	.string "Looks like Mr.Briney is still\n"
+	.string "a master of his craft.$"
+
+LittlerootTown_BrendansHouse_1F_EventScript_BrineySink::
+	msgbox LittlerootTown_BrendansHouse_1F_Text_SinkFullof,MSGBOX_SIGN
+	end
+
+LittlerootTown_BrendansHouse_1F_Text_SinkFullof:
+	.string "It's full of salty water\n"
+	.string "and clam shells.\p"
+	.string "You see the glint of\n"
+	.string "a pearl somewhere within!$"
+
+
+
+LittlerootTown_BrendansHouse_1F_EventScript_BrineyAward::
+	msgbox LittlerootTown_BrendansHouse_1F_Text_CoastGuard,MSGBOX_SIGN
+	end
+
+LittlerootTown_BrendansHouse_1F_Text_CoastGuard:
+	.string "An award given to Mr.Briney\n"
+	.string "for exceptional service as\p"
+	.string "a citizen volunteer for the\n"
+	.string "coast guard.$"
+
+
+LittlerootTown_BrendansHouse_1F_EventScript_DresserBriney::
+	msgbox LittlerootTown_BrendansHouse_1F_Text_LittleNautical,MSGBOX_SIGN
+	end
+
+LittlerootTown_BrendansHouse_1F_Text_LittleNautical:
+	.string "It's full of little\n"
+	.string "sailor hats!$"
+
+LittlerootTown_BrendansHouse_1F_EventScript_DishCupboard::
+	msgbox LittlerootTown_BrendansHouse_1F_Text_StarkContrast,MSGBOX_SIGN
+	end
+
+LittlerootTown_BrendansHouse_1F_Text_StarkContrast:
+	.string "The nice old china on the\n"
+	.string "top shelf stands in sharp\p"
+	.string "contrast with the metal ship\n"
+	.string "dishes also proudly on display.$"
+
+LittlerootTown_BrendansHouse_1F_EventScript_PetalburgPainting::
+	msgbox LittlerootTown_BrendansHouse_1F_Text_WoodsPainting,MSGBOX_SIGN
+	end
+
+LittlerootTown_BrendansHouse_1F_Text_WoodsPainting:
+	.string "A small shack on the coast\n"
+	.string "surrounded by woods.\p"
+	.string "A young man stands barefoot\n"
+	.string "on the beach beaming.\p"
+	.string "A WINGULL is perched on\n"
+	.string "the oar in his left hand.$"
 
 LittlerootTown_BrendansHouse_1F_EventScript_Unfinished::
 	msgbox LittlerootTown_BrendansHouse_1F_Text_Sorry,MSGBOX_SIGN

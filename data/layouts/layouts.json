@@ -94,8 +94,8 @@
     {
       "id": "LAYOUT_LITTLEROOT_TOWN",
       "name": "LittlerootTown_Layout",
-      "width": 40,
-      "height": 30,
+      "width": 47,
+      "height": 36,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mossdeep",
       "border_filepath": "data/layouts/LittlerootTown/border.bin",
@@ -554,7 +554,7 @@
     {
       "id": "LAYOUT_LITTLEROOT_TOWN_MAYS_HOUSE_1F",
       "name": "LittlerootTown_MaysHouse_1F_Layout",
-      "width": 13,
+      "width": 30,
       "height": 10,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_GenericBuilding",
@@ -4514,7 +4514,7 @@
     {
       "id": "LAYOUT_LITTLEROOT_TOWN_WEATHER_BARRACKS_1F",
       "name": "LittlerootTown_WeatherBarracks_1F_Layout",
-      "width": 54,
+      "width": 40,
       "height": 27,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_GenericBuilding",

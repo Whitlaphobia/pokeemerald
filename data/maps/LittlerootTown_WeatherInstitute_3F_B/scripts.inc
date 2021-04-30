@@ -99,7 +99,7 @@ LittlerootTown_WeatherInstitute_3F_B_EventScript_WeatherSatModel:: @ 81E8151
 	msgbox LittlerootTown_WeatherInstitute_3F_B_Text_WeatherSatelite, MSGBOX_SIGN
 	end
 LittlerootTown_WeatherInstitute_3F_B_Text_WeatherSatelite: @ 81E8ACF
-	.string "A model of the satelites that,\n"
+	.string "A model of the satellites that,\n"
 	.string "observe global weather patterns.\p"
 	.string "This one was launched from\n"
 	.string "this very facility!$"

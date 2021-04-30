@@ -62,7 +62,7 @@ LittlerootTown_WeatherInstitute_3F_C_Text_MeowthDoll: @ 81E8ACF
 	.string " stitched to its head.$"
 
 LittlerootTown_WeatherInstitute_3F_C_Text_BlockingtheWay: @ 81E8ACF
-	.string "Just like a real SNORELAX,\n"
+	.string "Just like a real SNORLAX,\n"
 	.string "this doll blocks the way.\p"
 	.string "It's the most lifelike of all!$"
 
