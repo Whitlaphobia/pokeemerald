@@ -2,7 +2,7 @@
   "id": "MAP_LITTLEROOT_TOWN_WEATHER_INSTITUTE_BF",
   "name": "LittlerootTown_WeatherInstitute_BF",
   "layout": "LAYOUT_LITTLEROOT_TOWN_WEATHER_INSTITUTE_BF",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_BIRCH_LAB",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

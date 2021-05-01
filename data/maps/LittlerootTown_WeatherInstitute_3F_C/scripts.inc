@@ -66,25 +66,42 @@ LittlerootTown_WeatherInstitute_3F_C_Text_BlockingtheWay: @ 81E8ACF
 	.string "this doll blocks the way.\p"
 	.string "It's the most lifelike of all!$"
 
+
+
 LittlerootTown_WeatherInstitute_3F_C_Text_JustaDoll: @ 81E8ACF
 	.string "It's very lifelike,\n"
 	.string "but it's actually just a doll.\p"
 	.string "CYNDAQUIL sure is cute!$"
+
+
+
+LittlerootTown_WeatherInstitute_3F_C_EventScript_HavePokemon:: @ 81E8151
+	lock
+	faceplayer
+	msgbox LittlerootTown_WeatherInstitute_3F_C_Text_PokemonDaycare, MSGBOX_DEFAULT
+	release
+	end
+	
 LittlerootTown_WeatherInstitute_3F_C_Text_PokemonDaycare: @ 81E8ACF
-	.string "It's very lifelike,\n"
-	.string "but it's actually just a doll.\p"
-	.string "Cyndaquil sure is cute!$"
+	.string "This is the pokemon daycare\n"
+	.string "where we raise pokemon specially\p"
+	.string "to be perfect partners for our work!$"
 
 
 
 
  LittlerootTown_WeatherInstitute_3F_C_Text_YoullTakeCastform:
 	.string "You'll take CASTFORM,\n"
-	.string "the forecast pokemon?$"
+	.string "the forecast pokemon?\p"
+	.string "CASTFORM adapts its form and\n"
+	.string "type according to the weather\p"
+	.string "with its FORECAST.$"
 
 LittlerootTown_WeatherInstitute_3F_C_Text_YoullTakeSwablu:
 	.string "You'll take SWABLU,\n"
-	.string "cloud bird pokemon?$"
+	.string "cloud bird pokemon?\p"
+	.string "SWABLU negates the effects\n"
+	.string "of weather with its CLOUD NINE.$"
 
 
 LittlerootTown_WeatherInstitute_3F_C_EventScript_SwabluBall:: @ 81F9FBB
@@ -155,6 +172,7 @@ LittlerootTown_WeatherInstitute_3F_C_EventScript_ReceivedCastform:: @ 81FA0FD
 	msgbox LittlerootTown_WeatherInstitute_3F_C_Text_HeadOnDown, MSGBOX_DEFAULT
 	releaseall
 	setflag FLAG_GOT_POKEMON
+	clearflag FLAG_NO_POKEMON_YET
 	warpsilent MAP_LITTLEROOT_TOWN_WEATHER_INSTITUTE_3F_C, -3, 9,14
 	end
 
@@ -163,6 +181,7 @@ LittlerootTown_WeatherInstitute_3F_C_EventScript_ReceivedSwablu:: @ 81FA0FD
 	msgbox LittlerootTown_WeatherInstitute_3F_C_Text_HeadOnDown, MSGBOX_DEFAULT
 	releaseall
 	setflag FLAG_GOT_POKEMON
+	clearflag FLAG_NO_POKEMON_YET
 	warpsilent MAP_LITTLEROOT_TOWN_WEATHER_INSTITUTE_3F_C, 3, 9,14
 	end
 
@@ -174,8 +193,12 @@ LittlerootTown_WeatherInstitute_3F_C_EventScript_TakeYourTime:: @ 81FA061
 	end
 
  LittlerootTown_WeatherInstitute_3F_C_Text_HeadOnDown:
-	.string "Fantastic!\n"
-	.string "Head on down to see Dr.Drake.$"
+	.string "Fantastic!\p"
+	.string "I'm sure you'll grow inseperable.\p"
+	.string "Take your time looking around town\n"
+	.string "and getting settled.\p"
+	.string "You can meet Prof. Drake in the\n"
+	.string "barracks when you're ready.$"
 
  LittlerootTown_WeatherInstitute_3F_C_Text_BothGood:
 	.string "Take your time, both\n"

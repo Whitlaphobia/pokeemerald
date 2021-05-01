@@ -10,19 +10,113 @@ LittlerootTown_MaysHouse_1F_MapScripts:: @ 81F88A5
 
 
 
+LittlerootTown_MaysHouse_1F_EventScript_ShelleyFridge::
+	msgbox LittlerootTown_MaysHouse_1F_Text_FullofLeftovers,MSGBOX_SIGN
+	call_if_unset FLAG_LITTLEROOT_TOWN_LEFTOVERS, LittlerootTown_MaysHouse_1F_EventScript_LeftoversFind
+	end
 
-LittlerootTown_MaysHouse_1F_EventScript_Unfinished::
-	msgbox LittlerootTown_MaysHouse_1F_Text_Sorry,MSGBOX_SIGN
+LittlerootTown_MaysHouse_1F_EventScript_LeftoversFind::
+	finditem ITEM_LEFTOVERS
+	setflag FLAG_LITTLEROOT_TOWN_LEFTOVERS
+	end
+
+LittlerootTown_MaysHouse_1F_Text_FullofLeftovers:
+	.string "It's got a great variety\n"
+	.string "of ready-made meals and\p"
+	.string "leftovers within.$"
+
+LittlerootTown_MaysHouse_1F_EventScript_Cupboard::
+	msgbox LittlerootTown_MaysHouse_1F_Text_StackedAgainst,MSGBOX_SIGN
 	setvar VAR_TEMP_0,1
 	end
 
 
-LittlerootTown_MaysHouse_1F_Text_Sorry:
-	.string "Sorry! This building\n"
-	.string "is not finished.\p"
-	.string "Feel free to look\n"
-	.string "at the map though!$"
+LittlerootTown_MaysHouse_1F_Text_StackedAgainst:
+	.string "The dishes in this cabinet\n"
+	.string "are stacked against the glass.\p"
+	.string "If someone opens it, they'll\n"
+	.string "all crash to the floor.$"
 
+LittlerootTown_MaysHouse_1F_EventScript_KitchenPoster::
+	msgbox LittlerootTown_MaysHouse_1F_Text_PromotionalPoster,MSGBOX_SIGN
+	end
+
+LittlerootTown_MaysHouse_1F_Text_PromotionalPoster:
+	.string "A promotional poster for\n"
+	.string "METEOR POINT UNDERSEA TOURS\p"
+	.string "“Experience the wonders of\p"
+	.string "the ocean AND the local\n"
+	.string "fishing culture!\p"
+	.string "BOOK TODAY!”$"
+
+
+LittlerootTown_MaysHouse_1F_EventScript_YoungLad::
+	lock
+	faceplayer
+	msgbox LittlerootTown_MaysHouse_1F_Text_MyBrother,MSGBOX_DEFAULT
+	release
+	end
+
+LittlerootTown_MaysHouse_1F_Text_MyBrother:
+	.string "My big brother is away\n"
+	.string "working in the big city!\p"
+	.string "My big sister is at work\n"
+	.string "running tours next door!\p"
+	.string "I've got leftovers to spare!$"
+
+
+LittlerootTown_MaysHouse_1F_EventScript_ShelleySink::
+	msgbox LittlerootTown_MaysHouse_1F_Text_Styrofoam,MSGBOX_SIGN
+	end
+
+LittlerootTown_MaysHouse_1F_Text_Styrofoam:
+	.string "Four styrofoam containers\n"
+	.string "sit in the sink, unrinsed.\p"
+	.string "There's no way they can be\n"
+	.string "recycled like that!$"
+
+LittlerootTown_MaysHouse_1F_EventScript_OldestShelf::
+	msgbox LittlerootTown_MaysHouse_1F_Text_OceanicBooks,MSGBOX_SIGN
+	end
+
+LittlerootTown_MaysHouse_1F_Text_OceanicBooks:
+	.string "A shelf full of books\n"
+	.string "on the creatures of the\p"
+	.string "deep sea, and a dozen\p"
+	.string "copies of 10 000 Leagues\n"
+	.string "Under the Sea.$"
+
+
+LittlerootTown_MaysHouse_1F_EventScript_MiddleShelf::
+	msgbox LittlerootTown_MaysHouse_1F_Text_BusinessBooks,MSGBOX_SIGN
+	end
+
+LittlerootTown_MaysHouse_1F_Text_BusinessBooks:
+	.string "A shelf full of books\n"
+	.string "on on business, trade,\p"
+	.string "and entrepreneurship.$"
+
+LittlerootTown_MaysHouse_1F_EventScript_ShelleyWindow::
+	msgbox LittlerootTown_MaysHouse_1F_Text_LookingOutPeacefully,MSGBOX_SIGN
+	end
+
+LittlerootTown_MaysHouse_1F_Text_LookingOutPeacefully:
+	.string "It's a very peaceful\n"
+	.string "view of the submarines\p"
+	.string "from the undersea tours\n"
+	.string "docked in the harbor.$"
+
+
+LittlerootTown_MaysHouse_1F_EventScript_YoungestShelf::
+	msgbox LittlerootTown_MaysHouse_1F_Text_PhilosophyBooks,MSGBOX_SIGN
+	end
+
+LittlerootTown_MaysHouse_1F_Text_PhilosophyBooks:
+	.string "This shelf is full of\n"
+	.string "comic books and field guides,\p"
+	.string "as well as books on \n"
+	.string "philosophy \p"
+	.string "and the meaning of life.$"
 
 LittlerootTown_MaysHouse_1F_OnLoad: @ 81F88B5
 	compare VAR_LITTLEROOT_INTRO_STATE, 6

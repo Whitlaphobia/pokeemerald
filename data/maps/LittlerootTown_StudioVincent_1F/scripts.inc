@@ -135,7 +135,7 @@ LittlerootTown_StudioVincent_1F_EventScript_SendSmeargleToParty:: @ 81FA0A1
 	call Common_EventScript_GetGiftMonPartySlot
 	call Common_EventScript_NameReceivedPartyMon
 	goto LittlerootTown_StudioVincent_1F_EventScript_ReceivedSmeargle
-	
+	setflag FLAG_SYS_NATIONAL_DEX
 	end
 
 
@@ -145,10 +145,46 @@ LittlerootTown_StudioVincent_1F_EventScript_ReceivedSmeargle:: @ 81FA0FD
 	releaseall
 	setflag FLAG_GOT_POKEMON
 	setvar VAR_UNUSED_0x40E5, 1
+	clearflag FLAG_NO_POKEMON_YET
+	setflag FLAG_SMEARGLE_STARTER
 	warpsilent MAP_LITTLEROOT_TOWN_STUDIO_VINCENT_1F, 3, 4, 5
 	end
 
 LittlerootTown_StudioVincent_1F_Text_ThickAsThieves:
 	.string "Look at you lot!\p"
-	.string "You'll be thick as thieves in\p"
+	.string "You'll be thick as thieves in\n"
 	.string "no time flat!$"
+
+LittlerootTown_StudioVincent_1F_EventScript_WithPokemon::
+	goto_if_set FLAG_SMEARGLE_STARTER, LittlerootTown_StudioVincent_1F_EventScript_WithSmeargle
+	goto_if_unset FLAG_SMEARGLE_STARTER, LittlerootTown_StudioVincent_1F_EventScript_WithoutSmeargle
+	end
+
+
+LittlerootTown_StudioVincent_1F_EventScript_WithSmeargle::
+	lock
+	faceplayer
+	msgbox LittlerootTown_StudioVincent_1F_Text_GettingAlong,MSGBOX_DEFAULT
+	release
+	end
+
+
+LittlerootTown_StudioVincent_1F_Text_GettingAlong:
+	.string "How are you and you SMEARGLE\n"
+	.string "getting along? Famously I bet!$"
+
+LittlerootTown_StudioVincent_1F_EventScript_WithoutSmeargle::
+	lock
+	faceplayer
+	msgbox LittlerootTown_StudioVincent_1F_Text_NotMyChoice,MSGBOX_DEFAULT
+	release
+	end
+
+
+LittlerootTown_StudioVincent_1F_Text_NotMyChoice:
+	.string "I see you got a partner from\n"
+	.string "the weather institute. Interesting.\p"
+	.string "Wouldn't have been my choice,\n"
+	.string "but you seem happy enough.$"
+
+

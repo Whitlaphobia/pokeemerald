@@ -85,7 +85,8 @@ LittlerootTown_ProfessorBirchsLab_Text_WelcomeOrientation:
 	.string "matters to attend to.\p"
 	.string "Please speak to my AIDE here\n"
 	.string "to get started.\p"
-	.string "I'll be back to brief you shortly.$"
+	.string "I'll be in the barracks\n"
+	.string "to brief you shortly.$"
 
 
 LittlerootTown_ProfessorBirchsLab_Text_DraketoAide:
@@ -99,9 +100,8 @@ LittlerootTown_ProfessorBirchsLab_Text_DraketoAide:
 LittlerootTown_ProfessorBirchsLab_Text_OrientationQuestion:
 	.string "Are you familiar with\n"
 	.string "what we do here already?\p"
-	.string "Have you read our orientation\n"
-	.string "materials already?\p"
-	.string "(Hint, hint)$"
+	.string "Would you like to hear\n"
+	.string "our orientation speech?$"
 
 LittlerootTown_ProfessorBirchsLab_Movement_LeftOne:
 	walk_left
@@ -125,9 +125,9 @@ LittlerootTown_ProfessorBirchsLab_EventScript_DrakeMeeting::
 	delay 20
 	
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_OrientationQuestion, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq LittlerootTown_ProfessorBirchsLab_EventScript_AideLeaves
 	compare VAR_RESULT, NO
+	goto_if_eq LittlerootTown_ProfessorBirchsLab_EventScript_AideLeaves
+	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_ProfessorBirchsLab_EventScript_OrientationSpeech
 	setflag FLAG_MET_DRAKE
 	end
@@ -153,14 +153,28 @@ LittlerootTown_ProfessorBirchsLab_EventScript_DrakeMeetingLeft::
 	delay 20
 	
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_OrientationQuestion, MSGBOX_YESNO
-	compare VAR_RESULT, YES
-	goto_if_eq LittlerootTown_ProfessorBirchsLab_EventScript_AideLeaves
 	compare VAR_RESULT, NO
+	goto_if_eq LittlerootTown_ProfessorBirchsLab_EventScript_AideLeaves
+	compare VAR_RESULT, YES
 	goto_if_eq LittlerootTown_ProfessorBirchsLab_EventScript_OrientationSpeech
 	setflag FLAG_MET_DRAKE
 	end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_AideLeaves::
+	goto_if_unset FLAG_GOT_POKEMON, LittlerootTown_ProfessorBirchsLab_EvenetScript_PickaStarter
+	goto_if_set FLAG_GOT_POKEMON, LittlerootTown_ProfessorBirchsLab_EvenetScript_UnconventionalPartner
+	return
+
+LittlerootTown_ProfessorBirchsLab_EvenetScript_UnconventionalPartner::
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_YouAlreadyHaveAPartner, MSGBOX_SIGN
+	delay 20
+	applymovement LOCALID_AIDE2, LittlerootTown_ProfessorBirchsLab_Movement_AideLeaves
+	delay 20
+	setflag FLAG_MET_DRAKE
+	return
+
+
+LittlerootTown_ProfessorBirchsLab_EvenetScript_PickaStarter::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_WonderfulMeet, MSGBOX_SIGN
 	delay 20
 	applymovement LOCALID_AIDE2, LittlerootTown_ProfessorBirchsLab_Movement_AideLeaves
@@ -171,9 +185,8 @@ LittlerootTown_ProfessorBirchsLab_EventScript_AideLeaves::
 LittlerootTown_ProfessorBirchsLab_EventScript_OrientationSpeech::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_HereAtTheInstitute, MSGBOX_SIGN
 	delay 20
-	msgbox LittlerootTown_ProfessorBirchsLab_Text_WonderfulMeet, MSGBOX_SIGN
-	delay 20
-	applymovement LOCALID_AIDE2, LittlerootTown_ProfessorBirchsLab_Movement_AideLeaves
+	goto_if_unset FLAG_GOT_POKEMON, LittlerootTown_ProfessorBirchsLab_EvenetScript_PickaStarter
+	goto_if_set FLAG_GOT_POKEMON, LittlerootTown_ProfessorBirchsLab_EvenetScript_UnconventionalPartner
 	setvar VAR_UNUSED_0x8014, 1
 	setflag FLAG_MET_DRAKE
 	return
@@ -195,10 +208,25 @@ LittlerootTown_ProfessorBirchsLab_Text_HereAtTheInstitute:
 	.string "and specially bred pokemon adapted\p"
 	.string "to extreme weather conditions.$"
 
+
+
+LittlerootTown_ProfessorBirchsLab_Text_YouAlreadyHaveAPartner:
+ 	.string "...\p"
+	 .string "Oh! You already have a pokemon\n"
+	.string "partner with you.\p"
+	.string "Well, it's a touch unconventional,\n"
+	.string "but having a close bond with\p"
+	.string "your pokemon is what is important!\p"
+	.string "I'll be on the third floor if you\n"
+	.string "need me, feel free to look around\p"
+	.string "our facility and meet Prof. Drake\n"
+	.string "in the barracks when you're ready.$"
+
 LittlerootTown_ProfessorBirchsLab_Text_WonderfulMeet:
- 	.string "Wonderful!\p"
-	.string "Feel free to look around our facility\n"
-	.string "and meet me on the third floor when\p"
+ 	.string "...\p"
+	 .string "Anyhow, that's our orientation spiel,\n"
+	.string "Feel free to look around our facility!\p"
+	.string "and meet me on the third floor when\n"
 	.string "you're ready to pick out your partner!$"
 
 LittlerootTown_ProfessorBirchsLab_OnTransition: @ 81F9CA1

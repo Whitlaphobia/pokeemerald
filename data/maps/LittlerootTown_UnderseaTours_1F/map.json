@@ -2,7 +2,7 @@
   "id": "MAP_LITTLEROOT_TOWN_UNDERSEA_TOURS_1F",
   "name": "LittlerootTown_UnderseaTours_1F",
   "layout": "LAYOUT_LITTLEROOT_TOWN_UNDERSEA_TOURS_1F",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_AQUA_MAGMA_HIDEOUT",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

@@ -1,47 +1,47 @@
 {
-  "id": "MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F",
-  "name": "LittlerootTown_MaysHouse_1F",
-  "layout": "LAYOUT_LITTLEROOT_TOWN_MAYS_HOUSE_1F",
-  "music": "MUS_LITTLEROOT",
+  "id": "MAP_LITTLEROOT_TOWN_WEATHER_BARRACKS_2F_A",
+  "name": "LittlerootTown_WeatherBarracks_2F_A",
+  "layout": "LAYOUT_LITTLEROOT_TOWN_WEATHER_BARRACKS_2F_A",
+  "music": "MUS_ABANDONED_SHIP",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
   "allow_cycling": false,
   "allow_escaping": false,
-  "allow_running": false,
+  "allow_running": true,
   "show_map_name": false,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
   "object_events": [
     {
-      "graphics_id": "OBJ_EVENT_GFX_LITTLE_BOY",
-      "x": 18,
-      "y": 5,
+      "graphics_id": "OBJ_EVENT_GFX_JUAN",
+      "x": 4,
+      "y": 2,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LittlerootTown_MaysHouse_1F_EventScript_YoungLad",
+      "script": "NULL",
       "flag": "0"
     }
   ],
   "warp_events": [
     {
-      "x": 18,
+      "x": 2,
       "y": 9,
       "elevation": 0,
-      "dest_map": "MAP_LITTLEROOT_TOWN",
-      "dest_warp_id": 0
+      "dest_map": "MAP_LITTLEROOT_TOWN_WEATHER_BARRACKS_1F",
+      "dest_warp_id": 2
     },
     {
-      "x": 17,
+      "x": 3,
       "y": 9,
       "elevation": 0,
-      "dest_map": "MAP_LITTLEROOT_TOWN",
-      "dest_warp_id": 0
+      "dest_map": "MAP_LITTLEROOT_TOWN_WEATHER_BARRACKS_1F",
+      "dest_warp_id": 2
     }
   ],
   "coord_events": [
@@ -50,107 +50,99 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 22,
+      "x": 2,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NULL"
+    },
+    {
+      "type": "sign",
+      "x": 3,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NULL"
+    },
+    {
+      "type": "sign",
+      "x": 5,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NULL"
+    },
+    {
+      "type": "sign",
+      "x": 1,
+      "y": 4,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NULL"
+    },
+    {
+      "type": "sign",
+      "x": 8,
+      "y": 7,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "NULL"
+    },
+    {
+      "type": "sign",
+      "x": 0,
       "y": 6,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_MaysHouse_1F_EventScript_ShelleyFridge"
+      "script": "NULL"
     },
     {
       "type": "sign",
-      "x": 18,
-      "y": 2,
+      "x": 9,
+      "y": 8,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_MaysHouse_1F_EventScript_OldestShelf"
+      "script": "NULL"
     },
     {
       "type": "sign",
-      "x": 19,
-      "y": 2,
+      "x": 4,
+      "y": 4,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_MaysHouse_1F_EventScript_OldestShelf"
+      "script": "NULL"
     },
     {
       "type": "sign",
-      "x": 21,
-      "y": 2,
+      "x": 5,
+      "y": 9,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_MaysHouse_1F_EventScript_MiddleShelf"
+      "script": "NULL"
     },
     {
       "type": "sign",
-      "x": 22,
-      "y": 2,
+      "x": 8,
+      "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_MaysHouse_1F_EventScript_MiddleShelf"
+      "script": "NULL"
     },
     {
       "type": "sign",
-      "x": 25,
-      "y": 2,
+      "x": 9,
+      "y": 4,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_MaysHouse_1F_EventScript_YoungestShelf"
+      "script": "NULL"
     },
     {
       "type": "sign",
-      "x": 24,
-      "y": 2,
+      "x": 6,
+      "y": 9,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_MaysHouse_1F_EventScript_YoungestShelf"
-    },
-    {
-      "type": "sign",
-      "x": 20,
-      "y": 6,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_MaysHouse_1F_EventScript_Cupboard"
-    },
-    {
-      "type": "sign",
-      "x": 21,
-      "y": 6,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_MaysHouse_1F_EventScript_Cupboard"
-    },
-    {
-      "type": "sign",
-      "x": 23,
-      "y": 6,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_MaysHouse_1F_EventScript_ShelleySink"
-    },
-    {
-      "type": "sign",
-      "x": 25,
-      "y": 6,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_MaysHouse_1F_EventScript_KitchenPoster"
-    },
-    {
-      "type": "sign",
-      "x": 20,
-      "y": 2,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_MaysHouse_1F_EventScript_ShelleyWindow"
-    },
-    {
-      "type": "sign",
-      "x": 23,
-      "y": 2,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_MaysHouse_1F_EventScript_ShelleyWindow"
+      "script": "NULL"
     }
   ]
 }

@@ -2,7 +2,7 @@
   "id": "MAP_LITTLEROOT_TOWN_STUDIO_VINCENT_1F",
   "name": "LittlerootTown_StudioVincent_1F",
   "layout": "LAYOUT_LITTLEROOT_TOWN_STUDIO_VINCENT_1F",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_LILYCOVE_MUSEUM",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -55,16 +55,16 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ARTIST",
-      "x": -2,
-      "y": 1,
+      "x": 4,
+      "y": 3,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
-      "flag": "0"
+      "script": "LittlerootTown_StudioVincent_1F_EventScript_WithPokemon",
+      "flag": "FLAG_NO_POKEMON_YET"
     }
   ],
   "warp_events": [

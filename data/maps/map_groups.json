@@ -111,7 +111,9 @@
     "LittlerootTown_StudioVincent_1F",
     "LittlerootTown_IntroShip",
     "LittlerootTown_IntroShip_Room",
-    "LittlerootTown_WeatherBarracks_1F"
+    "LittlerootTown_WeatherBarracks_1F",
+    "LittlerootTown_WeatherBarracks_2F_A",
+    "LittlerootTown_UnderseaTours_Route1"
   ],
   "gMapGroup2": [
     "OldaleTown_House1",

@@ -42,7 +42,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",
-      "x": 35,
+      "x": 34,
       "y": 26,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -186,7 +186,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_KECLEON",
       "x": 34,
-      "y": 15,
+      "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
@@ -225,7 +225,7 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_VIGOROTH_FACING_AWAY",
       "x": 24,
-      "y": 15,
+      "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_RIGHT",
       "movement_range_x": 0,
@@ -258,8 +258,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LittlerootTown_EventScript_YoungsterBattle",
-      "flag": "0"
+      "script": "LittlerootTown_EventScript_YoungsterBattleChoiceNoRepeat",
+      "flag": "FLAG_NO_POKEMON_YET"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -272,7 +272,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LittlerootTown_EventScript_LaggingTail",
-      "flag": "0"
+      "flag": "FLAG_LITTLEROOT_TOWN_LAGGING_TAIL"
     }
   ],
   "warp_events": [
@@ -479,7 +479,7 @@
     {
       "type": "sign",
       "x": 35,
-      "y": 15,
+      "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LittlerootTown_EventScript_Rock"

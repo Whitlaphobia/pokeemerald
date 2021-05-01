@@ -127,11 +127,11 @@ LittlerootTown_EventScript_VigHello::
 	release
 	end
 
-LittlerootTown_EventScript_ShipExit:: @ 81E8151
 
+LittlerootTown_EventScript_ShipExit:: @ 81E8151
 	setflag FLAG_SYS_POKEDEX_GET
-	setflag FLAG_RECEIVED_RUNNING_SHOES
-	setflag FLAG_SYS_NATIONAL_DEX
+	setflag FLAG_SYS_B_DASH 
+	setflag FLAG_NO_POKEMON_YET
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_FaceRight
 	applymovement LOCALID_SIDNEY, Common_Movement_ExclamationMark
 	delay 20
@@ -142,8 +142,9 @@ LittlerootTown_EventScript_ShipExit:: @ 81E8151
 	delay 20
 	playmoncry SPECIES_VIGOROTH, 0
 	delay 60
+	playse SE_SHIP
 	applymovement LOCALID_SHIP, LittlerootTown_Movement_LeavePort
-	delay 70
+	delay 100
 	setflag FLAG_HIDE_SIDNEY_PORT
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_ExitDock
 	delay 200
@@ -255,6 +256,7 @@ LittlerootTown_EventScript_VincentWelcome:: @ 81E8151
 	msgbox LittlerootTown_Text_ItMustBeTough, MSGBOX_SIGN
 	delay 40
 	applymovement LOCALID_VINCENT, LittlerootTown_Movement_VincentLeave
+	delay 100
 	setvar VAR_TEMP_0, 2
 	setflag FLAG_MET_VINCENT
 	end
@@ -410,12 +412,13 @@ LittlerootTown_Text_FishermanonLeave: @ 81E8D32
 
 
 LittlerootTown_Text_YDavidIntro: @ 81E8ACF
-	.string "You have a pokemon now!\p"
-	.string "Let's have a battle\n"
-	.string "to keep warm!$"
+	.string "Oh?\p"
+	.string "Now that you have a pokemon,\n"
+	.string "you want to battle?$"
 
 LittlerootTown_EventScript_LaggingTail:: @ 8290E2A
 	finditem ITEM_LAGGING_TAIL
+	setflag FLAG_LITTLEROOT_TOWN_LAGGING_TAIL
 	end
 
 LittlerootTown_Text_YDavidDefeated: @ 81E8ACF
@@ -430,10 +433,54 @@ LittlerootTown_Text_YDavidPostBattle: @ 81E8ACF
 	.string "according to its own moves, not its\p"
 	.string "opponents'.$"
 
-	LittlerootTown_EventScript_YoungsterBattle::
-	trainerbattle_single TRAINER_YOUNGSTER_DAVID_1, LittlerootTown_Text_YDavidIntro, LittlerootTown_Text_YDavidDefeated
-	msgbox LittlerootTown_Text_YDavidPostBattle, MSGBOX_AUTOCLOSE
+LittlerootTown_EventScript_YoungsterBattleChoiceNoRepeat::
+	call_if_set FLAG_YDAVID_SETS_OFF, LittlerootTown_EventScript_YoungsterBeatenAlready
+	delay 20
+	call_if_unset FLAG_YDAVID_SETS_OFF, LittlerootTown_EventScript_YoungsterBattleChoice
 	end
+
+LittlerootTown_EventScript_YoungsterBattleChoice::
+	lock
+	faceplayer
+	msgbox LittlerootTown_Text_YDavidIntro, MSGBOX_YESNO
+	compare VAR_RESULT, YES
+	goto_if_eq LittlerootTown_EventScript_YoungsterBattle
+	compare VAR_RESULT, NO
+	goto_if_eq LittlerootTown_EventScript_YoungsterChallenge
+	release
+	return
+
+LittlerootTown_Text_YDavidBattleIntro: @ 81E8ACF
+	.string "Can you adapt like\n"
+	.string "me and KECLEON can?$"
+
+LittlerootTown_EventScript_YoungsterChallenge::
+	msgbox LittlerootTown_Text_YDavidChallenge, MSGBOX_DEFAULT
+	release
+	end
+
+LittlerootTown_EventScript_YoungsterBeatenAlready::
+	lock	
+	faceplayer
+	msgbox LittlerootTown_Text_YDavidWereTired, MSGBOX_DEFAULT
+	release
+	end
+
+LittlerootTown_Text_YDavidWereTired: @ 81E8ACF
+	.string "I appreciate the enthusiasm,\n"
+	.string "but we're a little tired right now.$"
+
+LittlerootTown_Text_YDavidChallenge: @ 81E8ACF
+	.string "That's ok,\p"
+	.string "we'll have a battle later.$"
+
+LittlerootTown_EventScript_YoungsterBattle::
+	trainerbattle_single TRAINER_YOUNGSTER_DAVID_1, LittlerootTown_Text_YDavidBattleIntro, LittlerootTown_Text_YDavidDefeated
+	msgbox LittlerootTown_Text_YDavidPostBattle, MSGBOX_AUTOCLOSE
+	delay 20
+	setflag FLAG_YDAVID_SETS_OFF
+	delay 20
+	return
 
 
 

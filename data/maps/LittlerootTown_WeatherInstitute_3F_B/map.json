@@ -2,7 +2,7 @@
   "id": "MAP_LITTLEROOT_TOWN_WEATHER_INSTITUTE_3F_B",
   "name": "LittlerootTown_WeatherInstitute_3F_B",
   "layout": "LAYOUT_LITTLEROOT_TOWN_WEATHER_INSTITUTE_3F_B",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_OCEANIC_MUSEUM",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

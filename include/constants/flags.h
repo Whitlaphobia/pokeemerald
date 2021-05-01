@@ -45,11 +45,11 @@
 #define FLAG_MET_VINCENT    0x21 // Unused Flag
 #define FLAG_MET_DRAKE    0x22 // Unused Flag
 #define FLAG_GOT_POKEMON    0x23 // Unused Flag
-#define FLAG_UNUSED_0x024    0x24 // Unused Flag
-#define FLAG_UNUSED_0x025    0x25 // Unused Flag
-#define FLAG_UNUSED_0x026    0x26 // Unused Flag
-#define FLAG_UNUSED_0x027    0x27 // Unused Flag
-#define FLAG_UNUSED_0x028    0x28 // Unused Flag
+#define FLAG_LITTLEROOT_TOWN_LAGGING_TAIL    0x24 // Unused Flag
+#define FLAG_LITTLEROOT_TOWN_LEFTOVERS   0x25 // Unused Flag
+#define FLAG_NO_POKEMON_YET    0x26 // Unused Flag
+#define FLAG_SMEARGLE_STARTER   0x27 // Unused Flag
+#define FLAG_YDAVID_SETS_OFF   0x28 // Unused Flag
 #define FLAG_UNUSED_0x029    0x29 // Unused Flag
 #define FLAG_UNUSED_0x02A    0x2A // Unused Flag
 #define FLAG_UNUSED_0x02B    0x2B // Unused Flag

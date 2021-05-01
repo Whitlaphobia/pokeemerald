@@ -5,8 +5,14 @@ LittlerootTown_UnderseaTours_1F_EventScript_ShelleyWelcome:: @ 81E8151
 	lock
 	faceplayer
 	msgbox LittlerootTown_UnderseaTours_1F_Text_WelcomeIn, MSGBOX_DEFAULT
+	call_if_unset FLAG_RECEIVED_OLD_ROD, LittlerootTown_UnderseaTours_1F_EventScript_GetOldRod
 	release
 	end
+
+LittlerootTown_UnderseaTours_1F_EventScript_GetOldRod::
+	giveitem ITEM_OLD_ROD
+	setflag FLAG_RECEIVED_OLD_ROD
+	return
 
 
 
