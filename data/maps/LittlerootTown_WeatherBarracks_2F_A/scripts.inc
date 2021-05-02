@@ -24,7 +24,7 @@ LittlerootTown_WeatherBarracks_2F_A_EventScript_TakeTimetoPrepare::
 
 LittlerootTown_WeatherBarracks_2F_A_EventScript_LeaveMeteorPoint::
 	msgbox LittlerootTown_WeatherBarracks_2F_A_Text_LetsLeaveNow, MSGBOX_DEFAULT
-	warp MAP_LITTLEROOT_TOWN_UNDERSEA_TOURS_1F, -1, 5, 1
+	warp MAP_TANTAMARSH_TOWN_OCEAN_PORT_1F, -1, 13, 14
 	end
 
 LittlerootTown_WeatherBarracks_2F_A_Text_GoGetReady:	
