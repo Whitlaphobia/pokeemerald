@@ -2,7 +2,7 @@
   "id": "MAP_LITTLEROOT_TOWN_WEATHER_BARRACKS_2F_A",
   "name": "LittlerootTown_WeatherBarracks_2F_A",
   "layout": "LAYOUT_LITTLEROOT_TOWN_WEATHER_BARRACKS_2F_A",
-  "music": "MUS_ABANDONED_SHIP",
+  "music": "MUS_LITTLEROOT",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "LittlerootTown_WeatherBarracks_2F_A_EventScript_TalkToDrake1",
       "flag": "0"
     }
   ],
@@ -54,7 +54,7 @@
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "LittlerootTown_WeatherBarracks_2F_A_EventScript_LabComputerMeta"
     },
     {
       "type": "sign",
@@ -62,7 +62,7 @@
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "LittlerootTown_WeatherBarracks_2F_A_EventScript_LabComputerMeta"
     },
     {
       "type": "sign",
@@ -70,7 +70,7 @@
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "LittlerootTown_WeatherBarracks_2F_A_EventScript_SoilBook"
     },
     {
       "type": "sign",
@@ -78,7 +78,7 @@
       "y": 4,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "LittlerootTown_WeatherBarracks_2F_A_EventScript_ThreeRingBinders"
     },
     {
       "type": "sign",
@@ -86,7 +86,7 @@
       "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "LittlerootTown_WeatherBarracks_2F_A_EventScript_ThreeRingBinders"
     },
     {
       "type": "sign",
@@ -102,7 +102,7 @@
       "y": 8,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "LittlerootTown_WeatherBarracks_2F_A_EventScript_LabComputerGoof"
     },
     {
       "type": "sign",
@@ -110,7 +110,7 @@
       "y": 4,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "LittlerootTown_WeatherBarracks_2F_A_EventScript_SatelliteMap"
     },
     {
       "type": "sign",
@@ -118,7 +118,7 @@
       "y": 9,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "LittlerootTown_WeatherBarracks_2F_A_EventScript_BoxesPackedWith"
     },
     {
       "type": "sign",
@@ -126,7 +126,7 @@
       "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "LittlerootTown_WeatherBarracks_2F_A_EventScript_BoxesPackedWith"
     },
     {
       "type": "sign",
@@ -134,7 +134,7 @@
       "y": 4,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "LittlerootTown_WeatherBarracks_2F_A_EventScript_BoxesPackedWith"
     },
     {
       "type": "sign",
@@ -142,7 +142,23 @@
       "y": 9,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "LittlerootTown_WeatherBarracks_2F_A_EventScript_BoxesPackedWith"
+    },
+    {
+      "type": "sign",
+      "x": 6,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LittlerootTown_WeatherBarracks_2F_A_EventScript_TakeoutReceipt"
+    },
+    {
+      "type": "sign",
+      "x": 4,
+      "y": 1,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LittlerootTown_WeatherBarracks_2F_A_EventScript_CloudBook"
     }
   ]
 }

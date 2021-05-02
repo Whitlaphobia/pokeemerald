@@ -194,7 +194,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LittlerootTown_EventScript_Kecleon",
-      "flag": "FLAG_MET_VINCENT"
+      "flag": "FLAG_GOT_POKEMON"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SIDNEY",
@@ -207,7 +207,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LittlerootTown_EventScript_SidneyMove",
-      "flag": "FLAG_GOT_POKEMON"
+      "flag": "FLAG_MET_DRAKE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VIGOROTH_CARRYING_BOX",
@@ -220,7 +220,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_GOT_POKEMON"
+      "flag": "FLAG_MET_DRAKE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VIGOROTH_FACING_AWAY",
@@ -233,12 +233,12 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LittlerootTown_EventScript_VigHello",
-      "flag": "FLAG_GOT_POKEMON"
+      "flag": "FLAG_MET_DRAKE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_VIGOROTH_FACING_AWAY",
       "x": 39,
-      "y": 15,
+      "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_WALK_SLOWLY_IN_PLACE_RIGHT",
       "movement_range_x": 0,
@@ -246,7 +246,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "LittlerootTown_EventScript_VigHello",
-      "flag": "FLAG_GOT_POKEMON"
+      "flag": "FLAG_MET_DRAKE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER",

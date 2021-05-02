@@ -4526,7 +4526,7 @@
       "name": "LittlerootTown_WeatherBarracks_2F_A_Layout",
       "width": 10,
       "height": 10,
-      "primary_tileset": "gTileset_Building",
+      "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Lab",
       "border_filepath": "data/layouts/LittlerootTown_WeatherBarracks_2F_A/border.bin",
       "blockdata_filepath": "data/layouts/LittlerootTown_WeatherBarracks_2F_A/map.bin"

@@ -142,7 +142,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_DrakeMeetingLeft::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_DraketoAide, MSGBOX_SIGN
 	delay 20
 	applymovement LOCALID_DRAKE, Common_Movement_ExclamationMark
-	delay 20
+	waitmovement 0
 	applymovement LOCALID_DRAKE, LittlerootTown_ProfessorBirchsLab_Movement_DrakeNotice
 	delay 80
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_WelcomeOrientation, MSGBOX_SIGN
@@ -169,7 +169,7 @@ LittlerootTown_ProfessorBirchsLab_EvenetScript_UnconventionalPartner::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_YouAlreadyHaveAPartner, MSGBOX_SIGN
 	delay 20
 	applymovement LOCALID_AIDE2, LittlerootTown_ProfessorBirchsLab_Movement_AideLeaves
-	delay 20
+	waitmovement 0
 	setflag FLAG_MET_DRAKE
 	return
 
@@ -178,7 +178,7 @@ LittlerootTown_ProfessorBirchsLab_EvenetScript_PickaStarter::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_WonderfulMeet, MSGBOX_SIGN
 	delay 20
 	applymovement LOCALID_AIDE2, LittlerootTown_ProfessorBirchsLab_Movement_AideLeaves
-	delay 20
+	waitmovement 0
 	setflag FLAG_MET_DRAKE
 	return
 

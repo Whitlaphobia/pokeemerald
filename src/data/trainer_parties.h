@@ -114,7 +114,7 @@ static const struct TrainerMonItemCustomMoves sParty_YDavid1[] = {
     .lvl = 3,
     .species = SPECIES_KECLEON,
     .heldItem = ITEM_NONE,
-    .moves = {MOVE_ABSORB, MOVE_ASTONISH, MOVE_BUBBLE, MOVE_NUZZLE}
+    .moves = {MOVE_ABSORB, MOVE_MUD_SLAP, MOVE_STORED_POWER, MOVE_NUZZLE}
     }
 };
 

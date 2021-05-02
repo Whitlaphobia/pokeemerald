@@ -147,8 +147,9 @@ LittlerootTown_EventScript_ShipExit:: @ 81E8151
 	delay 100
 	setflag FLAG_HIDE_SIDNEY_PORT
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_ExitDock
-	delay 200
+	waitmovement 0
 	applymovement LOCALID_OLDMAN, LittlerootTown_Movement_DownOne
+	waitmovement 0
 	setvar VAR_TEMP_0, 1
 	end
 
@@ -245,7 +246,7 @@ LittlerootTown_Movement_VincentPush:
 LittlerootTown_EventScript_VincentWelcome:: @ 81E8151
 	setrespawn HEAL_LOCATION_LITTLEROOT_TOWN
 	applymovement LOCALID_VINCENT, Common_Movement_ExclamationMark
-	delay 20
+	waitmovement 0
 	msgbox LittlerootTown_Text_HeyWatchIt, MSGBOX_SIGN
 	delay 20
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_LeftOne
@@ -256,7 +257,7 @@ LittlerootTown_EventScript_VincentWelcome:: @ 81E8151
 	msgbox LittlerootTown_Text_ItMustBeTough, MSGBOX_SIGN
 	delay 40
 	applymovement LOCALID_VINCENT, LittlerootTown_Movement_VincentLeave
-	delay 100
+	waitmovement 0
 	setvar VAR_TEMP_0, 2
 	setflag FLAG_MET_VINCENT
 	end

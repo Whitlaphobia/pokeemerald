@@ -50,8 +50,8 @@
 #define FLAG_NO_POKEMON_YET    0x26 // Unused Flag
 #define FLAG_SMEARGLE_STARTER   0x27 // Unused Flag
 #define FLAG_YDAVID_SETS_OFF   0x28 // Unused Flag
-#define FLAG_UNUSED_0x029    0x29 // Unused Flag
-#define FLAG_UNUSED_0x02A    0x2A // Unused Flag
+#define FLAG_DRAKE_MISSION_BRIEF_1  0x29 // Unused Flag
+#define FLAG_STARTING_POKEBALLS   0x2A // Unused Flag
 #define FLAG_UNUSED_0x02B    0x2B // Unused Flag
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag

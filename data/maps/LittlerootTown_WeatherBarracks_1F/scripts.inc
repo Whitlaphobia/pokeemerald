@@ -80,6 +80,41 @@ LittlerootTown_WeatherBarracks_1F_EventScript_ComfyBed::
 	msgbox LittlerootTown_WeatherBarracks_1F_Text_HighQualitySheets,MSGBOX_SIGN
 	end
 
+
+LittlerootTown_WeatherBarracks_1F_EventScript_PokeballGuy::
+	lock
+	faceplayer
+	call_if_unset FLAG_STARTING_POKEBALLS, LittlerootTown_WeatherBarracks_1F_EventScript_GivePokeballs
+	call_if_set FLAG_STARTING_POKEBALLS, LittlerootTown_WeatherBarracks_1F_EventScript_HowIsCatching
+	end
+
+LittlerootTown_WeatherBarracks_1F_EventScript_GivePokeballs::
+	msgbox LittlerootTown_WeatherBarracks_1F_Text_NewtoPokemon,MSGBOX_DEFAULT
+	giveitem ITEM_POKE_BALL,10
+	setflag FLAG_STARTING_POKEBALLS
+	release
+	end
+
+LittlerootTown_WeatherBarracks_1F_Text_NewtoPokemon:
+	.string "Oh, youre {PLAYER},\n"
+	.string "our new neighbour?\p"
+	.string "AND you're a new trainer?\n"
+	.string "take these as a welcome gift!$"
+
+
+LittlerootTown_WeatherBarracks_1F_EventScript_HowIsCatching::
+	msgbox LittlerootTown_WeatherBarracks_1F_Text_HowIsCatchingGoing,MSGBOX_DEFAULT
+	release
+	end
+
+
+LittlerootTown_WeatherBarracks_1F_Text_HowIsCatchingGoing:
+	.string "Hey there {PLAYER},\n"
+	.string "have you caught any\p"
+	.string "new pokemon yet?$"
+
+
+
 LittlerootTown_WeatherBarracks_1F_Text_HighQualitySheets:
 	.string "The sheets are the softest\n"
 	.string "you've ever felt\p"
@@ -119,9 +154,23 @@ LittlerootTown_WeatherBarracks_1F_EventScript_KnifeCupboard::
 
 LittlerootTown_WeatherBarracks_1F_Text_ChefKnives:
 	.string "There are nice, sharp\n"
-	.string "kitchen knives in the drawer.p"
+	.string "kitchen knives in the drawer.\p"
 	.string "Cooking here is going to\n"
 	.string "be a dream!$"
+
+
+LittlerootTown_WeatherBarracks_1F_EventScript_Bed:: @ 826FB18
+	lockall
+	msgbox LittlerootTown_WeatherBarracks_1F_Text_TakeRestInBed, MSGBOX_DEFAULT
+	closemessage
+	call Common_EventScript_OutOfCenterPartyHeal
+	releaseall
+	end
+
+	
+LittlerootTown_WeatherBarracks_1F_Text_TakeRestInBed: @ 826FEFC
+	.string "It's my bed…\n"
+	.string "Let's take a rest.$"
 
 
 LittlerootTown_WeatherBarracks_1F_EventScript_CommunalSink::
