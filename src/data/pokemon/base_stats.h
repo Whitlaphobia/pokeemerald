@@ -5766,7 +5766,7 @@ const struct BaseStats gBaseStats[] =
         .growthRate = GROWTH_MEDIUM_FAST,
         .eggGroup1 = EGG_GROUP_FIELD,
         .eggGroup2 = EGG_GROUP_FIELD,
-        .abilities = {ABILITY_INNER_FOCUS, ABILITY_EARLY_BIRD},
+        .abilities = {ABILITY_PARENTAL_BOND, ABILITY_PARENTAL_BOND},
         #ifdef BATTLE_ENGINE
             .abilityHidden = ABILITY_SAP_SIPPER,
         #endif

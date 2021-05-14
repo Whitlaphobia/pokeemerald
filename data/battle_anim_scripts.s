@@ -23934,12 +23934,12 @@ CastformChangeContinue:
 	monbg ANIM_ATTACKER
 	playsewithpan SE_M_TELEPORT, SOUND_PAN_ATTACKER
 	waitplaysewithpan SE_M_MINIMIZE, SOUND_PAN_ATTACKER, 48
-	createvisualtask AnimTask_TransformMon, 2, 1, 0
+	createvisualtask AnimTask_TransformMon, 2, 1
 	waitforvisualfinish
 	clearmonbg ANIM_ATTACKER
 	end
 CastformChangeSkipAnim:
-	createvisualtask AnimTask_CastformGfxDataChange, 2, 1
+	createvisualtask AnimTask_CastformGfxDataChange, 2, 1, 0
 	end
 
 General_StatsChange:
