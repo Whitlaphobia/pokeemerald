@@ -111,7 +111,7 @@ LittlerootTown_WeatherBarracks_1F_EventScript_HowIsCatching::
 LittlerootTown_WeatherBarracks_1F_Text_HowIsCatchingGoing:
 	.string "Hey there {PLAYER},\n"
 	.string "have you caught any\p"
-	.string "new pokemon yet?$"
+	.string "new POKéMON yet?$"
 
 
 
@@ -167,7 +167,17 @@ LittlerootTown_WeatherBarracks_1F_EventScript_Bed:: @ 826FB18
 	releaseall
 	end
 
-	
+
+LittlerootTown_WeatherBarracks_1F_Text_WoodPiece: @ 826FEFC
+	.string "A piece of wood\n"
+	.string "signed by the original members\p"
+	.string "of the WEATHER INSTITUTE.$"
+
+
+LittlerootTown_WeatherBarracks_1F_EventScript_DisplayCase::
+	msgbox LittlerootTown_WeatherBarracks_1F_Text_WoodPiece,MSGBOX_SIGN
+	end
+
 LittlerootTown_WeatherBarracks_1F_Text_TakeRestInBed: @ 826FEFC
 	.string "It's my bed…\n"
 	.string "Let's take a rest.$"

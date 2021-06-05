@@ -138,30 +138,30 @@ LittlerootTown_WeatherInstitute_3F_A_EventScript_IndividualValues:: @ 81E8151
 
 LittlerootTown_WeatherInstitute_3F_A_Text_EVsandIVs: @ 81E8ACF
 	.string "The blackboard describes \n"
-	.string "pokemon EVs and IVs,\p"
+	.string "POKéMON EVs and IVs,\p"
 	.string "genetic and experiential factors\n"
 	.string "that influence their stats.$"	
 
 LittlerootTown_WeatherInstitute_3F_A_Text_IVDesc:@ 81E8ACF
 	.string "Individual Values are\n"
-	.string "pokemon genetics.\p"
+	.string "POKéMON genetics.\p"
 	.string "They are fixed stat modifiers\n"
-	.string "that every pokemon has.\p"
+	.string "that every POKéMON has.\p"
 	.string "They range from 0-31 \n"
 	.string "in each stat.\p"
-	.string "To check a pokemon's IVs,\n"
+	.string "To check a POKéMON's IVs,\n"
 	.string "press L on their stat page.$"	
 
 LittlerootTown_WeatherInstitute_3F_A_Text_EVDesc:@ 81E8ACF
 	.string "Effort Values are gained when\n"
-	.string "defeating other pokemon in battle.\p"
-	.string "Your pokemon gains EVs according \n"
+	.string "defeating other POKéMON in battle.\p"
+	.string "Your POKéMON gains EVs according \n"
 	.string "to the highest stat of the opponent.\p"
-	.string "Each pokemon can only\n"
+	.string "Each POKéMON can only\n"
 	.string "gain so many EVs,\p"
 	.string "so think carefully\n"
 	.string "about how you raise them.\p"
-	.string "To check a pokemon's EVs,\n"
+	.string "To check a POKéMON's EVs,\n"
 	.string "press R on their stat page.$"
 
 LittlerootTown_WeatherInstitute_3F_A_EventScript_TeacherDesk:: @ 81E8151

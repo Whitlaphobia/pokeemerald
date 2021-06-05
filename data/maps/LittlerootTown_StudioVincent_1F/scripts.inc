@@ -27,7 +27,7 @@ LittlerootTown_StudioVincent_1F_Text_PokemonFigures: @ 81E8D32
 	.string "It's a display cabinet\n"
 	.string "full of tiny figures.\p"
 	.string "They appear to be little sculptures\n"
-	.string "of pokemon carefully painted.$"
+	.string "of POKéMON carefully painted.$"
 
 
 
@@ -55,7 +55,7 @@ LittlerootTown_StudioVincent_1F_EventScript_MysterySculpture:: @ 81E8151
 
 LittlerootTown_StudioVincent_1F_Text_HeavyStone: @ 81E8D32
 	.string "A large stone sculpture of\n"
-	.string "a pokemon you've never seen before.\p"
+	.string "a POKéMON you've never seen before.\p"
 	.string "How does Vincent move this thing?\n"
 	.string "It must weigh a ton!$"
 
@@ -82,7 +82,7 @@ LittlerootTown_StudioVincent_1F_Text_SadView: @ 81E8D32
 
 LittlerootTown_StudioVincent_1F_Text_YoullTakeSmeargle:
 	.string "You'll take SMEARGLE,\n"
-	.string "the artist pokemon?$"
+	.string "the artist POKéMON?$"
 
 LittlerootTown_StudioVincent_1F_Text_SmeargleOffer:
 	.string "Hello there!\n"
@@ -92,7 +92,7 @@ LittlerootTown_StudioVincent_1F_Text_SmeargleOffer:
 	.string "I've got the perfect\p"
 	.string "housewarming gift for you!\p"
 	.string "How would you like\n"
-	.string "your very own pokemon partner?$"
+	.string "your very own POKéMON partner?$"
 
 LittlerootTown_StudioVincent_1F_EventScript_AreYouSure::
 	hidemonpic

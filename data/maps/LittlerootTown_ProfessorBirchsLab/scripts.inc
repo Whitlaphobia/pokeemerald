@@ -203,20 +203,20 @@ LittlerootTown_ProfessorBirchsLab_Text_HereAtTheInstitute:
 	.string "We train people to help out our\n"
 	.string "communities and gather data on\p"
 	.string "our changing climate together\n"
-	.string "With their pokemon.\p"
+	.string "With their POKéMON.\p"
 	.string "We provide housing, training, support,\n"
-	.string "and specially bred pokemon adapted\p"
+	.string "and specially bred POKéMON adapted\p"
 	.string "to extreme weather conditions.$"
 
 
 
 LittlerootTown_ProfessorBirchsLab_Text_YouAlreadyHaveAPartner:
  	.string "...\p"
-	 .string "Oh! You already have a pokemon\n"
+	 .string "Oh! You already have a POKéMON\n"
 	.string "partner with you.\p"
 	.string "Well, it's a touch unconventional,\n"
 	.string "but having a close bond with\p"
-	.string "your pokemon is what is important!\p"
+	.string "your POKéMON is what is important!\p"
 	.string "I'll be on the third floor if you\n"
 	.string "need me, feel free to look around\p"
 	.string "our facility and meet Prof. Drake\n"

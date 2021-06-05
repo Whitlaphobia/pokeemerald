@@ -4,10 +4,10 @@
     {
       "id": "LAYOUT_PETALBURG_CITY",
       "name": "PetalburgCity_Layout",
-      "width": 30,
-      "height": 30,
+      "width": 70,
+      "height": 50,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_Fallarbor",
       "border_filepath": "data/layouts/PetalburgCity/border.bin",
       "blockdata_filepath": "data/layouts/PetalburgCity/map.bin"
     },
@@ -104,10 +104,10 @@
     {
       "id": "LAYOUT_OLDALE_TOWN",
       "name": "OldaleTown_Layout",
-      "width": 40,
-      "height": 40,
+      "width": 56,
+      "height": 60,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mauville",
+      "secondary_tileset": "gTileset_Tantramarsh",
       "border_filepath": "data/layouts/OldaleTown/border.bin",
       "blockdata_filepath": "data/layouts/OldaleTown/map.bin"
     },
@@ -164,7 +164,7 @@
     {
       "id": "LAYOUT_ROUTE101",
       "name": "Route101_Layout",
-      "width": 56,
+      "width": 65,
       "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Dewford",
@@ -174,7 +174,7 @@
     {
       "id": "LAYOUT_ROUTE102",
       "name": "Route102_Layout",
-      "width": 54,
+      "width": 62,
       "height": 55,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Fortree",
@@ -184,7 +184,7 @@
     {
       "id": "LAYOUT_ROUTE103",
       "name": "Route103_Layout",
-      "width": 40,
+      "width": 48,
       "height": 40,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Fortree",
@@ -194,20 +194,20 @@
     {
       "id": "LAYOUT_ROUTE104",
       "name": "Route104_Layout",
-      "width": 40,
-      "height": 80,
+      "width": 50,
+      "height": 40,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Rustboro",
+      "secondary_tileset": "gTileset_Fallarbor",
       "border_filepath": "data/layouts/Route104/border.bin",
       "blockdata_filepath": "data/layouts/Route104/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE105",
       "name": "Route105_Layout",
-      "width": 40,
-      "height": 80,
+      "width": 80,
+      "height": 40,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Dewford",
+      "secondary_tileset": "gTileset_Fallarbor",
       "border_filepath": "data/layouts/Route105/border.bin",
       "blockdata_filepath": "data/layouts/Route105/map.bin"
     },
@@ -1314,8 +1314,8 @@
     {
       "id": "LAYOUT_GRANITE_CAVE_1F",
       "name": "GraniteCave_1F_Layout",
-      "width": 42,
-      "height": 15,
+      "width": 44,
+      "height": 32,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/GraniteCave_1F/border.bin",
@@ -4550,6 +4550,16 @@
       "secondary_tileset": "gTileset_Facility",
       "border_filepath": "data/layouts/TantramarshTown_OceanPort_1F/border.bin",
       "blockdata_filepath": "data/layouts/TantramarshTown_OceanPort_1F/map.bin"
+    },
+    {
+      "id": "LAYOUT_TANTRAMARSH_TOWN_SEASIDE_OUTPOST_1F",
+      "name": "TantramarshTown_SeasideOutpost_1F_Layout",
+      "width": 12,
+      "height": 11,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/TantramarshTown_SeasideOutpost_1F/border.bin",
+      "blockdata_filepath": "data/layouts/TantramarshTown_SeasideOutpost_1F/map.bin"
     }
   ]
 }

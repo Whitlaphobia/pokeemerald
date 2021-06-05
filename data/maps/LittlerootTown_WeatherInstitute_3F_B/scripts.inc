@@ -24,7 +24,7 @@ LittlerootTown_WeatherInstitute_3F_B_EventScript_PokemonWeather:: @ 81E8151
 	msgbox LittlerootTown_WeatherInstitute_3F_B_Text_AbilitiesAffect, MSGBOX_SIGN
 	end
 LittlerootTown_WeatherInstitute_3F_B_Text_AbilitiesAffect: @ 81E8ACF
-	.string "Some pokemon have abilities\n"
+	.string "Some POKéMON have abilities\n"
 	.string "that affect the weather!\p"
 	.string "While some summon weather,\n"
 	.string "such as WINGULL's DRIZZLE,\p"
@@ -41,7 +41,7 @@ LittlerootTown_WeatherInstitute_3F_B_Text_HowSunWorks: @ 81E8ACF
 	.string "moves are empowered\p"
 	.string "and WATER type moves\n"
 	.string "are weakened.\p"
-	.string "In the sun, a pokemon's\n"
+	.string "In the sun, a POKéMON's\n"
 	.string "SOLARBEAM will take one turn!$"
 
 LittlerootTown_WeatherInstitute_3F_B_EventScript_RainyWeather:: @ 81E8151
@@ -60,8 +60,8 @@ LittlerootTown_WeatherInstitute_3F_B_EventScript_SnowWeather:: @ 81E8151
 	end
 
 LittlerootTown_WeatherInstitute_3F_B_Text_HowHailWorks: @ 81E8ACF
-	.string "Some pokemon can summon HAIL,\n"
-	.string "which damages all pokemon\p"
+	.string "Some POKéMON can summon HAIL,\n"
+	.string "which damages all POKéMON\p"
 	.string "except for ICE types and makes\n"
 	.string "BLIZZARD always hit!$"
 
@@ -71,9 +71,11 @@ LittlerootTown_WeatherInstitute_3F_B_EventScript_SandstormWeather:: @ 81E8151
 	end
 
 LittlerootTown_WeatherInstitute_3F_B_Text_HowSandstormWorks: @ 81E8ACF
-	.string "Some pokemon can summon a SANDSTORM,\n"
-	.string "which damages all pokemon except\p"
-	.string "for ROCK, GROUND, and STEEL types.$"
+	.string "Some POKéMON can summon a SANDSTORM,\n"
+	.string "which damages all POKéMON except\p"
+	.string "for ROCK, GROUND, and STEEL types.\p"
+	.string "ROCK types also get a boost to their\n"
+	.string "SP. DEFENSE.$"
 
 LittlerootTown_WeatherInstitute_3F_B_EventScript_SubmarineModel:: @ 81E8151
 	msgbox LittlerootTown_WeatherInstitute_3F_B_Text_FirstSub, MSGBOX_SIGN
@@ -124,13 +126,13 @@ LittlerootTown_WeatherInstitute_3F_B_EventScript_PokemonClimateChange:: @ 81E815
 	msgbox LittlerootTown_WeatherInstitute_3F_B_Text_LegendariesEffect, MSGBOX_SIGN
 	end
 LittlerootTown_WeatherInstitute_3F_B_Text_LegendariesEffect: @ 81E8ACF
-	.string "Because some legendary pokemon\n"
+	.string "Because some legendary POKéMON\n"
 	.string "like GROUDON, KYOGRE, and LUGIA\p"
 	.string "can command the weather,\n"
 	.string "many people believe that they\p"
 	.string "are responsible for climate change.\p"
 	.string "But research shows that humans,\n"
-	.string "not pokemon, are responsible.$"
+	.string "not POKéMON, are responsible.$"
 
 LittlerootTown_WeatherInstitute_3F_B_EventScript_GreenhouseEffect:: @ 81E8151
 	msgbox LittlerootTown_WeatherInstitute_3F_B_Text_ManMadeClimateChange, MSGBOX_SIGN

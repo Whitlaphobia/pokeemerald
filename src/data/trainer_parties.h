@@ -4382,16 +4382,20 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Eddie[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Allen[] = {
+static const struct TrainerMonItemCustomMoves sParty_Allen[] = {
     {
-    .iv = 0,
+    .iv = 80,
     .lvl = 4,
-    .species = SPECIES_ZIGZAGOON,
+    .species = SPECIES_MAGIKARP,
+    .heldItem = ITEM_WEAKNESS_POLICY,
+    .moves = {MOVE_FLAIL, MOVE_BOUNCE, MOVE_TACKLE, MOVE_SPLASH}
     },
     {
     .iv = 0,
     .lvl = 3,
-    .species = SPECIES_TAILLOW,
+    .species = SPECIES_CARVANHA,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_BITE, MOVE_SCARY_FACE, MOVE_AQUA_JET, MOVE_HOWL}
     }
 };
 
@@ -7988,16 +7992,27 @@ static const struct TrainerMonNoItemDefaultMoves sParty_MaxieMtChimney[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Tiana[] = {
+static const struct TrainerMonItemCustomMoves sParty_Tiana[] = {
     {
     .iv = 0,
     .lvl = 4,
-    .species = SPECIES_ZIGZAGOON,
+    .species = SPECIES_SURSKIT,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_QUICK_ATTACK, MOVE_INFESTATION, MOVE_BUBBLE, MOVE_DOUBLE_TEAM}
     },
     {
     .iv = 0,
     .lvl = 4,
-    .species = SPECIES_SHROOMISH,
+    .species = SPECIES_LOTAD,
+    .heldItem = ITEM_BIG_ROOT,
+    .moves = {MOVE_ABSORB, MOVE_WATER_GUN, MOVE_LEECH_SEED, MOVE_GROWL}
+    },
+    {
+    .iv = 0,
+    .lvl = 4,
+    .species = SPECIES_PSYDUCK,
+    .heldItem = ITEM_ORAN_BERRY,
+    .moves = {MOVE_BRICK_BREAK, MOVE_PSYBEAM, MOVE_WATER_GUN, MOVE_HYPNOSIS}
     }
 };
 
@@ -8144,17 +8159,14 @@ static const struct TrainerMonNoItemDefaultMoves sParty_Crissy[] = {
     }
 };
 
-static const struct TrainerMonNoItemDefaultMoves sParty_Rick[] = {
+static const struct TrainerMonItemCustomMoves sParty_Rick[] = {
     {
     .iv = 0,
-    .lvl = 4,
-    .species = SPECIES_WURMPLE,
+    .lvl = 8,
+    .species = SPECIES_RATTATA,
+     .heldItem = ITEM_FLAME_ORB,
+    .moves = {MOVE_EXTREME_SPEED, MOVE_THUNDER_FANG, MOVE_CRUNCH, MOVE_ICE_FANG}
     },
-    {
-    .iv = 0,
-    .lvl = 4,
-    .species = SPECIES_WURMPLE,
-    }
 };
 
 static const struct TrainerMonNoItemDefaultMoves sParty_Lyle[] = {

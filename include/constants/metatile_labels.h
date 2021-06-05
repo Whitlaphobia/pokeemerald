@@ -730,6 +730,12 @@
 #define METATILE_Sootopolis_GymDoor_Closed   0x250
 #define METATILE_Sootopolis_RoughWater       0x290
 
+// gTileset_Tantramarsh
+#define METATILE_Tantramarsh_HalfSubmergedLogs_Horizontal0  0x23E
+#define METATILE_Tantramarsh_HalfSubmergedLogs_Horizontal1  0x23F
+#define METATILE_Tantramarsh_SubmergedLogs_Horizontal0      0x246
+#define METATILE_Tantramarsh_SubmergedLogs_Horizontal1      0x247
+
 // gTileset_TrainerHill
 #define METATILE_TrainerHill_CounterDoor          0x334
 #define METATILE_TrainerHill_Door_Elevator_Lobby  0x32C

@@ -830,3 +830,25 @@ gTileset_UnionRoom:: @ 83DFDFC
 	.4byte gMetatiles_UnionRoom
 	.4byte gMetatileAttributes_UnionRoom
 	.4byte NULL @ animation callback
+
+	.align 2
+gTileset_Tantramarsh::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_Tantramarsh
+	.4byte gTilesetPalettes_Tantramarsh
+	.4byte gMetatiles_Tantramarsh
+	.4byte gMetatileAttributes_Tantramarsh
+	.4byte NULL
+
+	.align 2
+gTileset_Mistveil::
+	.byte TRUE @ is compressed
+	.byte TRUE @ is secondary
+	.2byte 0
+	.4byte gTilesetTiles_Mistveil
+	.4byte gTilesetPalettes_Mistveil
+	.4byte gMetatiles_Mistveil
+	.4byte gMetatileAttributes_Mistveil
+	.4byte NULL

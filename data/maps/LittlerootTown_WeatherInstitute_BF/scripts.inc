@@ -82,7 +82,7 @@ LittlerootTown_WeatherInstitute_BF_Text_FullofResearchNotes: @ 81E8D32
 	.string "A file cabinet packed to the brim\n"
 	.string "with research notes from various projects\p"
 	.string "This one mentions new variations of \n"
-	.string "pokemon seen in the region recently\p"
+	.string "POKéMON seen in the region recently\p"
 	.string "It seems ZIGZAGOON have developed the\n"
 	.string "ability to filter toxins out of water!$"
 LittlerootTown_WeatherInstitute_BF_Text_FullofResearchNotesJoke: @ 81E8D32

@@ -1088,3 +1088,5 @@ Common_EventScript_LegendaryFlewAway:: @ 8273776
 	.include "data/maps/LittlerootTown_UnderseaTours_Route1/scripts.inc"
 
 	.include "data/maps/TantramarshTown_OceanPort_1F/scripts.inc"
+
+	.include "data/maps/TantramarshTown_SeasideOutpost_1F/scripts.inc"

@@ -85,7 +85,7 @@ LittlerootTown_BrendansHouse_1F_EventScript_BrineyBookshelf::
 LittlerootTown_BrendansHouse_1F_Text_SeaBooks:
 	.string "This shelf is full of\n"
 	.string "old nautical maps and\p"
-	.string "books on ocean dwelling pokemon.$"
+	.string "books on ocean dwelling POKéMON.$"
 
 
 

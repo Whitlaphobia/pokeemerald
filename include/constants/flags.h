@@ -52,7 +52,7 @@
 #define FLAG_YDAVID_SETS_OFF   0x28 // Unused Flag
 #define FLAG_DRAKE_MISSION_BRIEF_1  0x29 // Unused Flag
 #define FLAG_STARTING_POKEBALLS   0x2A // Unused Flag
-#define FLAG_UNUSED_0x02B    0x2B // Unused Flag
+#define FLAG_ENTERED_OUTPOST   0x2B // Unused Flag
 #define FLAG_UNUSED_0x02C    0x2C // Unused Flag
 #define FLAG_UNUSED_0x02D    0x2D // Unused Flag
 #define FLAG_UNUSED_0x02E    0x2E // Unused Flag

@@ -44,6 +44,12 @@ Route101_EventScript_StartBirchRescue:: @ 81EBCDE
 	releaseall
 	end
 
+
+Route101_EventScript_HiddenSoftSand::
+	finditem ITEM_SOFT_SAND
+	setflag FLAG_RECEIVED_SOFT_SAND
+	end
+
 Route101_EventScript_PreventExitSouth:: @ 81EBD4E
 	lockall
 	msgbox Route101_Text_DontLeaveMe, MSGBOX_DEFAULT
@@ -52,6 +58,68 @@ Route101_EventScript_PreventExitSouth:: @ 81EBD4E
 	waitmovement 0
 	releaseall
 	end
+
+Route101_EventScript_SandyFootsteps::
+	lock
+	faceplayer
+	msgbox Route101_Text_RunningInSand,MSGBOX_DEFAULT
+	release
+	end
+Route101_Text_RunningInSand:
+	.string "I love the feeling of\n"
+	.string "the sand between my toes.\p"
+	.string "Plus I leave fun footprints!$"
+
+
+Route101_EventScript_FascinatingLandscape::
+	lock
+	faceplayer
+	msgbox Route101_Text_FeastingEyes,MSGBOX_DEFAULT
+	release
+	end
+Route101_Text_FeastingEyes:
+	.string "There's so much to look at\n"
+	.string "in a new landscape.\p"
+	.string "I can't take my eyes off\n"
+	.string "of anything!$"
+
+
+Route101_EventScript_TourGuideAmbition::
+	lock
+	faceplayer
+	msgbox Route101_Text_WhenIGrowUp,MSGBOX_DEFAULT
+	release
+	end
+Route101_Text_WhenIGrowUp:
+	.string "I want to be a tour guide\n"
+	.string "when I grow up!$"
+
+
+Route101_EventScript_AttentiveListening::
+	lock
+	faceplayer
+	msgbox Route101_Text_BeQuiet,MSGBOX_DEFAULT
+	release
+	end
+Route101_Text_BeQuiet:
+	.string "Shh!\p"
+	.string "I'm trying to listen!$"
+
+
+
+Route101_EventScript_ProudMother::
+	lock
+	faceplayer
+	msgbox Route101_Text_CuriousKid,MSGBOX_DEFAULT
+	release
+	end
+Route101_Text_CuriousKid:
+	.string "I'm so lucky to have such\n"
+	.string "a curious daughter.\p"
+	.string "After all,\n"
+	.string "I am a curious mother!$"
+
+
 
 Route101_EventScript_PreventExitWest:: @ 81EBD64
 	lockall

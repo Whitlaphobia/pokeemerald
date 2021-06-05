@@ -4663,7 +4663,7 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_ALLEN] =
     {
-        .partyFlags = 0,
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
         .trainerClass = TRAINER_CLASS_YOUNGSTER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
         .trainerPic = TRAINER_PIC_YOUNGSTER,
@@ -4672,7 +4672,7 @@ const struct Trainer gTrainers[] = {
         .doubleBattle = FALSE,
         .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
         .partySize = ARRAY_COUNT(sParty_Allen),
-        .party = {.NoItemDefaultMoves = sParty_Allen},
+        .party = {.ItemCustomMoves = sParty_Allen},
     },
 
     [TRAINER_TIMMY] =
@@ -8443,16 +8443,16 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_TIANA] =
     {
-        .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_LASS,
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_EXPERT,
         .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
-        .trainerPic = TRAINER_PIC_LASS,
+        .trainerPic = TRAINER_PIC_EXPERT_F,
         .trainerName = _("TIANA"),
         .items = {},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE| AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = ARRAY_COUNT(sParty_Tiana),
-        .party = {.NoItemDefaultMoves = sParty_Tiana},
+        .party = {.ItemCustomMoves = sParty_Tiana},
     },
 
     [TRAINER_HALEY_1] =
@@ -8611,16 +8611,16 @@ const struct Trainer gTrainers[] = {
 
     [TRAINER_RICK] =
     {
-        .partyFlags = 0,
-        .trainerClass = TRAINER_CLASS_BUG_CATCHER,
+        .partyFlags = F_TRAINER_PARTY_HELD_ITEM | F_TRAINER_PARTY_CUSTOM_MOVESET,
+        .trainerClass = TRAINER_CLASS_YOUNGSTER,
         .encounterMusic_gender = TRAINER_ENCOUNTER_MUSIC_MALE,
-        .trainerPic = TRAINER_PIC_BUG_CATCHER,
+        .trainerPic = TRAINER_PIC_YOUNGSTER,
         .trainerName = _("RICK"),
-        .items = {},
+        .items = {ITEM_POTION,ITEM_POTION},
         .doubleBattle = FALSE,
-        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE,
+        .aiFlags = AI_SCRIPT_CHECK_BAD_MOVE| AI_SCRIPT_TRY_TO_FAINT | AI_SCRIPT_CHECK_VIABILITY,
         .partySize = ARRAY_COUNT(sParty_Rick),
-        .party = {.NoItemDefaultMoves = sParty_Rick},
+        .party = {.ItemCustomMoves = sParty_Rick},
     },
 
     [TRAINER_LYLE] =

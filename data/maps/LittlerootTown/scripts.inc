@@ -115,7 +115,7 @@ LittlerootTown_Text_SidneyPortGreeting: @ 81E8D32
 	.string "Head on down to the\n"
 	.string "Weather Institute\p"
 	.string "for your orientation and\n"
-	.string "to pick out a pokemon!$"
+	.string "to pick out a POKéMON!$"
 
 LittlerootTown_Text_VigrothGreeting: @ 81E8D32
 	.string "GROOOOW!$"
@@ -130,6 +130,7 @@ LittlerootTown_EventScript_VigHello::
 
 LittlerootTown_EventScript_ShipExit:: @ 81E8151
 	setflag FLAG_SYS_POKEDEX_GET
+	special EnableNationalPokedex
 	setflag FLAG_SYS_B_DASH 
 	setflag FLAG_NO_POKEMON_YET
 	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_FaceRight
@@ -394,7 +395,7 @@ LittlerootTown_Text_TrainingOurLapras: @ 81E8D32
 	.string "grandkids whenever we like!$"
 LittlerootTown_Text_ThisBagContains: @ 81E8D32
 	.string "This bag contains many toys and treats.\n"
-	.string "Perfect for training pokemon!$"
+	.string "Perfect for training POKéMON!$"
 
 LittlerootTown_Text_FishermanonLeave: @ 81E8D32
 	.string "I'm a fisherman,\n"
@@ -414,7 +415,7 @@ LittlerootTown_Text_FishermanonLeave: @ 81E8D32
 
 LittlerootTown_Text_YDavidIntro: @ 81E8ACF
 	.string "Oh?\p"
-	.string "Now that you have a pokemon,\n"
+	.string "Now that you have a POKéMON,\n"
 	.string "you want to battle?$"
 
 LittlerootTown_EventScript_LaggingTail:: @ 8290E2A

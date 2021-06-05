@@ -48,26 +48,27 @@ Route102_Text_AllenPostBattle: @ 82947DB
 
 Route102_Text_RickIntro: @ 829480C
 	.string "Hahah! Our eyes met!\n"
-	.string "I'll take you on with my BUG POKéMON!$"
+	.string "My RATTATA will be your downfall!$"
 
 Route102_Text_RickDefeated: @ 8294847
-	.string "Ow! Down and out!$"
+	.string "This win puts you in the top percentile!$"
 
 Route102_Text_RickPostBattle: @ 8294859
-	.string "If you lock eyes with a TRAINER,\n"
-	.string "you have to challenge! It's a rule!$"
+	.string "My RATTATA is going to take on\n"
+	.string "the toughest trainers in the region!$"
 
 Route102_Text_TianaIntro: @ 829489E
-	.string "I'm going to keep winning and aim\n"
-	.string "to be the best TRAINER.\p"
-	.string "Help me further my career!$"
+	.string "You're still looking for\n"
+	.string "more information after the tour?.\p"
+	.string "I'll give you a firsthand\n"
+	.string "demonstration of local POKéMON!$"
 
 Route102_Text_TianaDefeated: @ 82948F3
-	.string "I ended up furthering your career…$"
+	.string "I hope that was educational.$"
 
 Route102_Text_TianaPostBattle: @ 8294916
-	.string "To keep winning my way up, I see that\n"
-	.string "I have to catch more POKéMON.$"
+	.string "Local POKéMON are adapted to\n"
+	.string "the constant heavy rain of the area.$"
 
 Route103_Text_DaisyIntro: @ 829495A
 	.string "Did you feel the tug of our\n"

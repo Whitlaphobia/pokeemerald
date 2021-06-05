@@ -41,7 +41,7 @@ LittlerootTown_WeatherInstitute_3F_C_EventScript_Plant:: @ 81E8151
 
 LittlerootTown_WeatherInstitute_3F_C_Text_NaturalAir: @ 81E8ACF
 	.string "Having lots of plants around\n"
-	.string "is good for pokemon development!$"
+	.string "is good for POKéMON development!$"
 
 LittlerootTown_WeatherInstitute_3F_C_Text_KecleonSound: @ 81E8ACF
 	.string "...\p"
@@ -49,12 +49,12 @@ LittlerootTown_WeatherInstitute_3F_C_Text_KecleonSound: @ 81E8ACF
 
 LittlerootTown_WeatherInstitute_3F_C_Text_LotsOfLight: @ 81E8ACF
 	.string "You can see into a nursery\n"
-	.string "full of sleeping baby pokemon.\p"
+	.string "full of sleeping baby POKéMON.\p"
 	.string "Better not wake them up!$"
 
 LittlerootTown_WeatherInstitute_3F_C_Text_PackedtoTheBrim: @ 81E8ACF
 	.string "Boxes packed to the brim\n"
-	.string "with toys for all kinds of pokemon.$"
+	.string "with toys for all kinds of POKéMON.$"
 
 LittlerootTown_WeatherInstitute_3F_C_Text_MeowthDoll: @ 81E8ACF
 	.string "This MEOWTH doll is very lifelike.\p"
@@ -83,8 +83,8 @@ LittlerootTown_WeatherInstitute_3F_C_EventScript_HavePokemon:: @ 81E8151
 	end
 	
 LittlerootTown_WeatherInstitute_3F_C_Text_PokemonDaycare: @ 81E8ACF
-	.string "This is the pokemon daycare\n"
-	.string "where we raise pokemon specially\p"
+	.string "This is the POKéMON daycare\n"
+	.string "where we raise POKéMON specially\p"
 	.string "to be perfect partners for our work!$"
 
 
@@ -92,14 +92,14 @@ LittlerootTown_WeatherInstitute_3F_C_Text_PokemonDaycare: @ 81E8ACF
 
  LittlerootTown_WeatherInstitute_3F_C_Text_YoullTakeCastform:
 	.string "You'll take CASTFORM,\n"
-	.string "the forecast pokemon?\p"
+	.string "the forecast POKéMON?\p"
 	.string "CASTFORM adapts its form and\n"
 	.string "type according to the weather\p"
 	.string "with its FORECAST.$"
 
 LittlerootTown_WeatherInstitute_3F_C_Text_YoullTakeSwablu:
 	.string "You'll take SWABLU,\n"
-	.string "cloud bird pokemon?\p"
+	.string "cloud bird POKéMON?\p"
 	.string "SWABLU negates the effects\n"
 	.string "of weather with its CLOUD NINE.$"
 

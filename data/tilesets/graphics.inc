@@ -1729,3 +1729,43 @@ gTilesetPalettes_UnionRoom:: @ 8395678
 	.align 2
 gTilesetTiles_UnionRoom:: @ 8395878
 	.incbin "data/tilesets/secondary/union_room/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_Tantramarsh::
+	.incbin "data/tilesets/secondary/tantramarsh/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/tantramarsh/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/tantramarsh/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/tantramarsh/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/tantramarsh/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/tantramarsh/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/tantramarsh/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/tantramarsh/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/tantramarsh/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/tantramarsh/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/tantramarsh/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/tantramarsh/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/tantramarsh/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_Tantramarsh::
+	.incbin "data/tilesets/secondary/tantramarsh/tiles.4bpp.lz"
+
+	.align 2
+gTilesetPalettes_Mistveil::
+	.incbin "data/tilesets/secondary/mistveil/palettes/00.gbapal"
+	.incbin "data/tilesets/secondary/mistveil/palettes/01.gbapal"
+	.incbin "data/tilesets/secondary/mistveil/palettes/02.gbapal"
+	.incbin "data/tilesets/secondary/mistveil/palettes/03.gbapal"
+	.incbin "data/tilesets/secondary/mistveil/palettes/04.gbapal"
+	.incbin "data/tilesets/secondary/mistveil/palettes/05.gbapal"
+	.incbin "data/tilesets/secondary/mistveil/palettes/06.gbapal"
+	.incbin "data/tilesets/secondary/mistveil/palettes/07.gbapal"
+	.incbin "data/tilesets/secondary/mistveil/palettes/08.gbapal"
+	.incbin "data/tilesets/secondary/mistveil/palettes/09.gbapal"
+	.incbin "data/tilesets/secondary/mistveil/palettes/10.gbapal"
+	.incbin "data/tilesets/secondary/mistveil/palettes/11.gbapal"
+	.incbin "data/tilesets/secondary/mistveil/palettes/12.gbapal"
+
+	.align 2
+gTilesetTiles_Mistveil::
+	.incbin "data/tilesets/secondary/mistveil/tiles.4bpp.lz"
