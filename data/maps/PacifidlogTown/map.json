@@ -15,20 +15,20 @@
   "connections": [
     {
       "direction": "left",
-      "offset": 0,
-      "map": "MAP_ROUTE132"
+      "offset": 17,
+      "map": "MAP_ROUTE103"
     },
     {
       "direction": "right",
-      "offset": 0,
-      "map": "MAP_ROUTE131"
+      "offset": 2,
+      "map": "MAP_ROUTE104"
     }
   ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_GIRL_1",
-      "x": 10,
-      "y": 23,
+      "x": 8,
+      "y": 29,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
@@ -40,8 +40,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FISHERMAN",
-      "x": 11,
-      "y": 14,
+      "x": 16,
+      "y": 12,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
       "movement_range_x": 0,
@@ -53,8 +53,8 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_NINJA_BOY",
-      "x": 9,
-      "y": 16,
+      "x": 16,
+      "y": 25,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -67,43 +67,43 @@
   ],
   "warp_events": [
     {
-      "x": 8,
-      "y": 15,
+      "x": 36,
+      "y": 12,
       "elevation": 0,
       "dest_map": "MAP_PACIFIDLOG_TOWN_POKEMON_CENTER_1F",
       "dest_warp_id": 0
     },
     {
-      "x": 16,
-      "y": 13,
+      "x": 12,
+      "y": 14,
       "elevation": 0,
       "dest_map": "MAP_PACIFIDLOG_TOWN_HOUSE1",
       "dest_warp_id": 0
     },
     {
-      "x": 3,
-      "y": 22,
+      "x": 11,
+      "y": 30,
       "elevation": 0,
       "dest_map": "MAP_PACIFIDLOG_TOWN_HOUSE2",
       "dest_warp_id": 0
     },
     {
-      "x": 12,
-      "y": 24,
+      "x": 21,
+      "y": 21,
       "elevation": 0,
       "dest_map": "MAP_PACIFIDLOG_TOWN_HOUSE3",
       "dest_warp_id": 0
     },
     {
-      "x": 2,
+      "x": 18,
       "y": 12,
       "elevation": 0,
       "dest_map": "MAP_PACIFIDLOG_TOWN_HOUSE4",
       "dest_warp_id": 0
     },
     {
-      "x": 17,
-      "y": 21,
+      "x": 34,
+      "y": 33,
       "elevation": 0,
       "dest_map": "MAP_PACIFIDLOG_TOWN_HOUSE5",
       "dest_warp_id": 0
@@ -115,24 +115,24 @@
   "bg_events": [
     {
       "type": "sign",
-      "x": 9,
-      "y": 15,
+      "x": 22,
+      "y": 22,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemonCenterSign"
     },
     {
       "type": "sign",
-      "x": 7,
-      "y": 16,
+      "x": 27,
+      "y": 25,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "PacifidlogTown_EventScript_TownSign"
     },
     {
       "type": "sign",
-      "x": 10,
-      "y": 15,
+      "x": 36,
+      "y": 34,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
       "script": "Common_EventScript_ShowPokemonCenterSign"

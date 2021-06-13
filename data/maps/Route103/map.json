@@ -20,8 +20,8 @@
     },
     {
       "direction": "right",
-      "offset": -19,
-      "map": "MAP_OLDALE_TOWN"
+      "offset": -17,
+      "map": "MAP_PACIFIDLOG_TOWN"
     }
   ],
   "object_events": [
