@@ -212,12 +212,12 @@ struct BaseStats
  /* 0x07 */ u8 type2;
  /* 0x08 */ u8 catchRate;
  /* 0x09 */ u16 expYield;
- /* 0x0A */ u16 evYield_HP:2;
- /* 0x0A */ u16 evYield_Attack:2;
- /* 0x0A */ u16 evYield_Defense:2;
- /* 0x0A */ u16 evYield_Speed:2;
- /* 0x0B */ u16 evYield_SpAttack:2;
- /* 0x0B */ u16 evYield_SpDefense:2;
+ /* 0x0A */ u16 evYield_HP:3;
+ /* 0x0A */ u16 evYield_Attack:3;
+ /* 0x0A */ u16 evYield_Defense:3;
+ /* 0x0A */ u16 evYield_Speed:3;
+ /* 0x0B */ u16 evYield_SpAttack:3;
+ /* 0x0B */ u16 evYield_SpDefense:3;
  /* 0x0C */ u16 item1;
  /* 0x0E */ u16 item2;
  /* 0x10 */ u8 genderRatio;
@@ -226,17 +226,13 @@ struct BaseStats
  /* 0x13 */ u8 growthRate;
  /* 0x14 */ u8 eggGroup1;
  /* 0x15 */ u8 eggGroup2;
-            #ifdef BATTLE_ENGINE
- /* 0x16 */ u8 abilities[NUM_ABILITY_SLOTS];
-            #else
-            u8 abilities[2];
-            #endif
- /* 0x18 */ u8 safariZoneFleeRate;
+ /* 0x16 */ u16 abilities[NUM_ABILITY_SLOTS];
+
+ /* 0x18 */ //u8 safariZoneFleeRate;
  /* 0x19 */ u8 bodyColor : 7;
+
             u8 noFlip : 1;
-            #ifndef BATTLE_ENGINE
- /* 0x1A */ u8 abilityHidden;
-            #endif
+            u8 flags;
 }; /* size = 28 */
 
 #include "constants/battle_config.h"

@@ -1087,7 +1087,9 @@ struct SaveBlock1
     /*0x3B14*/ struct RecordMixingGift recordMixingGift;
     #ifndef FREE_EXTRA_SEEN_FLAGS
     /*0x3B24*/ u8 seen2[NUM_DEX_FLAG_BYTES];  //52 bytes
-    #endif
+    #endif 
+    /*0x3???*/ u8 dexSeen[NUM_DEX_FLAG_BYTES];
+    /*0x3???*/ u8 dexCaught[NUM_DEX_FLAG_BYTES];
     /*0x3B58*/ LilycoveLady lilycoveLady;
     /*0x3B98*/ struct TrainerNameRecord trainerNameRecords[20];
     #ifndef FREE_UNION_ROOM_CHAT

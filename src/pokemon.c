@@ -6948,8 +6948,6 @@ void MonGainEVs(struct Pokemon *mon, u16 defeatedSpecies)
     {
         if (gMain.inBattle)
             holdEffect = gEnigmaBerries[0].holdEffect;
-        else
-            holdEffect = gSaveBlock1Ptr->enigmaBerry.holdEffect;
     }
     else
     {
@@ -7019,11 +7017,7 @@ void MonGainEVs(struct Pokemon *mon, u16 defeatedSpecies)
                 holdEffect = 0;
                 #endif
         }
-        else
-        {
-            holdEffect = ItemId_GetHoldEffect(heldItem);
-        }
-
+    
         if (holdEffect == HOLD_EFFECT_MACHO_BRACE)
             evIncrease *= 2;
 
@@ -8289,6 +8283,7 @@ u16 MonTryLearningNewMoveEvolution(struct Pokemon *mon, bool8 firstMove)
         sLearningMoveTableID++;
     }
     return 0;
+}
 void CreateShinyMonWithNature(struct Pokemon *mon, u16 species, u8 level, u8 nature)
 {
     u32 personality;
