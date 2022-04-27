@@ -818,3 +818,33 @@ LilycoveCity_PokemonTrainerFanClub_Text_YourePowerfulButNotTrueStrength:
 	.string "True strength is…!\n"
 	.string "… …\p"
 	.string "Actually, I have no idea, either.$"
+
+
+
+
+@NEW SCRIPTS
+
+LilycoveCity_PokemonTrainerFanClub_EventScript_BrotherMonGive::
+lockall
+givemon SPECIES_DRAMPA, 100, ITEM_MYSTIC_WATER
+setflag FLAG_SYS_POKEMON_GET
+msgbox LilycoveCity_PokemonTrainerFanClub_Text_BrotherMon, MSGBOX_DEFAULT
+	release
+	end
+
+
+LilycoveCity_PokemonTrainerFanClub_Text_BrotherMon:
+	.string "After your parents passed away, your\n"
+	.string "brother took a job at the warehouse to\l"
+	.string "support you. He worked tirelessly so\l"
+	.string "that you could continue to chase your\l"
+	.string "dream of being a pokemon trainer. To\l"
+	.string "keep you company in the long hours\l"
+	.string "alone, he gave you another partner to\l"
+	.string "keep you company. \l"
+	.string "What pokemon was it?$"
+
+
+
+
+

@@ -141,3 +141,52 @@ SlateportCity_SternsShipyard_1F_Text_GetSeasickEasily:
 	.string "I get seasick real easily.\n"
 	.string "So I get to help out here instead.$"
 
+
+
+
+@NEW SCRIPTS
+SlateportCity_SternsShipyard_1F_EventScript_MailmanBattle::
+	trainerbattle_single TRAINER_MAILMAN_2, SlateportCity_SternsShipyard_1F_Text_MailmanIntro, SlateportCity_SternsShipyard_1F_Text_MailmanDefeat
+	msgbox SlateportCity_SternsShipyard_1F_Text_MailmanPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+SlateportCity_SternsShipyard_1F_Text_MailmanIntro:
+	.string "Youve arrived just in time. As it\n"
+	.string "happens, I have two more things for\l"
+	.string "you. The first is a PRESENT from my\l"
+	.string "dear DELIBIRD!$"
+
+SlateportCity_SternsShipyard_1F_Text_MailmanPostBattle:
+	.string "Signed and stamped...$"
+
+SlateportCity_SternsShipyard_1F_Text_MailmanDefeat:
+	.string "Well done, but I'm far from\n"
+	.string "the hardest of the trials that await\l"
+	.string "you. You'll only find your brother on\l"
+	.string "the very top floor. Go forth, take this\l"
+	.string "teleporting pad that my dearest ABRA\l"
+	.string "set up.$"
+
+
+
+@LazyGuyBattlescript
+SlateportCity_SternsShipyard_1F_EventScript_LazyBattle::
+	trainerbattle_single TRAINER_LAZY_GUY, SlateportCity_SternsShipyard_1F_Text_LazyIntro, SlateportCity_SternsShipyard_1F_Text_LazyDefeat
+	msgbox SlateportCity_SternsShipyard_1F_Text_LazyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+
+SlateportCity_SternsShipyard_1F_Text_LazyDefeat:
+	.string "Ah well, what can you do.$"
+
+
+SlateportCity_SternsShipyard_1F_Text_LazyIntro:
+.string "Hey, taking a break? I\n"
+	.string "understand. Try to follow the path\l"
+	.string "though, everyone's put in so much\l"
+	.string "effort. Speaking of, I should try to do\l"
+	.string "my best as well.$"
+
+SlateportCity_SternsShipyard_1F_Text_LazyPostBattle:
+	.string "When you're ready, please take the pad.\n"
+	.string "I'll see you later when I'm on my break.$"
