@@ -204,10 +204,10 @@
       "dest_warp_id": 0
     },
     {
-      "x": 47,
-      "y": 28,
+      "x": 44,
+      "y": 6,
       "elevation": 0,
-      "dest_map": "MAP_LILYCOVE_CITY_COVE_LILY_MOTEL_1F",
+      "dest_map": "MAP_LILYCOVE_CITY_POKEMON_TRAINER_FAN_CLUB",
       "dest_warp_id": 0
     },
     {
@@ -218,38 +218,24 @@
       "dest_warp_id": 0
     },
     {
-      "x": 44,
-      "y": 6,
+      "x": 47,
+      "y": 28,
       "elevation": 0,
-      "dest_map": "MAP_LILYCOVE_CITY_POKEMON_TRAINER_FAN_CLUB",
+      "dest_map": "MAP_LILYCOVE_CITY_CONTEST_LOBBY",
       "dest_warp_id": 1
     },
     {
       "x": 48,
       "y": 28,
       "elevation": 0,
-      "dest_map": "MAP_LILYCOVE_CITY_MOVE_DELETERS_HOUSE",
-      "dest_warp_id": 0
-    },
-    {
-      "x": 50,
-      "y": 6,
-      "elevation": 0,
-      "dest_map": "MAP_LILYCOVE_CITY_HOUSE1",
-      "dest_warp_id": 0
-    },
-    {
-      "x": 10,
-      "y": 14,
-      "elevation": 0,
-      "dest_map": "MAP_LILYCOVE_CITY_HOUSE3",
+      "dest_map": "MAP_LILYCOVE_CITY_CONTEST_LOBBY",
       "dest_warp_id": 0
     },
     {
       "x": 39,
       "y": 15,
       "elevation": 0,
-      "dest_map": "MAP_LILYCOVE_CITY_HOUSE4",
+      "dest_map": "MAP_PACIFIDLOG_TOWN_HOUSE1",
       "dest_warp_id": 0
     }
   ],
@@ -347,16 +333,16 @@
     },
     {
       "type": "hidden_item",
-      "x": 61,
-      "y": 7,
+      "x": 50,
+      "y": 6,
       "elevation": 0,
       "item": "ITEM_PP_UP",
       "flag": "FLAG_HIDDEN_ITEM_LILYCOVE_CITY_PP_UP"
     },
     {
       "type": "hidden_item",
-      "x": 53,
-      "y": 5,
+      "x": 10,
+      "y": 14,
       "elevation": 0,
       "item": "ITEM_POKE_BALL",
       "flag": "FLAG_HIDDEN_ITEM_LILYCOVE_CITY_POKE_BALL"

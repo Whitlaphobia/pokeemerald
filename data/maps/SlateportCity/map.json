@@ -38,7 +38,7 @@
       "x": 55,
       "y": 42,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WANDER_LEFT_AND_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 1,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -181,7 +181,7 @@
       "x": 37,
       "y": 29,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_WANDER_UP_AND_DOWN",
+      "movement_type": "MOVEMENT_TYPE_NONE",
       "movement_range_x": 0,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
@@ -232,7 +232,7 @@
   "warp_events": [
     {
       "x": 13,
-      "y": 46,
+      "y": 47,
       "elevation": 0,
       "dest_map": "MAP_SLATEPORT_CITY_MART",
       "dest_warp_id": 0
@@ -245,31 +245,17 @@
       "dest_warp_id": 0
     },
     {
-      "x": 30,
-      "y": 26,
+      "x": 35,
+      "y": 51,
       "elevation": 0,
       "dest_map": "MAP_SLATEPORT_CITY_OCEANIC_MUSEUM_1F",
       "dest_warp_id": 0
-    },
-    {
-      "x": 31,
-      "y": 26,
-      "elevation": 0,
-      "dest_map": "MAP_SLATEPORT_CITY_OCEANIC_MUSEUM_1F",
-      "dest_warp_id": 1
     },
     {
       "x": 12,
       "y": 6,
       "elevation": 0,
       "dest_map": "MAP_SLATEPORT_CITY_STERNS_SHIPYARD_1F",
-      "dest_warp_id": 0
-    },
-    {
-      "x": 35,
-      "y": 51,
-      "elevation": 0,
-      "dest_map": "MAP_SLATEPORT_CITY_HOUSE",
       "dest_warp_id": 0
     }
   ],
