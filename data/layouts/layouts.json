@@ -1065,7 +1065,7 @@
       "id": "LAYOUT_LILYCOVE_CITY_POKEMON_TRAINER_FAN_CLUB",
       "name": "LilycoveCity_PokemonTrainerFanClub_Layout",
       "width": 12,
-      "height": 14,
+      "height": 9,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/LilycoveCity_PokemonTrainerFanClub/border.bin",

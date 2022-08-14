@@ -39,14 +39,27 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "SlateportCity_SternsShipyard_2F_EventScript_Scientist2",
       "flag": "0"
+    },
+    {
+      "graphics_id": "OBJ_EVENT_GFX_KIRLIA",
+      "x": 3,
+      "y": 11,
+      "elevation": 3,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "NULL",
+      "flag": "0"
     }
   ],
   "warp_events": [
     {
-      "x": 12,
-      "y": 4,
+      "x": 3,
+      "y": 12,
       "elevation": 0,
-      "dest_map": "MAP_SLATEPORT_CITY_STERNS_SHIPYARD_1F",
+      "dest_map": "MAP_SLATEPORT_CITY_BATTLE_TENT_LOBBY",
       "dest_warp_id": 2
     },
     {

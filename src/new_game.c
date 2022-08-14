@@ -127,7 +127,7 @@ static void ClearFrontierRecord(void)
 
 static void WarpToTruck(void)
 {
-    SetWarpDestination(MAP_GROUP(LILYCOVE_CITY), MAP_NUM(LILYCOVE_CITY), WARP_ID_NONE, 7, 15);
+    SetWarpDestination(MAP_GROUP(LILYCOVE_CITY_POKEMON_TRAINER_FAN_CLUB), MAP_NUM(LILYCOVE_CITY_POKEMON_TRAINER_FAN_CLUB), -1, 6, 3);
     WarpIntoMap();
 }
 

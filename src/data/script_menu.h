@@ -70,6 +70,29 @@ static const struct MenuAction MultichoiceList_StatusInfo[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_DadPoke[] =
+{
+    {gText_AERODACTYL},
+    {gText_LILEEP},
+    {gText_TYRANTRUM},
+    {gText_Exit},
+};
+static const struct MenuAction MultichoiceList_MomPoke[] =
+{
+    {gText_OCTILLERY},
+    {gText_SCIZOR},
+    {gText_VICTREEBEL},
+    {gText_Exit},
+};
+static const struct MenuAction MultichoiceList_BroPoke[] =
+{
+    {gText_DRAMPA},
+    {gText_ARCANINE},
+    {gText_BLISSEY},
+    {gText_Exit},
+};
+
+
 static const struct MenuAction MultichoiceList_BrineyOffDewford[] =
 {
     {gText_Dewford},
@@ -793,13 +816,13 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_BASE_PC_WITH_REGISTRY]      = MULTICHOICE(MultichoiceList_BasePCWithRegistry),
     [MULTI_REGISTER_MENU]              = MULTICHOICE(MultichoiceList_RegisterMenu),
     [MULTI_SSTIDAL_LILYCOVE]           = MULTICHOICE(MultichoiceList_Exit),
-    [MULTI_UNUSED_9]                   = MULTICHOICE(MultichoiceList_Exit),
-    [MULTI_UNUSED_10]                  = MULTICHOICE(MultichoiceList_Exit),
+    [MULTI_UNUSED_DAD_MON]                   = MULTICHOICE(MultichoiceList_DadPoke),
+    [MULTI_UNUSED_MOM_MON]                  = MULTICHOICE(MultichoiceList_MomPoke),
     [MULTI_FRONTIER_PASS_INFO]         = MULTICHOICE(MultichoiceList_FrontierPassInfo),
     [MULTI_BIKE]                       = MULTICHOICE(MultichoiceList_Bike),
     [MULTI_STATUS_INFO]                = MULTICHOICE(MultichoiceList_StatusInfo),
     [MULTI_BRINEY_OFF_DEWFORD]         = MULTICHOICE(MultichoiceList_BrineyOffDewford),
-    [MULTI_UNUSED_15]                  = MULTICHOICE(MultichoiceList_Exit),
+    [MULTI_UNUSED_BRO_MON]                  = MULTICHOICE(MultichoiceList_BroPoke),
     [MULTI_VIEWED_PAINTINGS]           = MULTICHOICE(MultichoiceList_ViewedPaintings),
     [MULTI_YESNOINFO]                  = MULTICHOICE(MultichoiceList_YesNoInfo),
     [MULTI_BATTLE_MODE]                = MULTICHOICE(MultichoiceList_BattleMode),

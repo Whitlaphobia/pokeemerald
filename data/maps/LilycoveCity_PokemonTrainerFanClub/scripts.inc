@@ -821,7 +821,26 @@ LilycoveCity_PokemonTrainerFanClub_Text_YourePowerfulButNotTrueStrength:
 
 
 
+@LilycoveCity_PokemonTrainerFanClub_EventScript_Tyrant::
+	@goto LilycoveCity_PokemonTrainerFanClub_EventScript_TyraPick
+	@end
+	
+LilycoveCity_PokemonTrainerFanClub_EventScript_AerodactylPick::
+	release
+	@waitmovement 0
+	showmonpic SPECIES_AERODACTYL, 10, 3
+	msgbox LilycoveCity_PokemonTrainerFanClub_Text_ItWasAero, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LilycoveCity_PokemonTrainerFanClub_EventScript_TakeYourTime
+	goto LilycoveCity_PokemonTrainerFanClub_EventScript_AeroPick
+	end
 
+LilycoveCity_PokemonTrainerFanClub_EventScript_LileepPick::
+	release
+	@waitmovement 0
+	showmonpic SPECIES_LILEEP, 10, 3
+	msgbox LilycoveCity_PokemonTrainerFanClub_Text_ItWasLil, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LilycoveCity_PokemonTrainerFanClub_EventScript_TakeYourTime
+	goto LilycoveCity_PokemonTrainerFanClub_EventScript_LilPick
 @NEW SCRIPTS
 
 LilycoveCity_PokemonTrainerFanClub_EventScript_BrotherMonGive::
@@ -832,6 +851,16 @@ msgbox LilycoveCity_PokemonTrainerFanClub_Text_BrotherMon, MSGBOX_DEFAULT
 	release
 	end
 
+LilycoveCity_PokemonTrainerFanClub_Text_MotherMon:
+	.string "Your mother was a novelist.\n"
+	.string "Even when publishers clamored for\l"
+	.string "her books, she insisted on\l"
+	.string "self-publishing on her own paper\l"
+	.string "which she grew and harvested\l"
+	.string "in her garden. Once you were old\l"
+	.string "enough, she got a pokemon to help\l"
+	.string "her with the process. \l"
+	.string "What pokemon was it?$"
 
 LilycoveCity_PokemonTrainerFanClub_Text_BrotherMon:
 	.string "After your parents passed away, your\n"
@@ -846,5 +875,336 @@ LilycoveCity_PokemonTrainerFanClub_Text_BrotherMon:
 
 
 
+LilycoveCity_PokemonTrainerFanClub_Text_DadMonStory:
+	.string "Your dad was an archeologist,\n"
+	.string "so he was away from home a lot.\l"
+	.string "When he came home, the two of you \l"
+	.string "would play gamecube together for hours.\l"
+	.string "When you were 10,\l"
+	.string "he registered you as a trainer,\l"
+	.string "and got you your very first pokemom\l"
+	.string "from work.$"
+
+LilycoveCity_PokemonTrainerFanClub_Text_ChooseDadMon:
+	.string "What pokemon was it?$"
 
 
+LilycoveCity_PokemonTrainerFanClub_EventScript_DadPokemon::
+	lockall
+	msgbox LilycoveCity_PokemonTrainerFanClub_Text_DadMonStory, MSGBOX_DEFAULT
+	goto LilycoveCity_PokemonTrainerFanClub_EventScript_ChoosePokemonDad
+	end
+
+LilycoveCity_PokemonTrainerFanClub_EventScript_ChoosePokemonDad::
+	lockall
+	setflag FLAG_SYS_POKEMON_GET
+	message LilycoveCity_PokemonTrainerFanClub_Text_ChooseDadMon
+	waitmessage
+	multichoicegrid 8, 1, MULTI_UNUSED_DAD_MON, 3, FALSE
+	switch VAR_RESULT
+	case 0, LilycoveCity_PokemonTrainerFanClub_EventScript_AerodactylPick
+	case 1, LilycoveCity_PokemonTrainerFanClub_EventScript_LileepPick
+	case 2, LilycoveCity_PokemonTrainerFanClub_EventScript_TyrantrumPick
+	case 3, LilycoveCity_PokemonTrainerFanClub_EventScript_ExitTopicSelect
+	case MULTI_B_PRESSED, LilycoveCity_PokemonTrainerFanClub_EventScript_ExitTopicSelect
+	end
+
+LilycoveCity_PokemonTrainerFanClub_EventScript_ChoosePokemonMom::
+	lockall
+	setflag FLAG_SYS_POKEMON_GET
+	message LilycoveCity_PokemonTrainerFanClub_Text_MotherMon
+	waitmessage
+	multichoicegrid 8, 1, MULTI_UNUSED_MOM_MON, 3, FALSE
+	switch VAR_RESULT
+	case 0, LilycoveCity_PokemonTrainerFanClub_EventScript_OctilleryPick
+	case 1, LilycoveCity_PokemonTrainerFanClub_EventScript_ScizorPick
+	case 2, LilycoveCity_PokemonTrainerFanClub_EventScript_VictreebelPick
+	case 3, LilycoveCity_PokemonTrainerFanClub_EventScript_ExitTopicSelect
+	case MULTI_B_PRESSED, LilycoveCity_PokemonTrainerFanClub_EventScript_ExitTopicSelect
+	end
+
+
+LilycoveCity_PokemonTrainerFanClub_EventScript_ChoosePokemonMomPre::
+	lockall
+	goto_if_unset FLAG_MOM_POKEMON_GOT LilycoveCity_PokemonTrainerFanClub_EventScript_ChoosePokemonMom
+	message LilycoveCity_PokemonTrainerFanClub_Text_PulpPlant
+	waitmessage
+	release
+	end
+
+LilycoveCity_PokemonTrainerFanClub_Text_PulpPlant:
+	.string "A small garden for paper pulp.$"
+
+LilycoveCity_PokemonTrainerFanClub_EventScript_ChoosePokemonDadPre::
+	lockall
+	goto_if_unset FLAG_DAD_POKEMON_GOT LilycoveCity_PokemonTrainerFanClub_EventScript_DadPokemon
+	message LilycoveCity_PokemonTrainerFanClub_Text_FossilCase
+	waitmessage
+	release
+	end
+
+LilycoveCity_PokemonTrainerFanClub_Text_FossilCase:
+	.string "It appears to be OLD AMBER.$"
+
+
+
+
+LilycoveCity_PokemonTrainerFanClub_EventScript_ChoosePokemonBroPre::
+	lockall
+	goto_if_unset FLAG_BRO_POKEMON_GOT LilycoveCity_PokemonTrainerFanClub_EventScript_ChoosePokemonBro
+	message LilycoveCity_PokemonTrainerFanClub_Text_CupofJoe
+	waitmessage
+	release
+	end
+
+LilycoveCity_PokemonTrainerFanClub_Text_CupofJoe:
+	.string "A nice hot cup of Joe. $"
+
+LilycoveCity_PokemonTrainerFanClub_EventScript_ChoosePokemonBro::
+	lockall
+	setflag FLAG_SYS_POKEMON_GET
+	message LilycoveCity_PokemonTrainerFanClub_Text_BrotherMon
+	waitmessage
+	multichoicegrid 8, 1, MULTI_UNUSED_BRO_MON, 3, FALSE
+	switch VAR_RESULT
+	case 0, LilycoveCity_PokemonTrainerFanClub_EventScript_DrampaPick
+	case 1, LilycoveCity_PokemonTrainerFanClub_EventScript_ArcaninePick
+	case 2, LilycoveCity_PokemonTrainerFanClub_EventScript_BlisseyPick
+	case 3, LilycoveCity_PokemonTrainerFanClub_EventScript_ExitTopicSelect
+	case MULTI_B_PRESSED, LilycoveCity_PokemonTrainerFanClub_EventScript_ExitTopicSelect
+	end
+
+LilycoveCity_PokemonTrainerFanClub_EventScript_PartyCount::
+	lockall
+	getpartysize
+	call_if_eq VAR_RESULT, 3 LilycoveCity_PokemonTrainerFanClub_EventScript_SetVar
+	release
+	end
+
+LilycoveCity_PokemonTrainerFanClub_EventScript_SetVar::
+	setvar VAR_0x8007, 1
+	return
+
+LilycoveCity_PokemonTrainerFanClub_EventScript_DoHidingSpotSparkle::
+	setvar VAR_0x8006, 0
+	lockall
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_ExclamationMark
+	playse SE_PIN
+	delay 10
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterDown
+	msgbox LilycoveCity_PokemonTrainerFanClub_Text_DadAdvice, MSGBOX_SIGN
+	delay 10
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	call_if_unset FLAG_BRO_POKEMON_GOT, LilycoveCity_PokemonTrainerFanClub_EventScript_SparkleBroMon
+
+	call_if_unset FLAG_MOM_POKEMON_GOT, LilycoveCity_PokemonTrainerFanClub_EventScript_SparkleMomMon
+	
+	call_if_unset FLAG_DAD_POKEMON_GOT, LilycoveCity_PokemonTrainerFanClub_EventScript_SparkleDadMon
+
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	end
+
+LilycoveCity_PokemonTrainerFanClub_EventScript_SparkleDadMon::
+	dofieldeffectsparkle 0,8, VAR_0x8006
+	playse SE_SHINY
+	waitfieldeffect FLDEFF_SPARKLE
+	setvar VAR_0x8006, 0
+	@goto_if_unset FLAG_MOM_POKEMON_GOT, LilycoveCity_PokemonTrainerFanClub_EventScript_SparkleMomMon
+	return
+	
+LilycoveCity_PokemonTrainerFanClub_EventScript_SparkleMomMon::
+	dofieldeffectsparkle 10, 6, VAR_0x8006
+	playse SE_SHINY
+	waitfieldeffect FLDEFF_SPARKLE
+	@applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkUp
+	return
+
+LilycoveCity_PokemonTrainerFanClub_EventScript_SparkleBroMon::
+	dofieldeffectsparkle 6, 3, VAR_0x8006
+	playse SE_SHINY
+	waitfieldeffect FLDEFF_SPARKLE
+	setvar VAR_0x8006, 0
+	@goto_if_unset FLAG_DAD_POKEMON_GOT, LilycoveCity_PokemonTrainerFanClub_EventScript_SparkleDadMon
+	return
+
+
+LilycoveCity_PokemonTrainerFanClub_EventScript_AeroPick::
+	givemon SPECIES_AERODACTYL, 100, ITEM_SITRUS_BERRY
+	hidemonpic
+	setflag FLAG_DAD_POKEMON_GOT
+	msgbox LilycoveCity_PokemonTrainerFanClub_Text_ItWasAero, MSGBOX_DEFAULT
+	release
+	end
+
+LilycoveCity_PokemonTrainerFanClub_EventScript_TyraPick::
+	givemon SPECIES_TYRANTRUM, 100, ITEM_LEFTOVERS
+	hidemonpic
+	setflag FLAG_DAD_POKEMON_GOT
+	msgbox LilycoveCity_PokemonTrainerFanClub_Text_ItWasTyra, MSGBOX_DEFAULT
+	release
+	end
+
+LilycoveCity_PokemonTrainerFanClub_EventScript_LilPick::
+	givemon SPECIES_LILEEP, 100, ITEM_ORAN_BERRY
+	hidemonpic
+	setflag FLAG_DAD_POKEMON_GOT
+	msgbox LilycoveCity_PokemonTrainerFanClub_Text_ItWasLil, MSGBOX_DEFAULT
+	release
+	end
+
+LilycoveCity_PokemonTrainerFanClub_Text_DadAdvice:
+	.string "Dad's advice echoes in your head:\n"
+	.string "Never leave home without\l"
+	.string "your pokemon!$"
+
+LilycoveCity_PokemonTrainerFanClub_Text_ItWasTyra:
+	.string "It was a TYRANTRUM!$"
+
+LilycoveCity_PokemonTrainerFanClub_Text_ItWasLil:
+	.string "It was a LILEEP!$"
+
+LilycoveCity_PokemonTrainerFanClub_Text_ItWasAero:
+	.string "It was an AERODACTYL!$"
+
+LilycoveCity_PokemonTrainerFanClub_EventScript_ExitTopicSelect::
+	releaseall
+	end
+
+LilycoveCity_PokemonTrainerFanClub_EventScript_TyrantrumPick::
+	release
+	@waitmovement 0
+	showmonpic SPECIES_TYRANTRUM, 10, 3
+	msgbox LilycoveCity_PokemonTrainerFanClub_Text_ItWasTyra, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LilycoveCity_PokemonTrainerFanClub_EventScript_TyraPick
+	end
+
+LilycoveCity_PokemonTrainerFanClub_EventScript_ScizorPick::
+	release
+	@waitmovement 0
+	showmonpic SPECIES_SCIZOR, 10, 3
+	msgbox LilycoveCity_PokemonTrainerFanClub_Text_ItWasSci, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LilycoveCity_PokemonTrainerFanClub_EventScript_TakeYourTime
+	goto LilycoveCity_PokemonTrainerFanClub_EventScript_SciPick
+	end
+	
+	LilycoveCity_PokemonTrainerFanClub_Text_ItWasSci:
+		.string "It was a SCIZOR!$"
+
+	LilycoveCity_PokemonTrainerFanClub_EventScript_SciPick::
+		givemon SPECIES_SCIZOR, 100, ITEM_ORAN_BERRY
+		hidemonpic
+		setflag FLAG_MOM_POKEMON_GOT
+		msgbox LilycoveCity_PokemonTrainerFanClub_Text_ItWasSci, MSGBOX_DEFAULT
+		release
+		end
+
+LilycoveCity_PokemonTrainerFanClub_EventScript_VictreebelPick::
+	release
+	@waitmovement 0
+	showmonpic SPECIES_VICTREEBEL, 10, 3
+	msgbox LilycoveCity_PokemonTrainerFanClub_Text_ItWasVic, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LilycoveCity_PokemonTrainerFanClub_EventScript_TakeYourTime
+	goto LilycoveCity_PokemonTrainerFanClub_EventScript_VicPick
+	end
+	
+	LilycoveCity_PokemonTrainerFanClub_Text_ItWasVic:
+		.string "It was a VICTREEBEL!$"
+
+	LilycoveCity_PokemonTrainerFanClub_EventScript_VicPick::
+		givemon SPECIES_VICTREEBEL, 100, ITEM_ORAN_BERRY
+		hidemonpic
+		setflag FLAG_MOM_POKEMON_GOT
+		msgbox LilycoveCity_PokemonTrainerFanClub_Text_ItWasVic, MSGBOX_DEFAULT
+		release
+		end
+
+
+LilycoveCity_PokemonTrainerFanClub_EventScript_OctilleryPick::
+	release
+	@waitmovement 0
+	showmonpic SPECIES_OCTILLERY, 10, 3
+	msgbox LilycoveCity_PokemonTrainerFanClub_Text_ItWasOct, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LilycoveCity_PokemonTrainerFanClub_EventScript_TakeYourTime
+	goto LilycoveCity_PokemonTrainerFanClub_EventScript_OctPick
+	end
+	
+	LilycoveCity_PokemonTrainerFanClub_Text_ItWasOct:
+		.string "It was an OCTILLERY!$"
+
+	LilycoveCity_PokemonTrainerFanClub_EventScript_OctPick::
+		givemon SPECIES_OCTILLERY, 100, ITEM_ORAN_BERRY
+		hidemonpic
+		setflag FLAG_MOM_POKEMON_GOT
+		msgbox LilycoveCity_PokemonTrainerFanClub_Text_ItWasOct, MSGBOX_DEFAULT
+		release
+		end
+
+LilycoveCity_PokemonTrainerFanClub_EventScript_DrampaPick::
+	release
+	@waitmovement 0
+	showmonpic SPECIES_DRAMPA, 10, 3
+	msgbox LilycoveCity_PokemonTrainerFanClub_Text_ItWasDra, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LilycoveCity_PokemonTrainerFanClub_EventScript_TakeYourTime
+	goto LilycoveCity_PokemonTrainerFanClub_EventScript_DraPick
+	end
+	
+	LilycoveCity_PokemonTrainerFanClub_Text_ItWasDra:
+		.string "It was a DRAMPA!$"
+
+	LilycoveCity_PokemonTrainerFanClub_EventScript_DraPick::
+		givemon SPECIES_DRAMPA, 100, ITEM_ORAN_BERRY
+		hidemonpic
+		setflag FLAG_BRO_POKEMON_GOT
+		msgbox LilycoveCity_PokemonTrainerFanClub_Text_ItWasDra, MSGBOX_DEFAULT
+		release
+		end
+
+LilycoveCity_PokemonTrainerFanClub_EventScript_ArcaninePick::
+	release
+	@waitmovement 0
+	showmonpic SPECIES_ARCANINE, 10, 3
+	msgbox LilycoveCity_PokemonTrainerFanClub_Text_ItWasArc, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LilycoveCity_PokemonTrainerFanClub_EventScript_TakeYourTime
+	goto LilycoveCity_PokemonTrainerFanClub_EventScript_ArcPick
+	end
+	
+	LilycoveCity_PokemonTrainerFanClub_Text_ItWasArc:
+		.string "It was an ARCANINE!$"
+
+	LilycoveCity_PokemonTrainerFanClub_EventScript_ArcPick::
+		givemon SPECIES_ARCANINE, 100, ITEM_ORAN_BERRY
+		hidemonpic
+		setflag FLAG_BRO_POKEMON_GOT
+		msgbox LilycoveCity_PokemonTrainerFanClub_Text_ItWasArc, MSGBOX_DEFAULT
+		release
+		end
+
+LilycoveCity_PokemonTrainerFanClub_EventScript_BlisseyPick::
+	release
+	@waitmovement 0
+	showmonpic SPECIES_BLISSEY, 10, 3
+	msgbox LilycoveCity_PokemonTrainerFanClub_Text_ItWasBli, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, LilycoveCity_PokemonTrainerFanClub_EventScript_TakeYourTime
+	goto LilycoveCity_PokemonTrainerFanClub_EventScript_BliPick
+	end
+	
+	LilycoveCity_PokemonTrainerFanClub_Text_ItWasBli:
+		.string "It was a BLISSEY!$"
+
+	LilycoveCity_PokemonTrainerFanClub_EventScript_BliPick::
+		givemon SPECIES_BLISSEY, 100, ITEM_ORAN_BERRY
+		hidemonpic
+		setflag FLAG_BRO_POKEMON_GOT
+		msgbox LilycoveCity_PokemonTrainerFanClub_Text_ItWasBli, MSGBOX_DEFAULT
+		release
+		end
+
+
+LilycoveCity_PokemonTrainerFanClub_EventScript_TakeYourTime::
+	hidemonpic
+	msgbox LilycoveCity_PokemonTrainerFanClub_Text_TakeYourTimeAllInvaluable, MSGBOX_DEFAULT
+	releaseall
+	end
+
+LilycoveCity_PokemonTrainerFanClub_Text_TakeYourTimeAllInvaluable:
+	.string "On second thought...$"

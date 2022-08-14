@@ -19,35 +19,80 @@
   "warp_events": [
     {
       "x": 5,
-      "y": 13,
+      "y": 8,
       "elevation": 0,
       "dest_map": "MAP_LILYCOVE_CITY",
       "dest_warp_id": 1
     },
     {
       "x": 4,
-      "y": 13,
+      "y": 8,
       "elevation": 0,
       "dest_map": "MAP_LILYCOVE_CITY",
       "dest_warp_id": 1
     }
   ],
   "coord_events": [
-
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_0x8007",
+      "var_value": "0",
+      "script": "LilycoveCity_PokemonTrainerFanClub_EventScript_DoHidingSpotSparkle"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_0x8007",
+      "var_value": "0",
+      "script": "LilycoveCity_PokemonTrainerFanClub_EventScript_DoHidingSpotSparkle"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "LilycoveCity_PokemonTrainerFanClub_EventScript_PartyCount"
+    },
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 7,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "LilycoveCity_PokemonTrainerFanClub_EventScript_PartyCount"
+    },
+    {
+      "type": "trigger",
+      "x": 3,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "LilycoveCity_PokemonTrainerFanClub_EventScript_PartyCount"
+    },
+    {
+      "type": "trigger",
+      "x": 6,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "LilycoveCity_PokemonTrainerFanClub_EventScript_PartyCount"
+    }
   ],
   "bg_events": [
     {
       "type": "sign",
       "x": 9,
       "y": 1,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
-    },
-    {
-      "type": "sign",
-      "x": 7,
-      "y": 2,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "NULL"
@@ -71,50 +116,10 @@
     {
       "type": "sign",
       "x": 11,
-      "y": 12,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
-    },
-    {
-      "type": "sign",
-      "x": 11,
-      "y": 9,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
-    },
-    {
-      "type": "sign",
-      "x": 0,
-      "y": 10,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
-    },
-    {
-      "type": "sign",
-      "x": 0,
-      "y": 12,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
-    },
-    {
-      "type": "sign",
-      "x": 7,
-      "y": 9,
+      "y": 8,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "LilycoveCity_PokemonTrainerFanClub_EventScript_BrotherMonGive"
-    },
-    {
-      "type": "sign",
-      "x": 2,
-      "y": 9,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
     },
     {
       "type": "sign",
@@ -142,14 +147,6 @@
     },
     {
       "type": "sign",
-      "x": 6,
-      "y": 1,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
-    },
-    {
-      "type": "sign",
       "x": 10,
       "y": 2,
       "elevation": 0,
@@ -160,14 +157,6 @@
       "type": "sign",
       "x": 11,
       "y": 2,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
-    },
-    {
-      "type": "sign",
-      "x": 10,
-      "y": 6,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "NULL"
@@ -190,19 +179,35 @@
     },
     {
       "type": "sign",
-      "x": 1,
-      "y": 9,
+      "x": 3,
+      "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "NULL"
     },
     {
       "type": "sign",
-      "x": 10,
-      "y": 9,
+      "x": 5,
+      "y": 3,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "NULL"
+      "script": "LilycoveCity_PokemonTrainerFanClub_EventScript_ChoosePokemonBroPre"
+    },
+    {
+      "type": "sign",
+      "x": 10,
+      "y": 6,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LilycoveCity_PokemonTrainerFanClub_EventScript_ChoosePokemonMomPre"
+    },
+    {
+      "type": "sign",
+      "x": 0,
+      "y": 8,
+      "elevation": 0,
+      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
+      "script": "LilycoveCity_PokemonTrainerFanClub_EventScript_ChoosePokemonDadPre"
     }
   ]
 }
